@@ -65,26 +65,5 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.hexagon {
-  position: relative;
-  clip-path: path(
-    "M50 0 
-     C55 5, 65 10, 75 25 
-     L100 50 
-     L75 75 
-     C65 90, 55 95, 50 100 
-     C45 95, 35 90, 25 75 
-     L0 50 
-     L25 25 
-     C35 10, 45 5, 50 0 Z"
-  );
-  transition: all 0.3s ease;
-  border-radius: 8px; /* softens inner edges */
-}
 
-.hexagon:hover {
-  transform: scale(1.05);
-  /* background-color: #2563eb; */
-   /* blue-600 */
-}
 
