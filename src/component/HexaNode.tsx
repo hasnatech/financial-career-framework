@@ -7,7 +7,7 @@ export function HexaNode(props: any) {
   const [zoomLevel, setZoomLevel] = useState("small");
 
   useEffect(() => {
-    console.log(zoom);
+    // console.log(zoom);
     if (zoom < 1.5) {
       setZoomLevel("small");
     } else {
@@ -20,14 +20,13 @@ export function HexaNode(props: any) {
       .replace(/\//g, "_")
       .replace(/\s+/g, "_")
       .toLowerCase()}.svg`;
-
-    return `/${fileName}`;
+    return `${import.meta.env.BASE_URL}images/${fileName}`;
   };
 
   return (
     <div
       title={props.data.label}
-      className={`group relative flex items-center justify-center 
+      className={`group relative flex items-center justify-center transition-opacity
         hover:scale-[200%] hover:z-[100] transition-transform duration-300
         ${bandClass(props)}`}
     >
@@ -35,7 +34,6 @@ export function HexaNode(props: any) {
         className={`relative text-center text-sm h-24 w-28 
   flex items-center justify-center 
           `}
-        
       >
         <div
           className="relative text-center text-sm h-28 w-32 flex items-center 

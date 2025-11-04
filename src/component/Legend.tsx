@@ -1,26 +1,41 @@
+import { Button } from "../components/ui/button";
 import { legendData } from "./legendData";
 
-export function Legend() {
-      const getImage = (band: string) => {
+interface LegendProps {
+  selectedBands: string[];
+  onBandClick: (band: string) => void;
+  onClear: () => void;
+}
+
+export function Legend({ selectedBands, onBandClick, onClear }: LegendProps) {
+  const getImage = (band: string) => {
     const fileName = `${band
       .replace(/\//g, "_")
       .replace(/\s+/g, "_")
       .toLowerCase()}.svg`;
-
-    return `/${fileName}`;
+    return `${import.meta.env.BASE_URL}images/${fileName}`;
   };
+
   return (
-    <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-      {legendData.map(({ band, fill }) => (
-        <div key={band} className="flex items-center gap-2">
-          {/* <div
-            className="h-6 w-6 rounded-sm border border-slate-300"
-            style={{ backgroundColor: fill }}
-          /> */}
-          <img src={getImage(band)} alt={band} className="h-8 w-8" />
-          <span className="font-medium text-sm ">{band}</span>
-        </div>
-      ))}
+    <div className="flex flex-col gap-y-4">
+      <div className="flex flex-col flex-wrap gap-x-4 gap-y-4">
+        {legendData.map(({ band }) => {
+          const isSelected = selectedBands.includes(band);
+          const hasSelection = selectedBands.length > 0;
+          return (
+            <div
+              key={band}
+              className="flex items-center gap-2 cursor-pointer transition-opacity"
+              style={{ opacity: hasSelection && !isSelected ? 0.3 : 1 }}
+              onClick={() => onBandClick(band)}
+            >
+              <img src={getImage(band)} alt={band} className="h-8 w-8" />
+              <span className="font-medium text-sm ">{band}</span>
+            </div>
+          );
+        })}
+      </div>
+      <Button onClick={onClear} variant="outline" size="sm" className="self-start">Clear</Button>
     </div>
   );
 }

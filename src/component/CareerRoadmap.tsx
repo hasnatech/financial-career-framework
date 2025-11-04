@@ -125,7 +125,15 @@ export const CareerRoadmap = ({ nodes, nodeTypes,
         {nodes.map(node => {
           const NodeComponent = nodeTypes[node.type] || TextUpdaterNode;
           return (
-            <div key={node.id} style={{ position: 'absolute', left: node.position.x, top: node.position.y }}>
+            <div
+              key={node.id}
+              style={{
+                position: 'absolute',
+                left: node.position.x,
+                top: node.position.y,
+                ...node.style,
+              }}
+            >
               <NodeComponent {...node} zoom={transform.k}/>
             </div>
           );

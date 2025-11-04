@@ -1,4 +1,4 @@
-import { MoveUp } from "lucide-react";
+import { ChevronDown, ChevronUp, MoveUp } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import data from "../data.json";
 import { CareerRoadmap } from "../component/CareerRoadmap";
@@ -6,6 +6,7 @@ import { HexaNode } from "../component/HexaNode";
 import { NodeDetailPopup } from "../component/NodeDetailPopup";
 import MainLayout from "../Layout/MainLayout";
 import { Legend } from "../component/Legend";
+import { Button } from "../components/ui/button";
 
 const nodeTypes = {
   textUpdater: HexaNode,
@@ -17,10 +18,11 @@ export default function Option2() {
   const [selectedNodeForPopup, setSelectedNodeForPopup] = useState<any | null>(
     null
   );
+  const [selectedBands, setSelectedBands] = useState<string[]>([]);
+  const [isLegendOpen, setIsLegendOpen] = useState(true);
   const [showPathway, setShowPathway] = useState(true);
   const [pathWay, setPathWay] = useState<any[]>([]);
   const handleNodeClick = useCallback((nodeData: any) => {
-    
     setPathWay((prev) => {
       const exists = prev.some((n) => n.id === nodeData.id);
       if (exists) return prev;
@@ -31,6 +33,16 @@ export default function Option2() {
   const handleInfoClick = useCallback((nodeData: any) => {
     setSelectedNodeForPopup(nodeData);
   }, []);
+
+  const handleBandClick = (band: string) => {
+    setSelectedBands((prev) =>
+      prev.includes(band) ? prev.filter((b) => b !== band) : [...prev, band]
+    );
+  };
+
+  const handleClearBands = () => {
+    setSelectedBands([]);
+  };
   const NODE_WIDTH = 110;
   const NODE_HEIGHT = 120;
   useEffect(() => {
@@ -59,7 +71,7 @@ export default function Option2() {
     //   }
     // }
     const MAX_COL_LENGTH = Math.max(...data.map((d) => Number(d.col)));
-    console.log("MAX_COL_LENGTH", MAX_COL_LENGTH);
+    // console.log("MAX_COL_LENGTH", MAX_COL_LENGTH);
     for (let i = 0; i < data.length; i++) {
       let ypos =
         Number(data[i].row) * NODE_HEIGHT -
@@ -76,7 +88,7 @@ export default function Option2() {
         Number(data[i].col) * NODE_WIDTH +
         ((Number(data[i].row) + row_length) % 2 === 1 ? 0 : NODE_WIDTH / 2);
       // const xpos = (Number(data[i].col) * NODE_WIDTH) + (Number(data[i].row) % 2 === 1 ? 0 : NODE_WIDTH / 2);
-      console.log("row_length", row_length);
+      // console.log("row_length", row_length);
       const node: any = {
         id: `${data[i].row},${data[i].col}`,
         type: "textUpdater",
@@ -95,12 +107,16 @@ export default function Option2() {
           "Finance Technical Competencies":
             data[i]["Finance Technical Competencies"],
         },
+        style: {
+          opacity:
+            selectedBands.length === 0 || selectedBands.includes(data[i].Band) ? 1 : 0.3,
+        },
       };
       initialNodes.push(node);
     }
 
     setNodes(initialNodes);
-  }, [data]);
+  }, [data, selectedBands]);
 
   const shuffleHandler = useCallback(() => {
     setNodes((nodesSnapshot) => {
@@ -123,38 +139,41 @@ export default function Option2() {
 
   return (
     <MainLayout>
-      <div className="flex gap-3">
-        {/* <div className="w-72 border rounded p-3 space-y-3">
-          <div>
-            <h2 className="text-xl font-bold mb-3">Filter</h2>
-            <Button
-              variant={"default"}
-              className="bg-black text-gray-200"
-              onClick={shuffleHandler}
-            >
-              Suffle
-            </Button>
+      <div className="flex gap-2">
+        <div className="w-72 border rounded">
+          <div className="bg-gray-900 text-white p-3 rounded-t flex justify-between items-center">
+            <h2 className="text-xl font-bold">Legends</h2>
+            {/* <Button variant="ghost" size="icon" onClick={() => setIsLegendOpen(!isLegendOpen)} className="text-white hover:bg-gray-700 hover:text-white">
+              {isLegendOpen ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+            </Button> */}
           </div>
-          <div className="flex gap-2">
-            <input
-              checked={showPathway}
-              type="checkbox"
-              onChange={(e) => setShowPathway(e.target.checked)}
-            />
-            <label>Select My Pathway</label>
-          </div>
-        </div> */}
+          {isLegendOpen && (
+            <div className="p-2 space-y-3">
+              <Legend
+                selectedBands={selectedBands}
+                onBandClick={handleBandClick}
+                onClear={handleClearBands}
+              />
+            </div>
+          )}
+        </div>
 
         <div
           className="bg-slate-50 rounded-lg flex-1"
-          style={{ width: "100%", height: "84vh" }}
+          style={{ width: "100%", height: "90vh" }}
         >
           <CareerRoadmap nodes={nodes} nodeTypes={nodeTypes} fitView />
         </div>
-        {pathWay.length > 0  && (
-          <div className="w-80 border rounded p-3 space-y-3 overflow-y-auto h-[84vh]">
+        {pathWay.length > 0 && (
+          <div className="w-80 border rounded space-y-3 overflow-y-auto h-[90vh]">
+            <div className="bg-gray-900 text-white p-3 rounded-t flex justify-between items-center">
+            <h2 className="text-xl font-bold">My Pathway</h2>
+            {/* <Button variant="ghost" size="icon" onClick={() => setIsLegendOpen(!isLegendOpen)} className="text-white hover:bg-gray-700 hover:text-white">
+              {isLegendOpen ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+            </Button> */}
+          </div>
             {pathWay.length > 0 && (
-              <div className="flex flex-col-reverse gap-3">
+              <div className="flex flex-col-reverse gap-3 p-3">
                 {pathWay.map((node: any, index: number) => (
                   <div key={index}>
                     {index < pathWay.length - 1 && (
@@ -162,7 +181,12 @@ export default function Option2() {
                         <MoveUp className="w-4 h-4 stroke-slate-400" />
                       </div>
                     )}
-                    <HexaNode data={node} />
+                    <div
+                      className="transition-opacity"
+                      style={{ opacity: selectedBands.length === 0 || selectedBands.includes(node.band) ? 1 : 0.3 }}
+                    >
+                      <HexaNode data={node} />
+                    </div>
                   </div>
                 ))}
               </div>
@@ -170,9 +194,6 @@ export default function Option2() {
           </div>
         )}
       </div>
-         <div className="p-2 bg-gray-900 text-white rounded-b">
-              <Legend />
-            </div>
       <NodeDetailPopup
         nodeData={selectedNodeForPopup}
         onClose={() => setSelectedNodeForPopup(null)}
