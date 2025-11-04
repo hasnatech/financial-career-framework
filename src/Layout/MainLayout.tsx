@@ -5,27 +5,12 @@ export default function MainLayout({ children }: any) {
     <>
       <div className="bg-slate-50 shadow">
         <nav className="p-5 flex">
-          <ul className="flex gap-5 justify-between items-center w-full">
-            <li className="flex-1">
-              <a href="/" className="font-bold text-2xl">
+          <p>
+            <a href="/" className="font-bold text-2xl">
                 Career Framework
               </a>
-            </li>
-
-            {/* <li>
-              <Link to="/" className="hover:underline">
-                Option 1
-              </Link>
-            </li>
-            <li>
-              <Link to="/option2" className="hover:underline">
-                Option 2
-              </Link>
-            </li> */}
-            {/* <li>
-              <a href="/contact" className="hover:underline">Contact</a>
-            </li> */}
-          </ul>
+          </p>
+          
         </nav>
       </div>
       <div className=" p-3">{children}</div>
