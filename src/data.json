@@ -16,7 +16,14 @@
     "row": "1",
     "col": "2",
     "Title": "Senior Vice President, Commercial Finance",
-    "Band": "Enterprise Finance"
+    "Band": "Enterprise Finance",
+    "contents": {
+      "sub_family": "Engineering",
+      "contributor_type": "Individual",
+      "job_purpose": "Create a form with sub-family & sepcialization [text field], Band [text field], Contributor type [text field], Purpose [Textarea], Key Account [Textarea], Finanace Technical [Textarea]. Once I submit it should create json with same feild name and value . Key Account and Finanace Technical should be html text with ul>li for each line.",
+      "key_account": "<ul><li>metadata.json</li><li>check_circle</li><li>index.html</li><li>check_circle</li><li>index.tsx</li><li>check_circle</li><li>App.tsx</li><li>check_circle</li><li>components/InputField.tsx</li><li>check_circle</li><li>components/TextareaField.tsx</li><li>check_circle</li><li>components/JsonDisplay.tsx</li></ul>",
+      "finance_technical": "<ul><li>metadata.json</li><li>check_circle</li><li>index.html</li><li>check_circle</li><li>index.tsx</li><li>check_circle</li><li>App.tsx</li><li>check_circle</li><li>components/InputField.tsx</li><li>check_circle</li><li>components/TextareaField.tsx</li><li>check_circle</li><li>components/JsonDisplay.tsx</li></ul>"
+    }
   },
   {
     "row": "1",
