@@ -7,6 +7,7 @@ import { NodeDetailPopup } from "./component/NodeDetailPopup";
 import MainLayout from "./Layout/MainLayout";
 import { Legend } from "./component/Legend";
 import { Button } from "./components/ui/button";
+import "./App.css";
 
 const nodeTypes = {
   textUpdater: HexaNode,
@@ -102,10 +103,11 @@ export default function Option2() {
           band: data[i].Band,
           onClick: handleNodeClick,
           onInfoClick: handleInfoClick,
-          "Job purpose": data[i]["Job purpose"],
-          "Key Accountabilities": data[i]["Key Accountabilities"],
-          "Finance Technical Competencies":
-            data[i]["Finance Technical Competencies"],
+          "sub_family": data[i].contents?.sub_family || 'Empty',
+          "contributor_type": data[i].contents?.contributor_type || 'Empty',
+          "job_purpose": data[i].contents?.job_purpose || 'Empty',
+          "key_account": data[i].contents?.key_account || 'Empty',
+          "finance_technical":data[i].contents?.finance_technical || 'Empty',
         },
         style: {
           opacity:
