@@ -31,10 +31,12 @@ export default function Option2() {
   }, []);
 
   const handleInfoClick = useCallback((nodeData: any) => {
+    console.log(nodeData);
     setSelectedNodeForPopup(nodeData);
   }, []);
 
   const handleBandClick = (band: string) => {
+    console.log(band);
     setSelectedBands((prev) =>
       prev.includes(band) ? prev.filter((b) => b !== band) : [...prev, band]
     );
@@ -67,6 +69,7 @@ export default function Option2() {
         ((Number(data[i].row) + row_length) % 2 === 1 ? 0 : NODE_WIDTH / 2);
       // const xpos = (Number(data[i].col) * NODE_WIDTH) + (Number(data[i].row) % 2 === 1 ? 0 : NODE_WIDTH / 2);
       // console.log("row_length", row_length);
+     
       const node: any = {
         id: `${data[i].row},${data[i].col}`,
         type: "textUpdater",
@@ -82,7 +85,7 @@ export default function Option2() {
           onInfoClick: handleInfoClick,
           "sub_family": data[i].contents?.sub_family || 'Empty',
           "contributor_type": data[i].contents?.contributor_type || 'Empty',
-          "job_purpose": data[i].contents?.job_purpose || 'Empty',
+          "purpose": data[i].contents?.purpose || 'Empty',
           "key_account": data[i].contents?.key_account || 'Empty',
           "finance_technical":data[i].contents?.finance_technical || 'Empty',
         },
