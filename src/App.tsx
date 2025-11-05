@@ -1,13 +1,12 @@
-import { ChevronDown, ChevronUp, MoveUp } from "lucide-react";
+import { MoveUp } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
-import data from "./data.json";
+import "./App.css";
 import { CareerRoadmap } from "./component/CareerRoadmap";
 import { HexaNode } from "./component/HexaNode";
-import { NodeDetailPopup } from "./component/NodeDetailPopup";
-import MainLayout from "./Layout/MainLayout";
 import { Legend } from "./component/Legend";
-import { Button } from "./components/ui/button";
-import "./App.css";
+import { NodeDetailPopup } from "./component/NodeDetailPopup";
+import data from "./data.json";
+import MainLayout from "./Layout/MainLayout";
 
 const nodeTypes = {
   textUpdater: HexaNode,
@@ -48,29 +47,7 @@ export default function Option2() {
   const NODE_HEIGHT = 120;
   useEffect(() => {
     const initialNodes: any[] = [];
-
-    // let ypos = 0;
-    // for (let i = 0; i < data.length; i++) {
-    //   ypos += NODE_HEIGHT - (i === 0 ? 0 : NODE_HEIGHT / 4);
-    //   for (let j = 0; j < data[i].cells.length; j++) {
-    //     let xpos = j * NODE_WIDTH + (i % 2 === 0 ? 0 : NODE_WIDTH / 2);
-    //     const node: any = {
-    //       id: `${i},${j}`,
-    //       type: "textUpdater",
-    //       position: { x: xpos, y: ypos },
-    //       data: {
-    //         id: `${i},${j}`,
-    //         label: data[i].cells[j].Title,
-    //         target: `${i},${j}`,
-    //         group: data[i].cells[j].Band,
-    //         band: data[i].cells[j].BandLevel,
-    //         onClick: handleNodeClick,
-    //       },
-    //     };
-
-    //     initialNodes.push(node);
-    //   }
-    // }
+  
     const MAX_COL_LENGTH = Math.max(...data.map((d) => Number(d.col)));
     // console.log("MAX_COL_LENGTH", MAX_COL_LENGTH);
     for (let i = 0; i < data.length; i++) {
