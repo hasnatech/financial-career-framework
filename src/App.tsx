@@ -1,4 +1,4 @@
-import { MoveUp } from "lucide-react";
+import { LucideEllipsis, LucideSearch, MoveUp } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import "./App.css";
 import { CareerRoadmap } from "./component/CareerRoadmap";
@@ -22,12 +22,14 @@ export default function Option2() {
   const [isLegendOpen, setIsLegendOpen] = useState(true);
   const [showPathway, setShowPathway] = useState(true);
   const [pathWay, setPathWay] = useState<any[]>([]);
+  const [shouldOptionsOpen,setShouldOptionsOpen]=useState<string>("");
+  const [searchValue,setSearchValue]=useState<string>("");
   const handleNodeClick = useCallback((nodeData: any) => {
     setPathWay((prev) => {
       const exists = prev.some((n) => n.id === nodeData.id);
       if (exists) return prev;
       return [...prev, { ...nodeData }];
-    });
+    }); 
   }, []);
 
   const handleInfoClick = useCallback((nodeData: any) => {
@@ -71,6 +73,7 @@ export default function Option2() {
       // console.log("row_length", row_length);
      
       const node: any = {
+        isSearchValueMatch: data[i].Title.toLowerCase().includes(searchValue.toLowerCase()),
         id: `${data[i].row},${data[i].col}`,
         type: "textUpdater",
         position: { x: xpos, y: ypos },
@@ -91,14 +94,22 @@ export default function Option2() {
         },
         style: {
           opacity:
-            selectedBands.length === 0 || selectedBands.includes(data[i].Key) ? 1 : 0.3,
+            selectedBands.length === 0 && searchValue.length===0 || selectedBands.includes(data[i].Key) || searchValue.length>0 && data[i].Title.toLowerCase().includes(searchValue.toLowerCase()) ? 1 : 0.3,
         },
-      };
+        
+      };    
+     
       initialNodes.push(node);
     }
-
+    console.log(selectedBands);    
     setNodes(initialNodes);
-  }, [data, selectedBands]);
+
+  }, [data, selectedBands, searchValue]);
+
+  useEffect(()=>{
+    console.log(nodes);
+  })
+
 
   const shuffleHandler = useCallback(() => {
     setNodes((nodesSnapshot) => {
@@ -117,14 +128,42 @@ export default function Option2() {
     setIsTransposed(!isTransposed);
   }, [isTransposed]);
 
+console.log("Rendering, searchValue:", searchValue);
+
+  const handlePathWayDelete=(requestedNode:any)=>{
+    console.log('node to be deleted : ',requestedNode);
+    console.log(pathWay);
+    const newPathWay:any=pathWay.filter(node=>node.id!=requestedNode.id);
+    setPathWay(newPathWay);
+  }
+
+  const handlePathWayMoveUp=(requestedNode:any,currentIndex:number)=>{
+    console.log('node to be deleted : ',requestedNode);
+    console.log(pathWay);
+    const newPathWay:any=pathWay;
+    newPathWay.splice(currentIndex,1);
+    newPathWay.splice(currentIndex+1,0,requestedNode);
+    setPathWay(newPathWay);
+  }
+
+  const handlePathWayMoveDown=(requestedNode:any,currentIndex:number)=>{
+    console.log('node to be deleted : ',requestedNode);
+    console.log(pathWay);
+    const newPathWay:any=pathWay;
+    newPathWay.splice(currentIndex,1);
+    newPathWay.splice(currentIndex-1,0,requestedNode);
+    setPathWay(newPathWay);
+  }
 
 
   return (
-    <MainLayout>
-      <div className="flex gap-2">
+    
+    <MainLayout searchValue={searchValue} setSearchValue={setSearchValue}>
+      
+      <div className="flex gap-2 ">
         <div className="w-72 border rounded">
           <div className="bg-gray-900 text-white p-3 rounded-t flex justify-between items-center">
-            <h2 className="text-xl font-bold">Legends</h2>
+            <h2 className=  "text-xl font-bold">Legends</h2>
             {/* <Button variant="ghost" size="icon" onClick={() => setIsLegendOpen(!isLegendOpen)} className="text-white hover:bg-gray-700 hover:text-white">
               {isLegendOpen ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
             </Button> */}
@@ -147,27 +186,58 @@ export default function Option2() {
           <CareerRoadmap nodes={nodes} nodeTypes={nodeTypes} fitView />
         </div>
         {pathWay.length > 0 && (
-          <div className="w-80 border rounded space-y-3 overflow-y-auto h-[90vh]">
+          <div className="w-80 border rounded space-y-3 overflow-y-auto h-[90vh] border-red-500">
             <div className="bg-gray-900 text-white p-3 rounded-t flex justify-between items-center">
             <h2 className="text-xl font-bold">My Pathway</h2>
             {/* <Button variant="ghost" size="icon" onClick={() => setIsLegendOpen(!isLegendOpen)} className="text-white hover:bg-gray-700 hover:text-white">
               {isLegendOpen ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
-            </Button> */}
+            </Button> */} 
           </div>
             {pathWay.length > 0 && (
-              <div className="flex flex-col-reverse gap-3 p-3">
+              <div className="flex flex-col-reverse items-center gap-3 p-3">
                 {pathWay.map((node: any, index: number) => (
-                  <div key={index}>
+                  <div className="w-full" key={index}>
                     {index < pathWay.length - 1 && (
-                      <div className="pb-2 flex justify-center items-center">
+                      <div className="pb-2 flex justify-center items-center  w-full">
                         <MoveUp className="w-4 h-4 stroke-slate-400" />
                       </div>
                     )}
                     <div
-                      className="transition-opacity"
+                      className="transition-opacity flex items-start justify-center relative"
                       style={{ opacity: selectedBands.length === 0 || selectedBands.includes(node.band) ? 1 : 0.3 }}
                     >
                       <HexaNode data={node} />
+
+                      <div className='flex flex-col absolute top-0 right-0  '>
+                        <button onClick={()=>{
+                        if(shouldOptionsOpen===node.label){
+                          setShouldOptionsOpen('')
+                        } 
+                        else{ 
+                          setShouldOptionsOpen(node.label);
+                        }
+                      }} className="flex items-center justify-center hover:opacity-0.3 duration-500">
+                        <LucideEllipsis className="fill-gray-500 stroke-gray-[#334155] h-5"></LucideEllipsis>
+                      </button>
+                      {shouldOptionsOpen===node.label
+                      &&
+                      <div className="bg-white border-2 flex flex-col items-center h-20 w-full p-2">
+                        <button onClick={()=>{
+                          handlePathWayDelete(node);
+                          setShouldOptionsOpen('');
+                        }} className="text-xs font-medium">Delete</button>
+                        {index!=pathWay.length-1 && <button onClick={()=>{
+                          handlePathWayMoveUp(node,index);
+                          setShouldOptionsOpen('');
+                        }} className="text-xs font-medium">Move Up</button>}
+                        {index!=0 && <button onClick={()=>{
+                          handlePathWayMoveDown(node,index);
+                          setShouldOptionsOpen('');
+                        }}  className="text-xs font-medium">Move Down</button>}
+                      </div>
+                      }
+                      </div>
+                      
                     </div>
                   </div>
                 ))}
@@ -176,10 +246,14 @@ export default function Option2() {
           </div>
         )}
       </div>
-      <NodeDetailPopup
+
+      <NodeDetailPopup  
         nodeData={selectedNodeForPopup}
         onClose={() => setSelectedNodeForPopup(null)}
+        nodes={nodes}
       />
+      
+      
     </MainLayout>
   );
 }

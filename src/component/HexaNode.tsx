@@ -27,11 +27,11 @@ export function HexaNode(props: any) {
       title={props.data.label}
       className={`group relative flex items-center justify-center transition-opacity
         hover:scale-[200%] hover:z-[100] transition-transform duration-300
-        ${bandClass(props)}`}
+        ${bandClass(props)} `}
     >
       <div
         className={`relative text-center text-sm h-24 w-28 
-  flex items-center justify-center 
+  flex items-center justify-center z
           `}
       >
         <div
