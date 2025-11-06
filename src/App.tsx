@@ -79,11 +79,11 @@ export default function Option2() {
           // label: data[i].row + ", " + data[i].col + ", " + row_length + ", " + data[i].Title,
           label: data[i].Title,
           target: `${data[i].row},${data[i].col}`,
-          group: data[i].Band,
-          band: data[i].Band,
+          group: data[i].Key,
           onClick: handleNodeClick,
           onInfoClick: handleInfoClick,
           "sub_family": data[i].contents?.sub_family || 'Empty',
+          "band": data[i].contents?.band || 'Empty',
           "contributor_type": data[i].contents?.contributor_type || 'Empty',
           "purpose": data[i].contents?.purpose || 'Empty',
           "key_account": data[i].contents?.key_account || 'Empty',
@@ -91,7 +91,7 @@ export default function Option2() {
         },
         style: {
           opacity:
-            selectedBands.length === 0 || selectedBands.includes(data[i].Band) ? 1 : 0.3,
+            selectedBands.length === 0 || selectedBands.includes(data[i].Key) ? 1 : 0.3,
         },
       };
       initialNodes.push(node);

@@ -22,7 +22,6 @@ export function HexaNode(props: any) {
       .toLowerCase()}.svg`;
     return `${import.meta.env.BASE_URL}images/${fileName}`;
   };
-
   return (
     <div
       title={props.data.label}
@@ -44,7 +43,7 @@ export function HexaNode(props: any) {
           }}
         >
           <img
-            src={getImage(props.data.band)}
+            src={getImage(props.data.group)}
             alt="hexagon"
             className="absolute top-0 left-0 h-28 w-32"
           />
