@@ -12,7 +12,7 @@ const SearchBar=({ searchValue, setSearchValue }: SearchBarProps)=>{
   const inputRef=useRef(null);
 
  return (
- <div className="flex items-center gap-2 p-3 shadow-sm rounded-lg  mx-auto min-w-96 bg-white">
+ <div className="flex items-center gap-2 px-3 py-2 shadow-sm rounded-lg border  min-w-96 bg-white">
         <input ref={inputRef}
         value={searchValue}
         onChange={(event=>{
