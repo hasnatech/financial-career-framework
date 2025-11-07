@@ -1,5 +1,6 @@
 import { X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { getBandBackgroundColor} from "./Constant";
 
 interface NodeData {
   label?: string;
@@ -17,6 +18,8 @@ interface NodeDetailPopupProps {
   onClose: () => void;
 }
 
+
+
 export function NodeDetailPopup({ nodeData, onClose, nodes }: NodeDetailPopupProps) {
   if (!nodeData) return null;
 
@@ -30,6 +33,12 @@ export function NodeDetailPopup({ nodeData, onClose, nodes }: NodeDetailPopupPro
       document.body.style.overflow = "auto";
     };
   }, []);
+
+  useEffect(()=>{
+  console.log(nodeData);
+  console.log(nodes);
+  console.log(currentNodeData);
+})
 
   useEffect(() => {
     const index = nodes.findIndex((node) => node.data.label === currentNodeData.label);
@@ -65,8 +74,8 @@ export function NodeDetailPopup({ nodeData, onClose, nodes }: NodeDetailPopupPro
   if (currentNodeData && indexMap) {
     return (
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-10">
-        <div className="bg-white rounded-lg shadow-xl p-6 w-full m-6 max-h-full max-w-full overflow-y-auto pb-0">
-          <div className="flex justify-between items-center border-b pb-3 mb-4">
+        <div className="bg-white rounded-lg   w-full m-6 max-h-full max-w-full overflow-y-auto p-0">
+          <div className={`${getBandBackgroundColor(currentNodeData.group) as keyof typeof getBandBackgroundColor} sticky top-0 rounded-lg p-2  flex justify-between items-center border-b pb-3 mb-4 border-2`}>
             <h2 className="text-2xl font-bold">{currentNodeData.label}</h2>
             <button
               onClick={() => {

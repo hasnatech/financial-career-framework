@@ -12,7 +12,7 @@ const SearchBar=({ searchValue, setSearchValue }: SearchBarProps)=>{
   const inputRef=useRef(null);
 
  return (
- <div className="flex items-center gap-2 p-3 shadow-sm rounded-lg w-full bg-white">
+ <div className="flex items-center gap-2 p-3 shadow-sm rounded-lg  mx-auto min-w-96 bg-white">
         <input ref={inputRef}
         value={searchValue}
         onChange={(event=>{
@@ -30,13 +30,13 @@ const SearchBar=({ searchValue, setSearchValue }: SearchBarProps)=>{
                 setSearchValue(inputRef.current.value);
               }
             }} className="h-5 flex items-center justify-center hover:opacity-30 duration-500">
-            <LucideSearch className="stroke-gray-500"></LucideSearch>
+            <LucideSearch className="stroke-gray-500 h-4"></LucideSearch>
             </button>
             {searchValue &&
             <button onClick={()=>{
             setSearchValue('');
             }} className="h-5 flex items-center justify-center hover:opacity-30 duration-500">
-            <LucideX className="stroke-gray-500"></LucideX>
+            <LucideX className="stroke-gray-500 h-4"></LucideX>
             </button>
             }
         </div>

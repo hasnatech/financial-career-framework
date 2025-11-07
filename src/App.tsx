@@ -1,4 +1,4 @@
-import { LucideEllipsis, LucideSearch, MoveUp } from "lucide-react";
+import { LucideAArrowDown, LucideArrowDown, LucideArrowUp, LucideEllipsis, LucideSearch, LucideTrash, MoveUp } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import "./App.css";
 import { CareerRoadmap } from "./component/CareerRoadmap";
@@ -49,6 +49,11 @@ export default function Option2() {
   };
   const NODE_WIDTH = 110;
   const NODE_HEIGHT = 120;
+
+  useEffect(() => {
+      console.log('selected node',selectedNodeForPopup);
+  });
+
   useEffect(() => {
     const initialNodes: any[] = [];
   
@@ -140,7 +145,7 @@ console.log("Rendering, searchValue:", searchValue);
   const handlePathWayMoveUp=(requestedNode:any,currentIndex:number)=>{
     console.log('node to be deleted : ',requestedNode);
     console.log(pathWay);
-    const newPathWay:any=pathWay;
+    const newPathWay:any=[...pathWay];
     newPathWay.splice(currentIndex,1);
     newPathWay.splice(currentIndex+1,0,requestedNode);
     setPathWay(newPathWay);
@@ -148,11 +153,13 @@ console.log("Rendering, searchValue:", searchValue);
 
   const handlePathWayMoveDown=(requestedNode:any,currentIndex:number)=>{
     console.log('node to be deleted : ',requestedNode);
+    console.log('current index: ',currentIndex);
     console.log(pathWay);
-    const newPathWay:any=pathWay;
-    newPathWay.splice(currentIndex,1);
+    const newPathWay:any=[...pathWay];
+    newPathWay.splice(currentIndex,1);  
     newPathWay.splice(currentIndex-1,0,requestedNode);
     setPathWay(newPathWay);
+    console.log('new PathWay is : ',newPathWay);
   }
 
 
@@ -162,7 +169,7 @@ console.log("Rendering, searchValue:", searchValue);
       
       <div className="flex gap-2 ">
         <div className="w-72 border rounded">
-          <div className="bg-gray-900 text-white p-3 rounded-t flex justify-between items-center">
+          <div className="bg-[#03441F] text-white p-3 rounded-t flex justify-between items-center">
             <h2 className=  "text-xl font-bold">Legends</h2>
             {/* <Button variant="ghost" size="icon" onClick={() => setIsLegendOpen(!isLegendOpen)} className="text-white hover:bg-gray-700 hover:text-white">
               {isLegendOpen ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
@@ -186,7 +193,7 @@ console.log("Rendering, searchValue:", searchValue);
           <CareerRoadmap nodes={nodes} nodeTypes={nodeTypes} fitView />
         </div>
         {pathWay.length > 0 && (
-          <div className="w-80 border rounded space-y-3 overflow-y-auto h-[90vh] border-red-500">
+          <div className="w-80 border rounded space-y-3 overflow-y-auto h-[90vh]">
             <div className="bg-gray-900 text-white p-3 rounded-t flex justify-between items-center">
             <h2 className="text-xl font-bold">My Pathway</h2>
             {/* <Button variant="ghost" size="icon" onClick={() => setIsLegendOpen(!isLegendOpen)} className="text-white hover:bg-gray-700 hover:text-white">
@@ -194,7 +201,7 @@ console.log("Rendering, searchValue:", searchValue);
             </Button> */} 
           </div>
             {pathWay.length > 0 && (
-              <div className="flex flex-col-reverse items-center gap-3 p-3">
+              <div className="flex flex-col-reverse items-center  gap-3 p-3">
                 {pathWay.map((node: any, index: number) => (
                   <div className="w-full" key={index}>
                     {index < pathWay.length - 1 && (
@@ -203,39 +210,37 @@ console.log("Rendering, searchValue:", searchValue);
                       </div>
                     )}
                     <div
-                      className="transition-opacity flex items-start justify-center relative"
+                      className="transition-opacity flex  gap-x-3 justify-center relative"
                       style={{ opacity: selectedBands.length === 0 || selectedBands.includes(node.band) ? 1 : 0.3 }}
                     >
-                      <HexaNode data={node} />
+                      <HexaNode data={node} index={index} pathWay={pathWay} handlePathWayMoveUp={handlePathWayMoveUp} handlePathWayMoveDown={handlePathWayMoveDown} handlePathWayDelete={handlePathWayDelete}/>
 
-                      <div className='flex flex-col absolute top-0 right-0  '>
+                      <div className='absolute top-0 right-0 flex justify-around w-fit gap-x-1 items-center p-2 border border-slate-400 rounded-sm '>
+                        
+                      
+                       {
+                        index!=pathWay.length-1 &&
                         <button onClick={()=>{
-                        if(shouldOptionsOpen===node.label){
-                          setShouldOptionsOpen('')
-                        } 
-                        else{ 
-                          setShouldOptionsOpen(node.label);
-                        }
-                      }} className="flex items-center justify-center hover:opacity-0.3 duration-500">
-                        <LucideEllipsis className="fill-gray-500 stroke-gray-[#334155] h-5"></LucideEllipsis>
-                      </button>
-                      {shouldOptionsOpen===node.label
-                      &&
-                      <div className="bg-white border-2 flex flex-col items-center h-20 w-full p-2">
-                        <button onClick={()=>{
-                          handlePathWayDelete(node);
-                          setShouldOptionsOpen('');
-                        }} className="text-xs font-medium">Delete</button>
-                        {index!=pathWay.length-1 && <button onClick={()=>{
-                          handlePathWayMoveUp(node,index);
-                          setShouldOptionsOpen('');
-                        }} className="text-xs font-medium">Move Up</button>}
-                        {index!=0 && <button onClick={()=>{
-                          handlePathWayMoveDown(node,index);
-                          setShouldOptionsOpen('');
-                        }}  className="text-xs font-medium">Move Down</button>}
-                      </div>
+                        handlePathWayMoveUp(node,index);
+                        }} className="flex items-center justify-center hover:opacity-0.3 duration-500">
+                        <LucideArrowUp className="stroke-slate-400 h-4 w-4"/>
+                        </button>
                       }
+
+                      {
+                      index!=0 &&
+                      <button onClick={()=>{
+                      handlePathWayMoveDown(node,index);
+                      }} className="flex items-center justify-center hover:opacity-0.3 duration-500">
+                      <LucideArrowDown className="stroke-slate-400 h-4 w-4"/>
+                      </button>
+                      }
+
+                      <button onClick={()=>{
+                        handlePathWayDelete(node);
+                      }} className="flex items-center justify-center hover:opacity-0.3 duration-500">
+                        <LucideTrash className="stroke-slate-400 h-4 w-4"/>
+                      </button>
                       </div>
                       
                     </div>
