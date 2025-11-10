@@ -35,7 +35,7 @@ const Controls = ({ onZoomIn, onZoomOut, onFitView }: any) => {
 };
 
 export const CareerRoadmap = ({ nodes, nodeTypes, 
-  onNodesChange, onEdgesChange, onConnect, fitView, nodesDraggable, nodesConnectable,onSearchChange }) => {
+  onNodesChange, onEdgesChange, onConnect, fitView, nodesDraggable, nodesConnectable }) => {
   const [transform, setTransform] = useState({ x: 0, y: 0, k: 1 });
 
   const handleWheel = (event) => {

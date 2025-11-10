@@ -74,5 +74,8 @@ body{
   overflow: hidden;
 }
 
+.hide-scrollbar::-webkit-scrollbar{
+  display: none;
+}
 
 

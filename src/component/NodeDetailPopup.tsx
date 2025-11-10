@@ -18,17 +18,18 @@ interface NodeData {
 interface NodeDetailPopupProps {
   nodeData: NodeData | null;
   nodes: any[];
-  searchValue: any;
-  setSearchValue: any;
+  onSearchChange:(value:string)=>void;
   onClose: () => void;
+  setSelectedNodeForPopup:(value:any)=>void // ✅ now optional to prevent undefined errors
+
 }
 
 export function NodeDetailPopup({
   nodeData,
-  searchValue,
-  setSearchValue,
+  onSearchChange,
   onClose,
   nodes,
+  setSelectedNodeForPopup
 }: NodeDetailPopupProps) {
   if (!nodeData) return null;
 
@@ -46,10 +47,11 @@ export function NodeDetailPopup({
   }, []);
 
   useEffect(() => {
-    console.log(nodeData);
-    console.log(nodes);
-    console.log(currentNodeData);
-  });
+  setCurrentNodeData(nodeData);
+}, [nodeData]);
+
+
+
 
   useEffect(() => {
     const index = nodes.findIndex(
@@ -89,7 +91,7 @@ export function NodeDetailPopup({
     return (
       <div className="fixed inset-0 bg-black  bg-opacity-50 flex items-center justify-center z-50 p-5">
         <div
-          className={`${bgColor} bg-white rounded-lg  border w-full m-6 max-h-full max-w-full overflow-y-auto p-0 z-50`}
+          className={`${bgColor} bg-white rounded-lg  border w-full m-6 max-h-full max-w-full h-full overflow-y-auto p-0 z-50`}
         >
           <div
             className={`${bgColor} sticky top-0 rounded-t-lg p-2 pl-5  flex justify-between items-center pb-3 mb-2`}
@@ -97,10 +99,11 @@ export function NodeDetailPopup({
             <h2 className="text-2xl font-bold">{currentNodeData.label}</h2>
             <div className="flex gap-x-2">
               <SearchBar
-                searchValue={searchValue}
-                setSearchValue={setSearchValue}
+                onSearchChange={onSearchChange}
                 isNodeDetailPopupOpen={true}
                 onClose={onClose}
+                data={nodes}
+                setSelectedNodeForPopup={setSelectedNodeForPopup}
               ></SearchBar>
               <button
                 onClick={() => {
@@ -113,7 +116,7 @@ export function NodeDetailPopup({
               </button>
             </div>
           </div>
-          <div className="space-y-2 p-0 pb-0">
+          <div className="space-y-2 p-0 pb-0 h-full">
             <div className="flex gap-2 px-2">
               <div
                 className={`${bgColor} border rounded px-3 py-2 min-w-[180px]`}
@@ -183,7 +186,7 @@ export function NodeDetailPopup({
               </div>
             </div>
           </div>
-          <div className="w-full justify-end flex items-center gap-x-4 p-2 bg-white sticky bottom-0 bg-slate-200">
+          <div className=" flex justify-end gap-x-4 p-2 bg-white sticky bottom-0 right-0 bg-slate-200">
             <Button
               className=""
               disabled={currentNodeIndex === 0}
@@ -204,7 +207,7 @@ export function NodeDetailPopup({
               Next{" "}
               <LucideArrowRight className="h-4 stroke-white "></LucideArrowRight>
             </Button>
-          </div>
+          </div>  
         </div>
       </div>
     );
