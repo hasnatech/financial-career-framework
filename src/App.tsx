@@ -7,6 +7,8 @@ import { Legend } from "./component/Legend";
 import { NodeDetailPopup } from "./component/NodeDetailPopup";
 import data from "./data.json";
 import MainLayout from "./Layout/MainLayout";
+import { Button } from "./components/ui/button";
+import SearchBar from "./component/SearchBar";
 
 const nodeTypes = {
   textUpdater: HexaNode,
@@ -167,38 +169,54 @@ console.log("Rendering, searchValue:", searchValue);
     
     <MainLayout searchValue={searchValue} setSearchValue={setSearchValue}>
       
-      <div className="flex gap-2 ">
+      <div className="flex  gap-2 ">
         <div className="w-72 border rounded">
-          <div className="bg-[#03441F] text-white p-3 rounded-t flex justify-between items-center">
+          <div className="bg-softGreen text-white p-3 rounded-t flex justify-between items-center">
             <h2 className=  "text-xl font-bold">Legends</h2>
-            {/* <Button variant="ghost" size="icon" onClick={() => setIsLegendOpen(!isLegendOpen)} className="text-white hover:bg-gray-700 hover:text-white">
+            {/* <Button  ton variant="ghost" size="icon" onClick={() => setIsLegendOpen(!isLegendOpen)} className="text-white hover:bg-gray-700 hover:text-white">
               {isLegendOpen ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
             </Button> */}
           </div>
           {isLegendOpen && (
-            <div className="p-2 space-y-3">
+            <div className=" p-2 space-y-3 relative h-full">
               <Legend
                 selectedBands={selectedBands}
                 onBandClick={handleBandClick}
                 onClear={handleClearBands}
               />
+              {selectedBands.length>0 && <Button onClick={handleClearBands} variant="outline" size="sm" className="absolute bottom-[3.4rem] left-0 right-0 ">Clear</Button>}
             </div>
           )}
         </div>
+        <div className="relative p-5   flex flex-col w-full min-h-screen items-center gap-y-10">
+          <nav className="flex w-full justify-center items-center  ">
+           <p className="">
+            <a href="/" className="font-bold text-2xl">
+                Career Framework
+              </a>
+          </p>
 
+          <div>
+        <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} isNodeDetailPopupOpen={false}></SearchBar>
+          </div>
+          </nav>
+         
         <div
-          className="bg-slate-50 rounded-lg flex-1"
+          className="bg-slate-50 rounded-lg flex-1 border-4"
           style={{ width: "100%", height: "90vh" }}
         >
-          <CareerRoadmap nodes={nodes} nodeTypes={nodeTypes} fitView />
+          <CareerRoadmap nodes={nodes} nodeTypes={nodeTypes} searchValue={searchValue} setSearchValue={setSearchValue} fitView  />
         </div>
+        </div>
+
+        
         {pathWay.length > 0 && (
-          <div className="w-80 border rounded space-y-3 overflow-y-auto h-[90vh]">
-            <div className="bg-gray-900 text-white p-3 rounded-t flex justify-between items-center">
+          <div className="w-96 border rounded space-y-3 overflow-y-auto h-[90vh]">
+            <div className="bg-softGreen text-white p-3 rounded-t flex justify-between items-center">
             <h2 className="text-xl font-bold">My Pathway</h2>
             {/* <Button variant="ghost" size="icon" onClick={() => setIsLegendOpen(!isLegendOpen)} className="text-white hover:bg-gray-700 hover:text-white">
               {isLegendOpen ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
-            </Button> */} 
+            </Button> */}   
           </div>
             {pathWay.length > 0 && (
               <div className="flex flex-col-reverse items-center  gap-3 p-3">
@@ -214,35 +232,6 @@ console.log("Rendering, searchValue:", searchValue);
                       style={{ opacity: selectedBands.length === 0 || selectedBands.includes(node.band) ? 1 : 0.3 }}
                     >
                       <HexaNode data={node} index={index} pathWay={pathWay} handlePathWayMoveUp={handlePathWayMoveUp} handlePathWayMoveDown={handlePathWayMoveDown} handlePathWayDelete={handlePathWayDelete}/>
-
-                      <div className='absolute top-0 right-0 flex justify-around w-fit gap-x-1 items-center p-2 border border-slate-400 rounded-sm '>
-                        
-                      
-                       {
-                        index!=pathWay.length-1 &&
-                        <button onClick={()=>{
-                        handlePathWayMoveUp(node,index);
-                        }} className="flex items-center justify-center hover:opacity-0.3 duration-500">
-                        <LucideArrowUp className="stroke-slate-400 h-4 w-4"/>
-                        </button>
-                      }
-
-                      {
-                      index!=0 &&
-                      <button onClick={()=>{
-                      handlePathWayMoveDown(node,index);
-                      }} className="flex items-center justify-center hover:opacity-0.3 duration-500">
-                      <LucideArrowDown className="stroke-slate-400 h-4 w-4"/>
-                      </button>
-                      }
-
-                      <button onClick={()=>{
-                        handlePathWayDelete(node);
-                      }} className="flex items-center justify-center hover:opacity-0.3 duration-500">
-                        <LucideTrash className="stroke-slate-400 h-4 w-4"/>
-                      </button>
-                      </div>
-                      
                     </div>
                   </div>
                 ))}
@@ -254,8 +243,10 @@ console.log("Rendering, searchValue:", searchValue);
 
       <NodeDetailPopup  
         nodeData={selectedNodeForPopup}
+        searchValue={searchValue} setSearchValue={setSearchValue}
         onClose={() => setSelectedNodeForPopup(null)}
         nodes={nodes}
+        
       />
       
       

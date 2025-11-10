@@ -16,17 +16,17 @@ export const bandClass = (props: any) => {
 
 export const getBandBackgroundColor=(band:any)=>{
   const backgroundColor:{[key:string]:string}={
-    "Accounts Payable / Accounts Receivable": "bg-[#E0B622]",
-    "Corporate Audit": "bg-[#ABAC1C]",
-    "Enterprise Finance": "bg-[#86A84B]",
-    "Financial Accounting": "bg-[#5CB2A5]",
-    "Insurance": "bg-[#057A85]",
-    "Internal Control": "bg-[#056389]",
-    "Managerial Accounting": "bg-[#C10505]",
-    "Tax": "bg-[#C00000]",
-    "Trade Compliance": "bg-[#7132A0]",
-    "Treasury": "bg-[#D4D444]"
+    "Accounts Payable / Accounts Receivable": "bg-[#fff1c5]",
+    "Corporate Audit": "bg-[#f6f7c8]",
+    "Enterprise Finance": "bg-[#e3f4c5]",
+    "Financial Accounting": "bg-[#ccf1ec]",
+    "Insurance": "bg-[#ffff9e]  ",
+    "Internal Control": "bg-[#b3f8ff]",
+    "Managerial Accounting": "bg-[#b4e9ff]",
+    "Tax": "bg-[#efc1c1]",
+    "Trade Compliance": "bg-[#e49393]",
+    "Treasury": "bg-[#c8b0da]"
   }
 
-  return backgroundColor[band];
+  return backgroundColor[band] || 'bg-white'
 }

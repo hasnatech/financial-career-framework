@@ -1,4 +1,4 @@
-import { Info, LucideEllipsis } from "lucide-react";
+import { Info, LucideArrowDown, LucideArrowUp, LucideEllipsis, LucideTrash } from "lucide-react";
 import { bandClass } from "./Constant";
 import { useEffect, useState } from "react";
 
@@ -31,14 +31,38 @@ export function HexaNode(props: any) {
   return (
 
 
-    <div onMouseLeave={()=>{
-      //setShouldOptionsOpen("")
-    }}
+    <div 
       title={props.data.label}
-      className={`group relative flex items-center justify-center transition-opacity
-        hover:scale-[200%] hover:z-[100] transition-transform duration-300
+      className={`group relative w-full flex gap-x-4 items-center justify-center transition-opacity
+         ${props.pathWay ? '' :  'hover:scale-[200%]'} hover:z-40 transition-transform duration-300
         ${bandClass(props)} `}
     >
+
+    {props.pathWay && 
+    <div className="opacity-0 group-hover:opacity-100 flex absolute top-0 right-0 justify-around w-fit gap-x-1 items-center p-2 border border-slate-400 rounded-sm">
+      
+      {props.index!=props.pathWay.length-1 && <button onClick={()=>{
+        props.handlePathWayMoveUp(props.data,props.index);
+      }} className="flex items-center justify-center hover:opacity-30 duration-500">
+        <LucideArrowUp className="stroke-slate-400 h-4 w-4" />
+      </button>
+        }
+
+      {props.index!=0 && <button onClick={()=>{
+        props.handlePathWayMoveDown(props.data,props.index);
+      }}  className="flex items-center justify-center hover:opacity-30 duration-500">
+        <LucideArrowDown className="stroke-slate-400 h-4 w-4" />
+      </button>
+      }
+
+      <button onClick={()=>{  
+        props.handlePathWayDelete(props.data);
+      }} className="flex items-center justify-center hover:opacity-30 duration-500">
+        <LucideTrash className="stroke-slate-400 h-4 w-4" />
+      </button>
+    </div>
+    }
+
       
 
      
@@ -64,9 +88,8 @@ export function HexaNode(props: any) {
           <span
             className={`z-10 px-2 text-black text-center sm:text-sm font-medium
             overflow-hidden leading-[1.2] w-[85%] line-clamp-3
-            transition-all duration-200 group-hover:leading-[1.1] 
-            group-hover:line-clamp-none
-            group-hover:text-[0.7rem] cursor-pointer
+            transition-all duration-200 cursor-pointer
+            ${props.pathWay ? '' : 'group-hover:line-clamp-none group-hover:text-[0.7rem] group-hover:leading-[1.1]  '}
              `}
             // ${
             //   zoomLevel === "small"
@@ -83,14 +106,8 @@ export function HexaNode(props: any) {
           >
             {props.data.label}
           </span>
-        </div>
-      </div>
-
-      {/* Info icon */}
-      <div
-        className="z-15 absolute right-2 bottom-2 opacity-0 group-hover:opacity-100 
-        transition-opacity duration-200 cursor-pointer bg-white rounded-full bg-white
-         "
+          <div
+        className='z-15 absolute right-2 bottom-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-pointer bg-white rounded-full bg-white'
         onClick={(e) => {
           e.stopPropagation(); // prevent ReactFlow canvas from handling the click
           props.data.onInfoClick?.(props.data);
@@ -98,6 +115,11 @@ export function HexaNode(props: any) {
       >
         <Info className="w-4 h-4 stroke-slate-600" />
       </div>
+        </div>
+      </div>
+
+      {/* Info icon */}
+      
     </div>
   );  
 }

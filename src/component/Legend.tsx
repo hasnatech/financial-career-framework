@@ -4,7 +4,7 @@ import { legendData } from "./legendData";
 interface LegendProps {
   selectedBands: string[];
   onBandClick: (band: string) => void;
-  onClear: () => void;
+  onClear: () => void;  
 }
 
 export function Legend({ selectedBands, onBandClick, onClear }: LegendProps) {
@@ -17,8 +17,8 @@ export function Legend({ selectedBands, onBandClick, onClear }: LegendProps) {
   };
 
   return (
-    <div className="flex flex-col gap-y-4">
-      <div className="flex flex-col flex-wrap gap-x-4 gap-y-4">
+    <div className="flex flex-col gap-y-4 ">
+      <div className="flex flex-col flex-wrap gap-x-4 gap-y-4 ">
         {legendData.map(({ band }) => {
           const isSelected = selectedBands.includes(band);
           const hasSelection = selectedBands.length > 0;
@@ -29,13 +29,13 @@ export function Legend({ selectedBands, onBandClick, onClear }: LegendProps) {
               style={{ opacity: hasSelection && !isSelected ? 0.3 : 1 }}
               onClick={() => onBandClick(band)}
             >
-              <img src={getImage(band)} alt={band} className="h-8 w-8" />
+              <img src  ={getImage(band)} alt={band} className="h-8 w-8" />
               <span className="font-medium text-sm ">{band}</span>
             </div>
           );
         })}
       </div>
-      <Button onClick={onClear} variant="outline" size="sm" className="self-start">Clear</Button>
+      
     </div>
   );
 }

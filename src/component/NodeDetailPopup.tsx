@@ -1,6 +1,7 @@
-import { X } from "lucide-react";
+import { LucideArrowLeft, LucideArrowRight, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { getBandBackgroundColor} from "./Constant";
+import SearchBar from "./SearchBar";
 
 interface NodeData {
   label?: string;
@@ -10,17 +11,20 @@ interface NodeData {
   purpose?: string;
   key_account?: string;
   finance_technical?: string;
+  group?:string;
 }
 
 interface NodeDetailPopupProps {
   nodeData: NodeData | null;
   nodes: any[];
+  searchValue:any;
+  setSearchValue:any;
   onClose: () => void;
 }
 
 
 
-export function NodeDetailPopup({ nodeData, onClose, nodes }: NodeDetailPopupProps) {
+export function NodeDetailPopup({ nodeData, searchValue, setSearchValue, onClose, nodes }: NodeDetailPopupProps) {
   if (!nodeData) return null;
 
   const [currentNodeData, setCurrentNodeData] = useState<NodeData>(nodeData);
@@ -73,10 +77,12 @@ export function NodeDetailPopup({ nodeData, onClose, nodes }: NodeDetailPopupPro
 
   if (currentNodeData && indexMap) {
     return (
-      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-10">
-        <div className="bg-white rounded-lg   w-full m-6 max-h-full max-w-full overflow-y-auto p-0">
-          <div className={`${getBandBackgroundColor(currentNodeData.group) as keyof typeof getBandBackgroundColor} sticky top-0 rounded-lg p-2  flex justify-between items-center border-b pb-3 mb-4 border-2`}>
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-5">
+        <div className="bg-white rounded-lg   w-full m-6 max-h-full max-w-full overflow-y-auto p-0 z-50">
+          <div className={`${getBandBackgroundColor(currentNodeData.group) as keyof typeof getBandBackgroundColor} sticky top-0 rounded-lg p-2 pl-5  flex justify-between items-center border-b pb-3 mb-4 border-2`}>
             <h2 className="text-2xl font-bold">{currentNodeData.label}</h2>
+            <div className="flex gap-x-2" >
+            <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} isNodeDetailPopupOpen={true} onClose={onClose}   ></SearchBar>
             <button
               onClick={() => {
                 setCurrentNodeData({} as NodeData);
@@ -86,8 +92,10 @@ export function NodeDetailPopup({ nodeData, onClose, nodes }: NodeDetailPopupPro
             >
               <X className="w-6 h-6" />
             </button>
+            </div>
+            
           </div>
-          <div className="space-y-3">
+          <div className="space-y-3 p-5">
             <div className="flex gap-3">
               <div className="bg-slate-200 rounded px-3 py-2 min-w-[180px]">
                 <h3 className="font-bold text-lg mb-2 whitespace-nowrap">Sub Family</h3>
@@ -136,19 +144,19 @@ export function NodeDetailPopup({ nodeData, onClose, nodes }: NodeDetailPopupPro
             </div>
           </div>
           <div className="w-full justify-center flex items-center gap-x-4 p-5 bg-white sticky bottom-0">
-            <button className="disabled:text-gray-500" disabled={currentNodeIndex===0}
+            <button className="flex items-center justify-center disabled:text-gray-500 hover:bg-gray-50 duration-500 cursor-pointer h-6 w-6 rounded-full " disabled={currentNodeIndex===0}
               onClick={() => {
                 handleSlide(true, false);
               }}
             >
-              Previous
+             <LucideArrowLeft className="h-4 stroke-slate-600 "></LucideArrowLeft>
             </button>
-            <button className="disabled:text-gray-500" disabled={currentNodeIndex===nodes.length-1}
+            <button className="disabled:text-gray-500 flex items-center justify-center hover:bg-gray-50 duration-500 cursor-pointer h-6 w-6 rounded-full " disabled={currentNodeIndex===nodes.length-1}
               onClick={() => {
                 handleSlide(false, true);
               }}
             >
-              Next
+              <LucideArrowRight className="h-4 stroke-slate-600 "></LucideArrowRight>
             </button>
           </div>
         </div>

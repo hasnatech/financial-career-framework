@@ -1,6 +1,7 @@
 import { Fullscreen, Minus, Plus } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { TextUpdaterNode } from './TextUpdaterNode';
+import SearchBar from './SearchBar';
 
 const Background = ({ color, gap }: { color: string; gap: number }) => {
   const backgroundStyle = {
@@ -34,7 +35,7 @@ const Controls = ({ onZoomIn, onZoomOut, onFitView }: any) => {
 };
 
 export const CareerRoadmap = ({ nodes, nodeTypes, 
-  onNodesChange, onEdgesChange, onConnect, fitView, nodesDraggable, nodesConnectable }) => {
+  onNodesChange, onEdgesChange, onConnect, fitView, nodesDraggable, nodesConnectable,searchValue,setSearchValue }) => {
   const [transform, setTransform] = useState({ x: 0, y: 0, k: 1 });
 
   const handleWheel = (event) => {
@@ -120,6 +121,9 @@ export const CareerRoadmap = ({ nodes, nodeTypes,
       onWheel={handleWheel}
       onMouseDown={handleMouseDown}
     >
+      <div className='absolute -top-1 right-10 z-20'>
+      <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} isNodeDetailPopupOpen={false}></SearchBar>
+      </div>
       <Background color="#e6e5e5ff" gap={16} />
       <div style={{ transform: `translate(${transform.x}px, ${transform.y}px) scale(${transform.k})`, transformOrigin: '0 0' }}>
         {nodes.map(node => {
