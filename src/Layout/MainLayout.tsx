@@ -1,7 +1,5 @@
 // import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import { LucideSearch } from "lucide-react";
-import SearchBar from "../component/SearchBar";
 
 
 

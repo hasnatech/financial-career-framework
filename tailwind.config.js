@@ -52,6 +52,9 @@ export default {
         },
         softGreen: {
           DEFAULT: "hsl(var(--soft-green))"
+        },
+        whiteGreen:{
+          DEFAULT: "hsl(var(--white-green))"
         }
       },
     },

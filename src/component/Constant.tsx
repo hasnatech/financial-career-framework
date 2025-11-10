@@ -14,18 +14,29 @@ export const bandClass = (props: any) => {
   return pastelDark[props.data.band] || "border-gray-500";
 };
 
+// {fill:"FFF1C5", stroke:"E0B622"},
+// {fill:"F6F7C8", stroke:"ABAC1C"},
+// {fill:"E3F4C5", stroke:"86A84B"},
+// {fill:"CCF1EC", stroke:"5CB2A5"},
+// {fill:"B3F8FF", stroke:"057A85"},
+// {fill:"B4E9FF", stroke:"056389"},
+// {fill:"EFC1C1", stroke:"C10505"},
+// {fill:"E49393", stroke:"C00000"},
+// {fill:"C8B0DA", stroke:"7132A0"},
+// {fill:"FFFF9E", stroke:"D4D444"}
+
 export const getBandBackgroundColor=(band:any)=>{
   const backgroundColor:{[key:string]:string}={
-    "Accounts Payable / Accounts Receivable": "bg-[#fff1c5]",
-    "Corporate Audit": "bg-[#f6f7c8]",
-    "Enterprise Finance": "bg-[#e3f4c5]",
-    "Financial Accounting": "bg-[#ccf1ec]",
-    "Insurance": "bg-[#ffff9e]  ",
-    "Internal Control": "bg-[#b3f8ff]",
-    "Managerial Accounting": "bg-[#b4e9ff]",
-    "Tax": "bg-[#efc1c1]",
-    "Trade Compliance": "bg-[#e49393]",
-    "Treasury": "bg-[#c8b0da]"
+    "Accounts Payable / Accounts Receivable": "bg-[#FFF1C5] border-[#E0B622]",
+    "Corporate Audit": "bg-[#F6F7C8] border-[#ABAC1C]",
+    "Enterprise Finance": "bg-[#E3F4C5] border-[#86A84B]",
+    "Financial Accounting": "bg-[#CCF1EC] border-[#5CB2A5]",
+    "Insurance": "bg-[#FFFF9E] border-[#D4D444]",
+    "Internal Control": "bg-[#b3f8ff] border-[#057a85]",
+    "Managerial Accounting": "bg-[#b4e9ff] border-[#056389]",
+    "Tax": "bg-[#efc1c1] border-[#c10505]",
+    "Trade Compliance": "bg-[#e49393] border-[#c00000]",
+    "Treasury": "bg-[#c8b0da] border-[#7132a0]"
   }
 
   return backgroundColor[band] || 'bg-white'
