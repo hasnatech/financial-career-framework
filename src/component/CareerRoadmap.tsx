@@ -35,7 +35,7 @@ const Controls = ({ onZoomIn, onZoomOut, onFitView }: any) => {
 };
 
 export const CareerRoadmap = ({ nodes, nodeTypes, 
-  onNodesChange, onEdgesChange, onConnect, fitView, nodesDraggable, nodesConnectable,searchValue,setSearchValue }) => {
+  onNodesChange, onEdgesChange, onConnect, fitView, nodesDraggable, nodesConnectable,onSearchChange }) => {
   const [transform, setTransform] = useState({ x: 0, y: 0, k: 1 });
 
   const handleWheel = (event) => {
@@ -121,16 +121,14 @@ export const CareerRoadmap = ({ nodes, nodeTypes,
       onWheel={handleWheel}
       onMouseDown={handleMouseDown}
     >
-      <div className='absolute -top-1 right-10 z-20'>
-      <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} isNodeDetailPopupOpen={false}></SearchBar>
-      </div>
+      
       <Background color="#e6e5e5ff" gap={16} />
       <div style={{ transform: `translate(${transform.x}px, ${transform.y}px) scale(${transform.k})`, transformOrigin: '0 0' }}>
         {nodes.map(node => {
           const NodeComponent = nodeTypes[node.type] || TextUpdaterNode;
           return (
             <div
-              key={node.id}
+              key={node.id} 
               style={{
                 position: 'absolute',
                 left: node.position.x,

@@ -197,7 +197,7 @@ console.log("Rendering, searchValue:", searchValue);
           </p>
 
           <div>
-        <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} isNodeDetailPopupOpen={false}></SearchBar>
+        <SearchBar onSearchChange={(value)=>setSearchValue(value)} isNodeDetailPopupOpen={false} data={nodes}></SearchBar>
           </div>
           </nav>
          
@@ -205,7 +205,7 @@ console.log("Rendering, searchValue:", searchValue);
           className="bg-slate-50 rounded-lg flex-1 border-4"
           style={{ width: "100%", height: "90vh" }}
         >
-          <CareerRoadmap nodes={nodes} nodeTypes={nodeTypes} searchValue={searchValue} setSearchValue={setSearchValue} fitView  />
+          <CareerRoadmap nodes={nodes} nodeTypes={nodeTypes} onSearchChange={(value)=>setSearchValue(value)} onCL fitView  />
         </div>
         </div>
 
@@ -243,7 +243,7 @@ console.log("Rendering, searchValue:", searchValue);
 
       <NodeDetailPopup  
         nodeData={selectedNodeForPopup}
-        searchValue={searchValue} setSearchValue={setSearchValue}
+        onSearchChange={(value)=>setSearchValue(value)}
         onClose={() => setSelectedNodeForPopup(null)}
         nodes={nodes}
         

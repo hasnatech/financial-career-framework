@@ -17,14 +17,13 @@ interface NodeData {
 interface NodeDetailPopupProps {
   nodeData: NodeData | null;
   nodes: any[];
-  searchValue:any;
-  setSearchValue:any;
+  onSearchChange:(value:string)=>void;
   onClose: () => void;
 }
 
 
 
-export function NodeDetailPopup({ nodeData, searchValue, setSearchValue, onClose, nodes }: NodeDetailPopupProps) {
+export function NodeDetailPopup({ nodeData,onSearchChange, onClose, nodes }: NodeDetailPopupProps) {
   if (!nodeData) return null;
 
   const [currentNodeData, setCurrentNodeData] = useState<NodeData>(nodeData);
@@ -82,7 +81,7 @@ export function NodeDetailPopup({ nodeData, searchValue, setSearchValue, onClose
           <div className={`${getBandBackgroundColor(currentNodeData.group) as keyof typeof getBandBackgroundColor} sticky top-0 rounded-lg p-2 pl-5  flex justify-between items-center border-b pb-3 mb-4 border-2`}>
             <h2 className="text-2xl font-bold">{currentNodeData.label}</h2>
             <div className="flex gap-x-2" >
-            <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} isNodeDetailPopupOpen={true} onClose={onClose}   ></SearchBar>
+            <SearchBar onSearchChange={onSearchChange} data={nodes} isNodeDetailPopupOpen={true} onClose={onClose}   ></SearchBar>
             <button
               onClick={() => {
                 setCurrentNodeData({} as NodeData);
