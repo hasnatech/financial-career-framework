@@ -19,7 +19,7 @@ const Background = ({ color, gap }: { color: string; gap: number }) => {
 const Controls = ({ onZoomIn, onZoomOut, onFitView }: any) => {
   return (
     <div style={{ position: 'absolute', top: 10, right: 10, display: 'flex', flexDirection: 'column' }}
-    className='space-y-1'
+    className='space-y-1 z-20'
     >
       <button className='p-2 cursor bg-white rounded shadow' onClick={onZoomIn}>
         <Plus className="w-4 h-4 stroke-slate-700" />
