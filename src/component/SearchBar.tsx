@@ -45,9 +45,12 @@ const SearchBar = ({
     }
 
     const filtered = data.filter((node) => {
-      const label = node?.data?.label;
-      return label?.toLowerCase().includes(searchValue.toLowerCase());
-    });
+  const label = node?.data?.label?.toLowerCase() || "";
+  const query = searchValue.toLowerCase();
+  return label.startsWith(query); // ✅ only matches labels starting with the query
+});
+
+
 
     setFilteredSuggestions(filtered);
     setShowSuggestions(true);
@@ -60,7 +63,7 @@ const SearchBar = ({
   };
 
   return (
-    <div className={`${!isNodeDetailPopupOpen ? "absolute top-3 right-10" : ""}`}>
+    <div className={`${!isNodeDetailPopupOpen ? "absolute -top-1 right-20" : ""}`}>
       <div className="flex flex-col relative">
         <div className="flex items-center gap-2 px-3 py-2 shadow-sm rounded-lg border min-w-96 bg-white">
           <input

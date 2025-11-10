@@ -222,12 +222,12 @@ export default function Option2() {
 
         {pathWay.length > 0 && (
           <div className="h-screen flex flex-col w-fit">
-          <div className="w-80 h-full flex flex-col border-4 justify-between  rounded space-y-3 overflow-y-auto h-[90vh]">
-            <div className="bg-primary sticky top-0 z-40 text-white p-3 rounded-t flex justify-between  items-center">
+          <div className="w-80  flex flex-col  rounded space-y-3 overflow-y-auto h-[90vh]">
+            <div className="bg-primary sticky top-0 z-50 text-white p-3 rounded-t flex justify-between  items-center">
               <h2 className="text-xl font-bold">My Pathway</h2>
             </div>
             {pathWay.length > 0 && (
-              <div className="flex flex-col-reverse items-center gap-3 p-3">
+              <div className="flex flex-col-reverse justify-end items-center gap-3 p-3 h-full  ">
                 {pathWay.map((node: any, index: number) => (
                   <div className="w-full" key={index}>
                     {index < pathWay.length - 1 && (
@@ -259,8 +259,8 @@ export default function Option2() {
               </div>
             )}
           </div>
-          <div className="flex w-full p-5 pl-0">
-           <button className="px-6 py-2 rounded-full bg-primary text-white font-bold">Print</button>
+          <div className="flex w-full p-5 pl-2">
+           <button className="px-10 py-2 rounded-full bg-primary text-white font-bold">Print</button>
 
           </div>
 
