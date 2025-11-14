@@ -2,3 +2,22 @@ ul{
     list-style: disc;
     margin-left: 1.5rem;
 }
+
+.goog-te-gadget-icon,
+.skiptranslate iframe {
+    display: none;
+}
+#google_translate_element .skiptranslate > *:not(:first-child) {
+    display: none !important;
+}
+#google_translate_element .skiptranslate {
+    font-size: 0 !important; /* hides text nodes */
+}
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf .VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc{
+    opacity: 0 !important;
+}
+#google_translate_element{
+   img{
+        display: none;
+    }
+}
