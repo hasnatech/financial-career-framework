@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
 
 
 @layer base {
@@ -73,9 +82,147 @@
 body{
   overflow: hidden;
 }
-
-.hide-scrollbar::-webkit-scrollbar{
+.hide-scrollbar::-webkit-scrollbar{ 
   display: none;
 }
+/* Hides the Google Translate top bar */
+/* Ensures no offset remains */
+body {
+  top: 0px !important;
+}
+.goog-te-gadget-icon,
+.skiptranslate iframe {
+    display: none !important;
+}
+/* Hide Google Translate Hover Popup */
+#goog-gt-tt {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+.goog-tooltip {
+  display: none !important;
+  visibility: hidden !important;
+}
+.goog-tooltip:hover {
+  display: none !important;
+}
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}
+/* Remove Google Translate text highlight */
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+  color: inherit !important;
+}
+/* Optional: Prevent grey background flicker on body */
+body {
+  position: static !important;
+}
+
+.goog-te-combo{
+  padding: 0.75rem 0.5rem !important;
+  border-radius: 0.5rem !important;
+  font-size: 14px !important;
+  border:solid 1px rgb(229, 231, 235);
+  background-color: white !important;
+  cursor: pointer;
+  outline: none;
+  margin:0;
+   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+}
+.goog-te-gadget .goog-te-combo {
+    margin: 0 0;
+}
+.fade-in{
+  animation: fadeIn 0.5s;
+}
+
+.page {
+  width: 210mm;
+  min-height: 297mm; /* Full A4 height */
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 10mm;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10mm;
+}
+
+/* Key containers */
+.node-details,
+.key-account,
+.band,
+.contributor-type,
+.purpose,
+.key-account-finance-container,
+.finance-technical,
+.pathway-node {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* Handle normal text wrapping properly */
+p,
+ul,
+ol {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+
+/* Pathway node safe text wrapping */
+.pathway-node * {
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  text-overflow: ellipsis;
+}
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  .page {
+    page-break-after: always;
+    break-after: page;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 10mm;
+  }
+
+  .print-title {
+    font-size: 20pt;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+  }
+
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+}
+
+
+
+
+
+
+
+
 
 

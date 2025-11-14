@@ -20,8 +20,10 @@ interface NodeDetailPopupProps {
   nodes: any[];
   onSearchChange:(value:string)=>void;
   onClose: () => void;
-  setSelectedNodeForPopup:(value:any)=>void // ✅ now optional to prevent undefined errors
-
+  setSelectedNodeForPopup:(value:any)=>void;  
+  setSelectedNodeForCopilotPopup:(value:any)=>void;
+  setShouldCopilotPopupOpen:(value:any)=>void;
+  setCopilotPromptDetails:(value:any)=>void;
 }
 
 export function NodeDetailPopup({
@@ -29,12 +31,17 @@ export function NodeDetailPopup({
   onSearchChange,
   onClose,
   nodes,
-  setSelectedNodeForPopup
+  setSelectedNodeForPopup,
+  setSelectedNodeForCopilotPopup,
+  setShouldCopilotPopupOpen,
+  setCopilotPromptDetails
 }: NodeDetailPopupProps) {
   if (!nodeData) return null;
 
   const [currentNodeData, setCurrentNodeData] = useState<NodeData>(nodeData);
   const [currentNodeIndex, setCurrentNodeIndex] = useState<number>(-1);
+  const [shouldOpenTimelinePopup,setShouldOpenTimelinePopup]=useState<boolean>(false);
+  const [timeline,setTimeline]=useState<string>('');
   const indexMap = new Map<number, NodeData>(
     nodes.map((node, index) => [index, node.data as NodeData])
   );
@@ -86,18 +93,29 @@ export function NodeDetailPopup({
     }
   };
 
+  const handleCopilotPopup=()=>{
+    const copilotPromptDetails={...currentNodeData,timeline:timeline};
+    setCopilotPromptDetails(copilotPromptDetails);
+    console.log(copilotPromptDetails);
+    setShouldOpenTimelinePopup(false);
+    setShouldCopilotPopupOpen(true);
+    setSelectedNodeForPopup(null);
+    
+    
+  }
+
   if (currentNodeData && indexMap) {
     const bgColor = getBandBackgroundColor(currentNodeData.group);
     return (
       <div className="fixed inset-0 bg-black  bg-opacity-50 flex items-center justify-center z-50 p-5">
         <div
-          className={`${bgColor} bg-white rounded-lg  border w-full m-6 max-h-full max-w-full h-full overflow-y-auto p-0 z-50`}
+          className={`${bgColor} relative bg-white rounded-lg  border w-full m-6 max-h-full max-w-full h-full overflow-y-auto p-0 z-50`}
         >
           <div
             className={`${bgColor} sticky top-0 rounded-t-lg p-2 pl-5  flex justify-between items-center pb-3 mb-2`}
           >
             <h2 className="text-2xl font-bold">{currentNodeData.label}</h2>
-            <div className="flex gap-x-2">
+            <div className="flex items-center gap-2 ">
               <SearchBar
                 onSearchChange={onSearchChange}
                 isNodeDetailPopupOpen={true}
@@ -105,18 +123,29 @@ export function NodeDetailPopup({
                 data={nodes}
                 setSelectedNodeForPopup={setSelectedNodeForPopup}
               ></SearchBar>
+              <button onClick={()=>{
+                setShouldOpenTimelinePopup(true);
+              
+              }} className="group flex items-center justify-center gap-2 ">
+
+         
+              <div className="h-11 w-11 p-2 bg-white rounded-full flex items-center justify-center hover:opacity-80 duration-300 shadow-md">
+              <img src="./src/assets/icons/icons8-microsoft-copilot-48.png"/>
+              </div>
+              </button>
+              
               <button
                 onClick={() => {
                   setCurrentNodeData({} as NodeData);
                   onClose();
                 }}
-                className="p-2 rounded-full hover:bg-red-500 hover:text-white transition-colors duration-100"
+                className="rounded-full hover:bg-red-500 p-1 hover:text-white transition-colors duration-100"
               >
                 <X className="w-6 h-6" />
               </button>
             </div>
           </div>
-          <div className="space-y-2 p-0 pb-0 h-full">
+          <div className="space-y-2 p-0 pb-0 h-full   ">
             <div className="flex gap-2 px-2">
               <div
                 className={`${bgColor} border rounded px-3 py-2 min-w-[180px]`}
@@ -209,6 +238,30 @@ export function NodeDetailPopup({
             </Button>
           </div>  
         </div>
+        {shouldOpenTimelinePopup && 
+        <div className="fixed z-50 flex items-center justify-center top-0 bottom-0 left-0 right-0 bg-black/50">
+          <div className="relative flex flex-col items-start  rounded-sm bg-white pt-2   pr-1">
+            <button
+                onClick={() => {
+                  setShouldOpenTimelinePopup(false);
+                }}
+                className="self-end absolute top-2 right-2 p-1 rounded-full hover:bg-red-500 hover:text-white transition-colors duration-100"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            <div className="flex flex-col gap-y-3 p-3 pb-5 pt-0">
+            <label className="font-bold text-lg " htmlFor="">Enter Timeline</label>
+            <input value={timeline} onChange={(event)=>{
+              setTimeline(event.target.value)
+            }} className="border w-full p-3 py-2 pl-3 rounded-md outline-none text-sm" type="text" placeholder="12 Months" />
+            <button onClick={()=>{
+              handleCopilotPopup();
+            }} className="px-4 py-2 text-sm font-medium self-center rounded-full bg-primary text-primary-foreground mt-1 w-fit border-none outline-none hover:opacity-50 duration-500">Generate Prompt</button>
+            </div>
+            
+          </div>
+        </div>
+        }
       </div>
     );
   }

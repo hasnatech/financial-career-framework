@@ -7,7 +7,7 @@ import {
   LucideTrash,
   MoveUp,
 } from "lucide-react";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import "./App.css";
 import { CareerRoadmap } from "./component/CareerRoadmap";
 import { HexaNode } from "./component/HexaNode";
@@ -17,6 +17,11 @@ import data from "./data.json";
 import MainLayout from "./Layout/MainLayout";
 import { Button } from "./components/ui/button";
 import SearchBar from "./component/SearchBar";
+import CopilotPopup from "./component/CopilotPopup";
+import { useReactToPrint } from "react-to-print";
+import PathwayPrintDocument from "./component/PathwayPrintDocument";
+import Translatex from "./components/Translate";
+import Translate from "./components/Translate";
 
 const nodeTypes = {
   textUpdater: HexaNode,
@@ -26,12 +31,33 @@ export default function Option2() {
   const [nodes, setNodes] = useState<any[]>([]);
   const [isTransposed, setIsTransposed] = useState(false);
   const [selectedNodeForPopup, setSelectedNodeForPopup] = useState<any | null>(null);
+  const [selectedNodeForCopilotPopup, setSelectedNodeForCopilotPopup] = useState<any | null>(null);
+  const [copilotPromptDetails,setCopilotPromptDetails] = useState<any | null>(null);
+
   const [selectedBands, setSelectedBands] = useState<string[]>([]);
   const [isLegendOpen, setIsLegendOpen] = useState(true);
   const [showPathway, setShowPathway] = useState(true);
   const [pathWay, setPathWay] = useState<any[]>([]);
   const [shouldOptionsOpen, setShouldOptionsOpen] = useState<string>("");
   const [searchValue, setSearchValue] = useState<string>("");
+  const [shouldCopilotPopupOpen,setShouldCopilotPopupOpen]=useState<boolean>(false);
+  const [isPrintInitiated,setIsPrintInitiated]=useState<boolean>(false);
+  const printRef=useRef<HTMLDivElement>(null);
+
+  const handlePrint=useReactToPrint({
+    contentRef:printRef,
+    documentTitle:'\u00A0',
+
+    onBeforePrint:()=>{
+      console.log("Before Print");
+      return Promise.resolve()
+    },
+    onAfterPrint:()=>{
+      console.log("After Print");
+      return Promise.resolve();
+    }
+
+  })
 
   const handleNodeClick = useCallback((nodeData: any) => {
     setPathWay((prev) => {
@@ -54,6 +80,13 @@ export default function Option2() {
   const handleClearBands = () => {
     setSelectedBands([]);
   };
+
+  useEffect(()=>{
+    if(isPrintInitiated){
+      handlePrint();
+      setIsPrintInitiated(false);
+    }
+  },[isPrintInitiated])
 
   const NODE_WIDTH = 110;
   const NODE_HEIGHT = 120;
@@ -174,32 +207,28 @@ export default function Option2() {
                 onClear={handleClearBands}
               />
               {selectedBands.length > 0 && (
-                <Button
-                  onClick={handleClearBands}
-                  variant="outline"
-                  size="sm"
-                  className="absolute bottom-[3.4rem] left-0 right-0"
-                >
-                  Clear
-                </Button>
+               <button onClick={handleClearBands} className=" absolute bottom-[4rem] left-2 right-30 border-2 px-10 py-1    rounded-full bg-gray-50 text-black font-bold">Clear</button>
               )}
             </div>
           )}
-        </div>
+        </div>  
 
         <div
           className={`relative flex flex-col w-full min-h-screen items-center gap-y-10 ${
             pathWay.length === 0 ? "pr-2" : ""
           }`}
         >
-          <nav className="flex w-full items-center absolute top-3 left-5 z-10">
+          <nav className="flex w-full justify-between items-center absolute top-3 left-5 z-10">
             <p>
               <a href="/" className="font-bold text-4xl text-primary">
                 Career Framework
               </a>
             </p>
-            <div>
+
+            <div className="flex items-start gap-x-2 absolute -top-1 right-20">
+              <div id="google_translate_element"></div> 
               <SearchBar
+              className={""}
                 onClose={() => {}}
                 searchValue={searchValue}
                 setSearchValue={setSearchValue}
@@ -259,9 +288,13 @@ export default function Option2() {
               </div>
             )}
           </div>
-          <div className="flex w-full p-5 pl-2">
-           <button className="px-10 py-2 rounded-full bg-primary text-white font-bold">Print</button>
-
+          <div className="flex w-full justify-around p-5 pl-2">
+           <button onClick={()=>{
+            setIsPrintInitiated(true);
+           }} className="px-10 py-2 rounded-full bg-primary text-white font-bold">Print</button>
+           <button onClick={()=>{
+            setPathWay([])
+           }} className="px-10 py-2 rounded-full bg-gray-50 text-black font-bold">Clear</button>
           </div>
 
           </div>
@@ -269,15 +302,42 @@ export default function Option2() {
 
         
       </div>
-      
 
+      <button onClick={()=>{
+        setShouldCopilotPopupOpen(true);
+      }} className={`group fixed ${pathWay.length>0 ? 'bottom-24' : 'bottom-10'} right-10 flex items-center gap-2 z-50`}>
+      {/* Bubble Text */}
+      <span className="opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 duration-300 bg-slate-50 text-primary text-sm font-medium px-3 py-1.5 rounded-full shadow-lg">
+      Copilot Corner
+      </span>
+
+      {/* Icon Button */}
+      <div className="h-12 w-12 p-2 rounded-full flex items-center justify-center hover:opacity-80 duration-300 shadow-md">
+     <img src="./src/assets/icons/icons8-microsoft-copilot-48.png"/>
+      </div>
+      </button>
+      
+      
       <NodeDetailPopup
         nodeData={selectedNodeForPopup}
         onSearchChange={(value) => setSearchValue(value)}
         onClose={() => setSelectedNodeForPopup(null)}
         nodes={nodes}
         setSelectedNodeForPopup={setSelectedNodeForPopup}
+        setSelectedNodeForCopilotPopup={setSelectedNodeForCopilotPopup}
+        setShouldCopilotPopupOpen={setShouldCopilotPopupOpen}
+        setCopilotPromptDetails={setCopilotPromptDetails}
       />
+
+      {shouldCopilotPopupOpen && 
+      <CopilotPopup data={nodes} promptDetails={copilotPromptDetails || ''} setCopilotPromptDetails={setCopilotPromptDetails} setShouldCopilotPopupOpen={setShouldCopilotPopupOpen} setSelectedNodeForCopilotPopup={setSelectedNodeForCopilotPopup}></CopilotPopup>
+      }
+
+      {isPrintInitiated && <PathwayPrintDocument pathWay={pathWay} ref={printRef}></PathwayPrintDocument>}
+
+
+
+
     </MainLayout>
   );
 }

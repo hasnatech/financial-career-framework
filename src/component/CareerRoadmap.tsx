@@ -22,7 +22,7 @@ const Controls = ({ onZoomIn, onZoomOut, onFitView }: any) => {
     className='space-y-1 z-20'
     >
       <button className='p-2 cursor bg-white rounded shadow' onClick={onZoomIn}>
-        <Plus className="w-4 h-4 stroke-slate-700" />
+        <Plus className="w-4 h-4 stroke-slate-700" /> 
       </button>
       <button className='p-2 cursor bg-white rounded shadow' onClick={onZoomOut}>
         <Minus className="w-4 h-4 stroke-slate-700" />
