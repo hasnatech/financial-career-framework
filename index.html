@@ -4,11 +4,56 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/financial-career-framework/images/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Finanace Career Framework</title>
-    <script type="module" crossorigin src="/financial-career-framework/assets/index-CLApmQkH.js"></script>
-    <link rel="stylesheet" crossorigin href="/financial-career-framework/assets/index-CinUixYL.css">
+    <title>Finance Career Framework</title>
+    <script type="module" crossorigin src="/financial-career-framework/assets/index-BZHWDhcM.js"></script>
+    <link rel="stylesheet" crossorigin href="/financial-career-framework/assets/index-Cp1YnVKE.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
+
+    <!-- ✅ Only this single script is needed 
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: 'en' },
+          'google_translate_element_hidden'
+        );
+      }
+    </script>
+
+    <script
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+      defer
+    ></script> -->
+
+    <script type="text/javascript" class="upperlayer">
+    function googleTranslateElementInit() {
+    docReady(() => {
+        // console.log(document.getElementById("google_translate_element"))
+        if (document.getElementById("google_translate_element") != null) {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+        }, 'google_translate_element');
+        } else {
+        setTimeout(() => {
+            googleTranslateElementInit();
+        }, 1000)
+        }
+    })
+    }
+    function docReady(fn) {
+    // see if DOM is already available
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+        // call on next available tick
+        setTimeout(fn, 1);
+    } else {
+        document.addEventListener("DOMContentLoaded", fn);
+    }
+    }
+
+</script>
+<script type="text/javascript"
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
   </body>
 </html>
