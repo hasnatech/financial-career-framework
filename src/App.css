@@ -21,3 +21,7 @@ ul{
         display: none;
     }
 }
+.goog-te-gadget .goog-te-combo
+{
+    margin: 0 !important;
+}
