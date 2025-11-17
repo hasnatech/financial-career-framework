@@ -257,30 +257,26 @@ export default function Option2() {
             </div>
           </nav>
 
-          <div
-            className="bg-white rounded-lg flex-1 border relative w-full"
-            
-          >
+          <div className="bg-white rounded-lg flex-1 border relative w-full">
             <CareerRoadmap nodes={nodes} nodeTypes={nodeTypes} fitView />
 
-             <button
-        onClick={() => {
-          setShouldCopilotPopupOpen(true);
-        }}
-        className={`group absolute bottom-10
-         right-10 flex items-center gap-2 z-50`}
-      >
-        {/* Bubble Text */}
-        <span className="opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 duration-300 bg-slate-50 text-primary text-sm font-medium px-3 py-1.5 rounded-full shadow-lg">
-          Copilot Corner
-        </span>
+            <button
+              onClick={() => {
+                setShouldCopilotPopupOpen(true);
+              }}
+              className={`group absolute bottom-5
+         right-5 flex items-center gap-2 z-50`}
+            >
+              {/* Bubble Text */}
+              <span className="opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 duration-300 bg-slate-50 text-primary text-sm font-medium px-3 py-1.5 rounded-full shadow-lg">
+                Copilot Corner
+              </span>
 
-        {/* Icon Button */}
-        <div className="h-12 w-12 p-2 rounded-full flex items-center justify-center hover:opacity-80 duration-300 shadow-md">
-          <img src="./src/assets/icons/icons8-microsoft-copilot-48.png" />
-        </div>
-      </button>
-
+              {/* Icon Button */}
+              <div className="h-12 w-12 p-2 rounded-full flex items-center justify-center hover:opacity-80 duration-300 shadow-md border bg-white">
+                <img  src="./src/assets/icons/icons8-microsoft-copilot-48.png" />
+              </div>
+            </button>
           </div>
         </div>
 
@@ -328,7 +324,6 @@ export default function Option2() {
                 onClick={() => {
                   setIsPrintInitiated(true);
                 }}
-                
               >
                 <Printer className="w-4 h-4 stroke-slate-200" />
                 Print
@@ -347,7 +342,6 @@ export default function Option2() {
         )}
       </div>
 
-     
       <NodeDetailPopup
         nodeData={selectedNodeForPopup}
         onSearchChange={(value) => setSearchValue(value)}

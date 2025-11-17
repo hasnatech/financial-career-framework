@@ -78,7 +78,7 @@ const CopilotPopup: React.FC<Props> = ({
   }, [currentPromptDetails]);
 
   const handleGeneratePrompt = () => {
-    const promptHeader = `The Role I aspire to attaining in the next ${currentPromptDetails.timeline} has the following job profile`;
+    const promptHeader = `The Role I aspire to attaining in the next ${currentPromptDetails.timeline} months has the following job profile`;
     const purpose = currentPromptDetails.purpose || "[Specify Role]";
     const keyAccount =
       handlePlainTextRetrieval(currentPromptDetails.key_account) ||
@@ -150,7 +150,10 @@ const CopilotPopup: React.FC<Props> = ({
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-5">
         <div className="relative bg-slate-50 h-full w-full flex flex-col items-start gap-y-3 rounded-lg overflow-clip  ">
           <div className="flex w-full border-2 bg-white  items-center justify-between sticky top-0 pt-3 p-3 pl-4">
+            <div className="flex gap-3 items-center">
+              <img  src="./src/assets/icons/icons8-microsoft-copilot-48.png" />
             <h1 className="text-black font-bold text-xl">Copilot Corner</h1>
+            </div>
             <button
               onClick={() => {
                 setSelectedNodeForCopilotPopup(null);
@@ -308,16 +311,16 @@ const CopilotPopup: React.FC<Props> = ({
 
                     {isPromptCopied && (
                       <div
-                        className={`absolute inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center
+                        className={`absolute inset-0 bg-pink-700/40 backdrop-blur-sm z-50 flex items-center justify-center
         rounded-[1.313rem]
         transition-opacity duration-700
         ${visible ? "opacity-100" : "opacity-0"}`}
                       >
                         <div className="flex flex-col rounded-lg border-primary h-full w-full items-center justify-center ">
-                          <p className="font-bold  text-center text-white text-3xl rounded-xl">
+                          <p className="font-bold text-center  text-3xl rounded-xl">
                             Prompt Copied...
                           </p>
-                          <p className="text-white/90 mt-2">
+                          <p className="opacity-90 mt-2">
                             Your prompt copied to clipboard...
                           </p>
                         </div>
