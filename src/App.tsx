@@ -274,7 +274,7 @@ export default function Option2() {
 
               {/* Icon Button */}
               <div className="h-12 w-12 p-2 rounded-full flex items-center justify-center hover:opacity-80 duration-300 shadow-md border bg-white">
-                <img  src="./src/assets/icons/icons8-microsoft-copilot-48.png" />
+                <img  src="images/icons/icons8-microsoft-copilot-48.png" />
               </div>
             </button>
           </div>

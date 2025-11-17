@@ -151,7 +151,7 @@ const CopilotPopup: React.FC<Props> = ({
         <div className="relative bg-slate-50 h-full w-full flex flex-col items-start gap-y-3 rounded-lg overflow-clip  ">
           <div className="flex w-full border-2 bg-white  items-center justify-between sticky top-0 pt-3 p-3 pl-4">
             <div className="flex gap-3 items-center">
-              <img  src="./src/assets/icons/icons8-microsoft-copilot-48.png" />
+              <img  src="images/icons/icons8-microsoft-copilot-48.png" />
             <h1 className="text-black font-bold text-xl">Copilot Corner</h1>
             </div>
             <button
