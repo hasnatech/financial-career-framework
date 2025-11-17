@@ -32,7 +32,7 @@ const PathwayPrintDocument = React.forwardRef<HTMLDivElement, PathwayPrintDocume
     <div className="flex flex-col items-start w-full gap-2">
       {index===0 && 
       <div className="page-header flex w-full absolute top-0 left-0 right-0 justify-center    ">
-      <h1 className="print-title">Pathway</h1>
+      <h1 className="print-title">Career Framework Pathway</h1>
       </div>
       }
       <div className={`${bgColor} rounded px-3 py-2 min-w-[180px]`}>

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import SearchBar from "./SearchBar";
 import { getBandBackgroundColor } from "./Constant";
-import { LucideX } from "lucide-react";
+import { Check, Copy, LucideX } from "lucide-react";
+import { Button } from "../components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface PromptDetails {
   band: string;
@@ -57,7 +59,7 @@ const CopilotPopup: React.FC<Props> = ({
 
   const [shouldOpenTimelinePrompt, setShouldOpenTimelinePrompt] =
     useState<boolean>(false);
-const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(true);
   const [generatedPrompt, setGeneratedPrompt] = useState("");
   const [isPromptCopied, setIsPromptCopied] = useState(false);
 
@@ -134,7 +136,7 @@ const [visible, setVisible] = useState(true);
       setTimeout(() => {
         setVisible(false);
       }, 3000);
-      
+
       setTimeout(() => {
         setIsPromptCopied(false);
       }, 4000);
@@ -160,14 +162,18 @@ const [visible, setVisible] = useState(true);
               <LucideX className="w-6 h-6"></LucideX>
             </button>
           </div>
-
+          <div className="px-5">
+            To go deeper with the Finance Career Framework and build a more
+            individualized development plan, consider using Copilot. Here's a
+            prompt you can copy and paste to start this journey:
+          </div>
           <div className="grid grid-cols-2 w-full max-w-full h-full max-h-full gap-x-5 p-5 pt-0 pb-2">
             <div className="flex flex-col items-start gap-y-4">
               <h2 className="self-start text-lg font-bold">
                 Enter Details of the role{" "}
               </h2>
-              <div className="grid grid-cols-2 gap-x-2 min-w-96 items-center text-sm  ">
-                <div className="w-full flex flex-col items-start gap-y-2 ">
+              <div className="flex gap-3 items-center text-sm w-full ">
+                <div className="w-full flex-1 flex flex-col items-start gap-y-2 ">
                   <label className="font-medium" htmlFor="">
                     Search for the Role
                   </label>
@@ -181,7 +187,7 @@ const [visible, setVisible] = useState(true);
                   ></SearchBar>
                 </div>
 
-                <div className="flex flex-col items-start gap-y-2 w-full">
+                <div className="flex flex-col items-start gap-y-2">
                   <label className="font-medium" htmlFor="">
                     Timeline
                   </label>
@@ -200,10 +206,10 @@ const [visible, setVisible] = useState(true);
               </div>
 
               {generatedPrompt && (
-                <div className="space-y-4 p-0 pb-0 h-full max-h-full ">
+                <div className="space-y-4 p-0 pb-0 h-full max-h-full flex flex-col mb-16">
                   <div className="flex gap-4   ">
                     <div
-                      className={`${bgColor} border rounded px-3 py-2 min-w-[180px]`}
+                      className={`${bgColor} border rounded px-3 py-2 min-w-[120px]`}
                     >
                       <h3 className="font-bold text-lg mb-2 whitespace-nowrap">
                         Sub Family
@@ -214,7 +220,7 @@ const [visible, setVisible] = useState(true);
                     </div>
 
                     <div
-                      className={`${bgColor} border rounded px-3 py-2 min-w-[180px] `}
+                      className={`${bgColor} border rounded px-3 py-2 min-w-[120px] `}
                     >
                       <h3 className="font-bold text-lg mb-2 whitespace-nowrap">
                         Band
@@ -225,9 +231,9 @@ const [visible, setVisible] = useState(true);
                     </div>
 
                     <div
-                      className={`${bgColor} border rounded px-3 py-2 min-w-[180px]`}
+                      className={`${bgColor} border rounded px-3 py-2 min-w-[120px]`}
                     >
-                      <h3 className="font-bold text-lg mb-2 whitespace-nowrap">
+                      <h3 className="font-bold text-lg mb-2 ">
                         Contributor Type
                       </h3>
                       <p className="text-sm text-black/90">
@@ -236,25 +242,25 @@ const [visible, setVisible] = useState(true);
                       </p>
                     </div>
 
-                    <div className={`${bgColor} border rounded px-3 py-2 `}>
-                      <h3 className="font-bold text-lg mb-2 line-clamp-3">
-                        Job Purpose
-                      </h3>
-                      <p className="text-sm text-black/90 text-ellipsis line-clamp-3">
+                    <div
+                      className={`${bgColor} border rounded px-3 py-2 max-h-[150px] overflow-hidden  hover:overflow-auto  `}
+                    >
+                      <h3 className="font-bold text-lg mb-2">Job Purpose</h3>
+                      <p className="text-sm text-black/90 ">
                         {`${currentPromptDetails.purpose}` || "Not available"}
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex gap-4">
+                  <div className="flex gap-4 flex-1 ">
                     <div
-                      className={`flex-1 ${bgColor} border rounded px-3 py-2`}
+                      className={`flex-1 ${bgColor} border rounded px-3 py-2 max-h-96 overflow-hidden  hover:overflow-auto `}
                     >
                       <h3 className="font-bold text-lg mb-2">
                         Key Accountabilities
                       </h3>
                       <p
-                        className="text-sm text-black/90 line-clamp-3"
+                        className="text-sm text-black/90 text-ellipsis h-full"
                         dangerouslySetInnerHTML={
                           currentPromptDetails.key_account
                             ? {
@@ -265,13 +271,13 @@ const [visible, setVisible] = useState(true);
                       ></p>
                     </div>
                     <div
-                      className={`flex-1 ${bgColor} border rounded px-3 py-2`}
+                      className={`flex-1 ${bgColor} border rounded px-3 py-2 max-h-96 overflow-hidden  hover:overflow-auto `}
                     >
                       <h3 className="font-bold text-lg mb-2">
                         Finance Technical Competencies
                       </h3>
                       <p
-                        className="text-sm text-black/90 line-clamp-3"
+                        className="text-sm text-black/90"
                         dangerouslySetInnerHTML={
                           currentPromptDetails.finance_technical
                             ? {
@@ -287,10 +293,13 @@ const [visible, setVisible] = useState(true);
             </div>
 
             {generatedPrompt ? (
-              <div className="grid  grid-rows-[6%_84%_10%] items-start  h-full">
+              <div className="space-y-5">
                 <h3 className="font-bold text-lg">Copilot Prompt</h3>
-                <div className=" p-[3px] rounded-3xl bg-gradient-to-r from-[#ffc9d4] to-[#beb8ff]">
-                  <div className="relative rounded-[1.313rem]  bg-white max-h-[70vh]  min-h-[70vh] overflow-auto flex    gap-y-2  w-full hide-scrollbar">
+                <div className="  p-[3px] rounded-3xl bg-gradient-to-r from-[#ffc9d4] to-[#beb8ff]">
+                  <div
+                    className="relative rounded-[1.313rem] max-h-[65vh] overflow-hidden hover:overflow-auto 
+                   bg-white h-full mb-5  overflow-auto flex    gap-y-2  w-full hide-scrollbar"
+                  >
                     <div>
                       <pre className="whitespace-pre-wrap p-5 ">
                         {generatedPrompt}
@@ -298,31 +307,56 @@ const [visible, setVisible] = useState(true);
                     </div>
 
                     {isPromptCopied && (
-                    <div
-                      className={`absolute inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center
+                      <div
+                        className={`absolute inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center
         rounded-[1.313rem]
         transition-opacity duration-700
         ${visible ? "opacity-100" : "opacity-0"}`}
-                    >
-                      <div className="flex flex-col rounded-lg border-primary h-full w-full items-center justify-center ">
-                        <p className="font-bold  text-center text-white text-3xl rounded-xl">
-                          Prompt Copied...
-                        </p>
-                        <p className="text-white/90 mt-2">Your prompt copied to clipboard...</p>
+                      >
+                        <div className="flex flex-col rounded-lg border-primary h-full w-full items-center justify-center ">
+                          <p className="font-bold  text-center text-white text-3xl rounded-xl">
+                            Prompt Copied...
+                          </p>
+                          <p className="text-white/90 mt-2">
+                            Your prompt copied to clipboard...
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                     )} 
+                    )}
                   </div>
                 </div>
 
-                <button
+                <Button
                   onClick={() => {
                     handleCopy();
                   }}
-                  className="border-2 w-fit self-end justify-self-end px-8 py-2 rounded-full bg-secondary"
+                  className=""
                 >
-                  Copy
-                </button>
+                  <AnimatePresence mode="wait" initial={false}>
+                    {isPromptCopied ? (
+                      <motion.div
+                        key="check"
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.5 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <Check className="w-4 h-4 stroke-green-500" />
+                      </motion.div>
+                    ) : (
+                      <motion.div
+                        key="copy"
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.5 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <Copy className="w-4 h-4 stroke-slate-200" />
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                  {isPromptCopied ? "Copied" : "Copy"}
+                </Button>
               </div>
             ) : (
               <div className=" p-[3px] rounded-3xl bg-gradient-to-r from-[#ffc9d4] to-[#beb8ff]">

@@ -1,11 +1,14 @@
 import {
+  Eraser,
   LucideAArrowDown,
   LucideArrowDown,
   LucideArrowUp,
   LucideEllipsis,
+  LucideRemoveFormatting,
   LucideSearch,
   LucideTrash,
   MoveUp,
+  Printer,
 } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import "./App.css";
@@ -30,9 +33,14 @@ const nodeTypes = {
 export default function Option2() {
   const [nodes, setNodes] = useState<any[]>([]);
   const [isTransposed, setIsTransposed] = useState(false);
-  const [selectedNodeForPopup, setSelectedNodeForPopup] = useState<any | null>(null);
-  const [selectedNodeForCopilotPopup, setSelectedNodeForCopilotPopup] = useState<any | null>(null);
-  const [copilotPromptDetails,setCopilotPromptDetails] = useState<any | null>(null);
+  const [selectedNodeForPopup, setSelectedNodeForPopup] = useState<any | null>(
+    null
+  );
+  const [selectedNodeForCopilotPopup, setSelectedNodeForCopilotPopup] =
+    useState<any | null>(null);
+  const [copilotPromptDetails, setCopilotPromptDetails] = useState<any | null>(
+    null
+  );
 
   const [selectedBands, setSelectedBands] = useState<string[]>([]);
   const [isLegendOpen, setIsLegendOpen] = useState(true);
@@ -40,24 +48,24 @@ export default function Option2() {
   const [pathWay, setPathWay] = useState<any[]>([]);
   const [shouldOptionsOpen, setShouldOptionsOpen] = useState<string>("");
   const [searchValue, setSearchValue] = useState<string>("");
-  const [shouldCopilotPopupOpen,setShouldCopilotPopupOpen]=useState<boolean>(false);
-  const [isPrintInitiated,setIsPrintInitiated]=useState<boolean>(false);
-  const printRef=useRef<HTMLDivElement>(null);
+  const [shouldCopilotPopupOpen, setShouldCopilotPopupOpen] =
+    useState<boolean>(false);
+  const [isPrintInitiated, setIsPrintInitiated] = useState<boolean>(false);
+  const printRef = useRef<HTMLDivElement>(null);
 
-  const handlePrint=useReactToPrint({
-    contentRef:printRef,
-    documentTitle:'\u00A0',
+  const handlePrint = useReactToPrint({
+    contentRef: printRef,
+    documentTitle: "\u00A0",
 
-    onBeforePrint:()=>{
+    onBeforePrint: () => {
       console.log("Before Print");
-      return Promise.resolve()
+      return Promise.resolve();
     },
-    onAfterPrint:()=>{
+    onAfterPrint: () => {
       console.log("After Print");
       return Promise.resolve();
-    }
-
-  })
+    },
+  });
 
   const handleNodeClick = useCallback((nodeData: any) => {
     setPathWay((prev) => {
@@ -81,12 +89,12 @@ export default function Option2() {
     setSelectedBands([]);
   };
 
-  useEffect(()=>{
-    if(isPrintInitiated){
+  useEffect(() => {
+    if (isPrintInitiated) {
       handlePrint();
       setIsPrintInitiated(false);
     }
-  },[isPrintInitiated])
+  }, [isPrintInitiated]);
 
   const NODE_WIDTH = 110;
   const NODE_HEIGHT = 120;
@@ -188,9 +196,12 @@ export default function Option2() {
     setPathWay(newPathWay);
   };
 
-  useEffect(()=>{
-    console.log('The selected node for popup is changed to : ',selectedNodeForPopup);
-  })
+  useEffect(() => {
+    console.log(
+      "The selected node for popup is changed to : ",
+      selectedNodeForPopup
+    );
+  });
 
   return (
     <MainLayout searchValue={searchValue} setSearchValue={setSearchValue}>
@@ -207,11 +218,17 @@ export default function Option2() {
                 onClear={handleClearBands}
               />
               {selectedBands.length > 0 && (
-               <button onClick={handleClearBands} className=" absolute bottom-[4rem] left-2 right-30 border-2 px-10 py-1    rounded-full bg-gray-50 text-black font-bold">Clear</button>
+                <Button
+                  onClick={handleClearBands}
+                  className=" absolute bottom-[4rem] right-1 left-1 bg-gray-300 text-black hover:bg-gray-400"
+                >
+                  <Eraser className="w-4 h-4 stroke-slate-800" />
+                  Clear
+                </Button>
               )}
             </div>
           )}
-        </div>  
+        </div>
 
         <div
           className={`relative flex flex-col w-full min-h-screen items-center gap-y-10 ${
@@ -226,9 +243,9 @@ export default function Option2() {
             </p>
 
             <div className="flex items-start gap-x-2 absolute -top-1 right-20">
-              <div id="google_translate_element"></div> 
+              <div id="google_translate_element"></div>
               <SearchBar
-              className={""}
+                className={""}
                 onClose={() => {}}
                 searchValue={searchValue}
                 setSearchValue={setSearchValue}
@@ -241,83 +258,96 @@ export default function Option2() {
           </nav>
 
           <div
-            className="bg-white rounded-lg flex-1 border"
-            style={{ width: "100%", height: "90vh" }}
+            className="bg-white rounded-lg flex-1 border relative w-full"
+            
           >
             <CareerRoadmap nodes={nodes} nodeTypes={nodeTypes} fitView />
+
+             <button
+        onClick={() => {
+          setShouldCopilotPopupOpen(true);
+        }}
+        className={`group absolute bottom-10
+         right-10 flex items-center gap-2 z-50`}
+      >
+        {/* Bubble Text */}
+        <span className="opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 duration-300 bg-slate-50 text-primary text-sm font-medium px-3 py-1.5 rounded-full shadow-lg">
+          Copilot Corner
+        </span>
+
+        {/* Icon Button */}
+        <div className="h-12 w-12 p-2 rounded-full flex items-center justify-center hover:opacity-80 duration-300 shadow-md">
+          <img src="./src/assets/icons/icons8-microsoft-copilot-48.png" />
+        </div>
+      </button>
+
           </div>
         </div>
 
-
         {pathWay.length > 0 && (
-          <div className="h-screen flex flex-col w-fit">
-          <div className="w-80  flex flex-col  rounded space-y-3 overflow-y-auto h-[90vh]">
-            <div className="bg-primary sticky top-0 z-50 text-white p-3 rounded-t flex justify-between  items-center">
-              <h2 className="text-xl font-bold">My Pathway</h2>
-            </div>
-            {pathWay.length > 0 && (
-              <div className="flex flex-col-reverse justify-end items-center gap-3 p-3 h-full  ">
-                {pathWay.map((node: any, index: number) => (
-                  <div className="w-full" key={index}>
-                    {index < pathWay.length - 1 && (
-                      <div className="pb-2 flex justify-center items-center w-full">
-                        <MoveUp className="w-4 h-4 stroke-slate-400" />
-                      </div>
-                    )}
-                    <div
-                      className="transition-opacity flex gap-x-3 justify-center relative"
-                      style={{
-                        opacity:
-                          selectedBands.length === 0 ||
-                          selectedBands.includes(node.band)
-                            ? 1
-                            : 0.3,
-                      }}
-                    >
-                      <HexaNode
-                        data={node}
-                        index={index}
-                        pathWay={pathWay}
-                        handlePathWayMoveUp={handlePathWayMoveUp}
-                        handlePathWayMoveDown={handlePathWayMoveDown}
-                        handlePathWayDelete={handlePathWayDelete}
-                      />
-                    </div>
-                  </div>
-                ))}
+          <div className="flex flex-col w-fit flex-1">
+            <div className="w-80  flex flex-col  rounded space-y-3 overflow-y-auto h-[92.5vh]">
+              <div className="bg-primary sticky top-0 z-50 text-white p-3 rounded-t flex justify-between  items-center">
+                <h2 className="text-xl font-bold">My Pathway</h2>
               </div>
-            )}
-          </div>
-          <div className="flex w-full justify-around p-5 pl-2">
-           <button onClick={()=>{
-            setIsPrintInitiated(true);
-           }} className="px-10 py-2 rounded-full bg-primary text-white font-bold">Print</button>
-           <button onClick={()=>{
-            setPathWay([])
-           }} className="px-10 py-2 rounded-full bg-gray-50 text-black font-bold">Clear</button>
-          </div>
-
+              {pathWay.length > 0 && (
+                <div className="flex flex-col-reverse justify-end items-center gap-3 p-3 h-full  ">
+                  {pathWay.map((node: any, index: number) => (
+                    <div className="w-full" key={index}>
+                      {index < pathWay.length - 1 && (
+                        <div className="pb-2 flex justify-center items-center w-full">
+                          <MoveUp className="w-4 h-4 stroke-slate-400" />
+                        </div>
+                      )}
+                      <div
+                        className="transition-opacity flex gap-x-3 justify-center relative"
+                        style={{
+                          opacity:
+                            selectedBands.length === 0 ||
+                            selectedBands.includes(node.band)
+                              ? 1
+                              : 0.3,
+                        }}
+                      >
+                        <HexaNode
+                          data={node}
+                          index={index}
+                          pathWay={pathWay}
+                          handlePathWayMoveUp={handlePathWayMoveUp}
+                          handlePathWayMoveDown={handlePathWayMoveDown}
+                          handlePathWayDelete={handlePathWayDelete}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+            <div className="flex w-full gap-4 p-5 pl-2">
+              <Button
+                onClick={() => {
+                  setIsPrintInitiated(true);
+                }}
+                
+              >
+                <Printer className="w-4 h-4 stroke-slate-200" />
+                Print
+              </Button>
+              <Button
+                onClick={() => {
+                  setPathWay([]);
+                }}
+                className="bg-gray-300 text-black hover:bg-gray-400"
+              >
+                <Eraser className="w-4 h-4 stroke-slate-800" />
+                Clear
+              </Button>
+            </div>
           </div>
         )}
-
-        
       </div>
 
-      <button onClick={()=>{
-        setShouldCopilotPopupOpen(true);
-      }} className={`group fixed ${pathWay.length>0 ? 'bottom-24' : 'bottom-10'} right-10 flex items-center gap-2 z-50`}>
-      {/* Bubble Text */}
-      <span className="opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 duration-300 bg-slate-50 text-primary text-sm font-medium px-3 py-1.5 rounded-full shadow-lg">
-      Copilot Corner
-      </span>
-
-      {/* Icon Button */}
-      <div className="h-12 w-12 p-2 rounded-full flex items-center justify-center hover:opacity-80 duration-300 shadow-md">
-     <img src="./src/assets/icons/icons8-microsoft-copilot-48.png"/>
-      </div>
-      </button>
-      
-      
+     
       <NodeDetailPopup
         nodeData={selectedNodeForPopup}
         onSearchChange={(value) => setSearchValue(value)}
@@ -329,15 +359,22 @@ export default function Option2() {
         setCopilotPromptDetails={setCopilotPromptDetails}
       />
 
-      {shouldCopilotPopupOpen && 
-      <CopilotPopup data={nodes} promptDetails={copilotPromptDetails || ''} setCopilotPromptDetails={setCopilotPromptDetails} setShouldCopilotPopupOpen={setShouldCopilotPopupOpen} setSelectedNodeForCopilotPopup={setSelectedNodeForCopilotPopup}></CopilotPopup>
-      }
+      {shouldCopilotPopupOpen && (
+        <CopilotPopup
+          data={nodes}
+          promptDetails={copilotPromptDetails || ""}
+          setCopilotPromptDetails={setCopilotPromptDetails}
+          setShouldCopilotPopupOpen={setShouldCopilotPopupOpen}
+          setSelectedNodeForCopilotPopup={setSelectedNodeForCopilotPopup}
+        ></CopilotPopup>
+      )}
 
-      {isPrintInitiated && <PathwayPrintDocument pathWay={pathWay} ref={printRef}></PathwayPrintDocument>}
-
-
-
-
+      {isPrintInitiated && (
+        <PathwayPrintDocument
+          pathWay={pathWay}
+          ref={printRef}
+        ></PathwayPrintDocument>
+      )}
     </MainLayout>
   );
 }
