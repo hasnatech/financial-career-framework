@@ -364,7 +364,7 @@ const CopilotPopup: React.FC<Props> = ({
             ) : (
               <div className=" p-[3px] rounded-3xl bg-gradient-to-r from-[#ffc9d4] to-[#beb8ff]">
                 <div className="bg-white rounded-[1.313rem] h-full w-full flex flex-col  gap-y-3 items-center justify-center justify-items-center">
-                  <img src="./src/assets/icons/icons8-microsoft-copilot-50 (2).png"></img>
+                  <img src="images/icons/icons8-microsoft-copilot-50 (2).png"></img>
                   <p className="text-slate-400">
                     Enter Details and Generate a Prompt
                   </p>
