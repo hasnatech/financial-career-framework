@@ -130,7 +130,7 @@ export function NodeDetailPopup({
 
          
               <div className="h-11 w-11 p-2 bg-white rounded-full flex items-center justify-center hover:opacity-80 duration-300 shadow-md">
-              <img src="./src/assets/icons/icons8-microsoft-copilot-48.png"/>
+              <img src="images/icons/icons8-microsoft-copilot-48.png"/>
               </div>
               </button>
               
