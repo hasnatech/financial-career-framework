@@ -62,7 +62,9 @@ const CopilotPopup: React.FC<Props> = ({
   const [visible, setVisible] = useState(true);
   const [generatedPrompt, setGeneratedPrompt] = useState("");
   const [isPromptCopied, setIsPromptCopied] = useState(false);
-
+  const [activeTab, setActiveTab] = useState<"employee" | "manager">(
+    "employee"
+  );
   const bgColor = getBandBackgroundColor(currentPromptDetails.group);
 
   useEffect(() => {
@@ -74,8 +76,8 @@ const CopilotPopup: React.FC<Props> = ({
     } else {
       setGeneratedPrompt("");
     }
-    console.log(currentPromptDetails);
-  }, [currentPromptDetails]);
+    // console.log(currentPromptDetails);
+  }, [currentPromptDetails, activeTab]);
 
   const handleGeneratePrompt = () => {
     const promptHeader = `The Role I aspire to attaining in the next ${currentPromptDetails.timeline} months has the following job profile`;
@@ -89,9 +91,48 @@ const CopilotPopup: React.FC<Props> = ({
     const promptInstruction =
       "Develop a detailed development plan and career roadmap to help me get to this next level";
 
-    const prompt = `${promptHeader}\n\nPurpose:\n${purpose}\n\nKey Accountabilities:\n${keyAccount}\n\nFinance Technical Competencies:\n${financeTechnical}\n\n${promptInstruction}`;
+    if (activeTab === "manager") {
+      console.log("activeTab", currentPromptDetails);
+      const managerPromptInstruction =
+        `${currentPromptDetails.label} Conversation Guide for Finance Managers
+🎯 Purpose
+•	Encourage reflection and career ownership
+•	Understand each team member’s aspirations
+•	Identify development needs and support opportunities
+•	Align goals with team and business priorities
 
-    setGeneratedPrompt(prompt);
+💬 Discussion Questions
+1. What are you most proud of accomplishing this year, and what energized you the most?
+→ Reflect on strengths and motivation
+2. Where do you see yourself growing in the next 12–18 months?
+→ Explore aspirations and career direction
+3. What skills or experiences do you need to develop to reach your next goal?
+→ Identify development areas and learning needs
+4. How can I or the team support you in your development journey?
+→ Discuss coaching, mentorship, and stretch opportunities
+
+🛠️ Copilot Prompts for Team Members
+Encourage your team to use Copilot to prepare:
+•	“Summarize what I accomplished this year and what I’m most proud of.”
+•	“What are some career paths I can explore based on my current finance role?”
+•	“Create a 70-20-10 development plan to help me grow toward a leadership role.”
+•	“Suggest ways my manager can support my career development goals.”
+
+📌 Follow-Up Actions
+•	Document key takeaways and goals
+•	Align development plans with team priorities
+•	Schedule follow-up check-ins
+•	Encourage use of https://cargillonline.sharepoint.com/sites/GlobalFinance/SitePages/Finance-Career-Framework.aspx
+`;
+      setGeneratedPrompt(`${managerPromptInstruction}`);
+      return;
+    } else {
+      const prompt = `${promptHeader}\n\nPurpose:\n${purpose}\n\nKey Accountabilities:\n${keyAccount}\n\nFinance Technical Competencies:\n${financeTechnical}\n\n${promptInstruction}`;
+      console.log("activeTab", activeTab);
+      setGeneratedPrompt(prompt);
+    }
+
+    // setGeneratedPrompt(prompt);
 
     return (
       <div className="flex flex-col h-full gap-y-3 border shadow-sm p-3 pt-0 overflow-auto ">
@@ -151,8 +192,8 @@ const CopilotPopup: React.FC<Props> = ({
         <div className="relative bg-slate-50 h-full w-full flex flex-col items-start gap-y-3 rounded-lg overflow-clip  ">
           <div className="flex w-full border-2 bg-white  items-center justify-between sticky top-0 pt-3 p-3 pl-4">
             <div className="flex gap-3 items-center">
-              <img  src="images/icons/icons8-microsoft-copilot-48.png" />
-            <h1 className="text-black font-bold text-xl">Copilot Corner</h1>
+              <img src="images/icons/icons8-microsoft-copilot-48.png" />
+              <h1 className="text-black font-bold text-xl">Copilot Corner</h1>
             </div>
             <button
               onClick={() => {
@@ -192,7 +233,7 @@ const CopilotPopup: React.FC<Props> = ({
 
                 <div className="flex flex-col items-start gap-y-2">
                   <label className="font-medium" htmlFor="">
-                    Timeline
+                    Timeline (in months)
                   </label>
                   <input
                     onChange={(event) => {
@@ -202,8 +243,9 @@ const CopilotPopup: React.FC<Props> = ({
                       });
                     }}
                     value={currentPromptDetails.timeline ?? ""}
+                    type="number"
                     className="border w-full p-3 py-2 pl-3 rounded-md outline-none"
-                    placeholder="12 Months"
+                    placeholder="number of months"
                   />
                 </div>
               </div>
@@ -298,71 +340,111 @@ const CopilotPopup: React.FC<Props> = ({
             {generatedPrompt ? (
               <div className="space-y-5">
                 <h3 className="font-bold text-lg">Copilot Prompt</h3>
-                <div className="  p-[3px] rounded-3xl bg-gradient-to-r from-[#ffc9d4] to-[#beb8ff]">
-                  <div
-                    className="relative rounded-[1.313rem] max-h-[65vh] overflow-hidden hover:overflow-auto 
-                   bg-white h-full mb-5  overflow-auto flex    gap-y-2  w-full hide-scrollbar"
-                  >
-                    <div>
-                      <pre className="whitespace-pre-wrap p-5 ">
-                        {generatedPrompt}
-                      </pre>
-                    </div>
+                <div>
+                  <div className="flex gap-3">
+                    <button
+                      className={`px-4 py-2 rounded-t-md  ${
+                        activeTab === "employee"
+                          ? "bg-gradient-to-t from-[#03441f] to-[#00843D] text-white"
+                          : "bg-slate-200"
+                      }`}
+                      onClick={() => setActiveTab("employee")}
+                    >
+                      Employee
+                    </button>
 
-                    {isPromptCopied && (
-                      <div
-                        className={`absolute inset-0 bg-pink-700/40 backdrop-blur-sm z-50 flex items-center justify-center
-        rounded-[1.313rem]
+                    <button
+                      className={`px-4 py-2 rounded-t-md ${
+                        activeTab === "manager"
+                          ? "bg-gradient-to-r from-[#03441f] to-[#00843D] text-white"
+                          : "bg-slate-200"
+                      }`}
+                      onClick={() => setActiveTab("manager")}
+                    >
+                      Manager
+                    </button>
+                  </div>
+                  <div className="  p-[3px] rounded-b-3xl bg-gradient-to-r from-[#03441f] to-[#BDE588]">
+                    {/* --- NEW TABS ---- */}
+
+                    <div
+                      className="relative rounded-b-[1.313rem] max-h-[62vh] overflow-hidden hover:overflow-auto 
+                   bg-white h-full mb-5  overflow-auto flex    gap-y-2  w-full hide-scrollbar"
+                    >
+                      <div>
+                        <pre className="whitespace-pre-wrap p-5 ">
+                          {generatedPrompt}
+                        </pre>
+                      </div>
+
+                      {isPromptCopied && (
+                        <div
+                          className={`absolute inset-0 bg-green-700/40 backdrop-blur-sm z-50 flex items-center justify-center
+        rounded-b-[1.313rem]
         transition-opacity duration-700
         ${visible ? "opacity-100" : "opacity-0"}`}
-                      >
-                        <div className="flex flex-col rounded-lg border-primary h-full w-full items-center justify-center ">
-                          <p className="font-bold text-center  text-3xl rounded-xl">
-                            Prompt Copied...
-                          </p>
-                          <p className="opacity-90 mt-2">
-                            Your prompt copied to clipboard...
-                          </p>
+                        >
+                          <div className="flex flex-col rounded-lg border-primary h-full w-full items-center justify-center ">
+                            <p className="font-bold text-center  text-3xl rounded-xl">
+                              Prompt Copied...
+                            </p>
+                            <p className="opacity-90 mt-2">
+                              Your prompt copied to clipboard...
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                    )}
+                      )}
+                    </div>
                   </div>
                 </div>
+                <div className="flex gap-3 justify-between">
+                  <p>
+                    Click on the{" "}
+                    <a
+                      className="underline text-blue-800"
+                      href="https://m365.cloud.microsoft/chat/?titleId=T_24e7e2dc-dc16-b3b7-de2a-51b9d3b65192&source=embedded-builder"
+                      target="_blank"
+                    >
+                      Finance Career Coach Agent{" "}
+                    </a>{" "}
+                    and paste the prompt.
+                  </p>
 
-                <Button
-                  onClick={() => {
-                    handleCopy();
-                  }}
-                  className=""
-                >
-                  <AnimatePresence mode="wait" initial={false}>
-                    {isPromptCopied ? (
-                      <motion.div
-                        key="check"
-                        initial={{ opacity: 0, scale: 0.5 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.5 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <Check className="w-4 h-4 stroke-green-500" />
-                      </motion.div>
-                    ) : (
-                      <motion.div
-                        key="copy"
-                        initial={{ opacity: 0, scale: 0.5 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.5 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <Copy className="w-4 h-4 stroke-slate-200" />
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                  {isPromptCopied ? "Copied" : "Copy"}
-                </Button>
+                  <Button
+                    onClick={() => {
+                      handleCopy();
+                    }}
+                    className=""
+                  >
+                    <AnimatePresence mode="wait" initial={false}>
+                      {isPromptCopied ? (
+                        <motion.div
+                          key="check"
+                          initial={{ opacity: 0, scale: 0.5 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 0.5 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <Check className="w-4 h-4 stroke-green-500" />
+                        </motion.div>
+                      ) : (
+                        <motion.div
+                          key="copy"
+                          initial={{ opacity: 0, scale: 0.5 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 0.5 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <Copy className="w-4 h-4 stroke-slate-200" />
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                    {isPromptCopied ? "Copied" : "Copy"}
+                  </Button>
+                </div>
               </div>
             ) : (
-              <div className=" p-[3px] rounded-3xl bg-gradient-to-r from-[#ffc9d4] to-[#beb8ff]">
+              <div className=" p-[3px] rounded-3xl bg-gradient-to-r from-[#03441f] to-[#BDE588]">
                 <div className="bg-white rounded-[1.313rem] h-full w-full flex flex-col  gap-y-3 items-center justify-center justify-items-center">
                   <img src="images/icons/icons8-microsoft-copilot-50 (2).png"></img>
                   <p className="text-slate-400">

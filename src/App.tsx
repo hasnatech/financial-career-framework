@@ -160,23 +160,6 @@ export default function Option2() {
     setNodes(initialNodes);
   }, [data, selectedBands, searchValue]);
 
-  const shuffleHandler = useCallback(() => {
-    setNodes((nodesSnapshot) => {
-      const newNodes = nodesSnapshot.map((node) => ({ ...node }));
-
-      newNodes.forEach((node) => {
-        const [row, col] = node.data.target.split(",").map(Number);
-        const x = isTransposed ? row * NODE_WIDTH : col * NODE_WIDTH;
-        const y = isTransposed ? col * NODE_HEIGHT : row * NODE_HEIGHT;
-        node.position = { x, y };
-      });
-
-      return newNodes;
-    });
-
-    setIsTransposed(!isTransposed);
-  }, [isTransposed]);
-
   const handlePathWayDelete = (requestedNode: any) => {
     const newPathWay = pathWay.filter((node) => node.id !== requestedNode.id);
     setPathWay(newPathWay);
@@ -197,6 +180,9 @@ export default function Option2() {
   };
 
   useEffect(() => {
+    if(selectedNodeForPopup == null) {
+      setSearchValue('');
+    }
     console.log(
       "The selected node for popup is changed to : ",
       selectedNodeForPopup

@@ -2,11 +2,10 @@ import {
   Info,
   LucideArrowDown,
   LucideArrowUp,
-  LucideEllipsis,
-  LucideTrash,
+  LucideTrash
 } from "lucide-react";
-import { bandClass } from "./Constant";
 import { useEffect, useState } from "react";
+import { bandClass } from "./Constant";
 
 export function HexaNode(props: any) {
   const zoom = props.zoom || 1;
