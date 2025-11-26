@@ -632,8 +632,16 @@
   {
     "row": "3",
     "col": "26",
-    "Title": "Vice President, Capital Markets & Trading",
-    "Key": "Treasury"
+    "Title": "Senior Director, Insurance Advisory (IA)",
+    "Key": "Insurance",
+    "contents": {
+      "sub_family": "Insurance, Insurance Advisory",
+      "band": "Manager II",
+      "contributor_type": "Manager",
+      "purpose": "The Manager II, Insurance Advisory job owns the execution of functional strategy and provides key input and operational direction on global hazard risk insurance strategy and program structure to enable the organization to proactively handle and mitigate the potential impacts of global hazards. This job leads all aspects of insurance activities for assigned regions, leading, advising, and making decisions on the most complex insurance matters, including insurance risk management, strategy development, insurance program management and administration, multi-jurisdiction compliance, contract and service negotiation, and complex mergers and acquisitions transactions. This job also directs and guides the governance and operations of the organization’s captive insurance company.",
+      "key_account": "<ul><li><b>Risk Management Strategy:</b> Owns the design and implementation of the global hazard risk management program strategy as it relates to the organization’s insurance programs and benefits to exposure to global hazards in a manner that aligns with its risk appetite, compliance, and operational requirements framework.</li><li><b>Risk Management:</b> Leads analyzing and evaluating potential loss areas and resolving appropriate type and level of protection to the organization, including negotiating insurance coverage and selecting tools as needed.</li><li><b>Vendor Relationship Management:</b> Fosters positive relationships with insurers, brokers, underwriters and related service providers and coordinates the related services that meet the organization’s performance to ensure access to the most suitable insurance coverage and related services at the most favorable terms and requirements.</li><li><b>Continuous Improvement:</b> Nurtures strategies and continuous improvement initiatives with a focus on systems and operational improvements for insurance governance and compliance across the regions while considering the specific regulatory and market conditions of each region.</li><li><b>Understanding Standardization:</b> Establishes, implements and monitors underwriting policies and procedures to minimize risk exposure while maintaining compliance with the captive towards fulfillment of the organization’s risk retention and mitigation goals.</li><li><b>Insurance Strategy:</b> Leads the global insurance strategy, due diligence and implementation guidelines to ensure that the organization’s insurance programs are compliant and up-to-date and guide effective risk financing from an insurance program at a global scale.</li><li><b>Mergers & Acquisitions:</b> Oversees activities and guides insurance due diligence and implementation for large or complex programs, counseling business divisions on insurance requirements and risk financing that the organization must consider for mergers, acquisitions and other related transactions.</li><li><b>Team Management:</b> Manages team members to achieve the organization’s goals, by ensuring productivity, communicating performance expectations, creating goal alignment, giving and seeking feedback, providing coaching, sharing best practices and holding people accountable, supporting employee development, recognizing achievement and lessons learned, and developing enabling conditions for talent to thrive in an inclusive team culture.</li></ul>",
+      "finance_technical": "<ul><li><b>Makes Decisions with Key Financial Information:</b> Manages, synthesizes, and optimizes key financial information and budgets to effectively inform business decision making and maximize the value of the organization.</li><li><b>Up-to-date Tax & Regulatory Standards:</b> Understands and applies tax-related knowledge about the external business environment and regulatory changes to uphold standards and make informed business decisions and recommendations.</li><li><b>Manages Financial Risk:</b> Identifies, assesses, communicates, educates, and mitigates financial risks and potential consequences to the business; understands and monitors robust control frameworks.</li><li><b>Conducts Complex Financial Analyses:</b> Conducts complex financial analyses (e.g., forecasting, scenario planning, cost/benefit analysis, and modeling), critically interprets models she results, and distills and translates the data points into actionable business insights and decision making.</li><li><b>Manages Allocation of Assets:</b> Manages carefully financial assets, liabilities, and cash flows to ensure liquidity, stability, and efficiency of financial operations for the organization.</li><li><b>Reports Financial Information:</b> Gathers, analyzes, understands, and interprets various types of financial information, both internally and externally, in a way that promotes the financial health and sustainability of the organization.</li></ul>"
+    }
   },
   {
     "row": "4",
@@ -750,7 +758,7 @@
   {
     "row": "5",
     "col": "1",
-    "Title": "Director, Accounts Payable / Accounts Receivable Process",
+    "Title": "Director, Accounts Payable / Accounts Receivable Process (AP)",
     "Key": "Accounts Payable / Accounts Receivable",
 
     "contents": {
@@ -765,7 +773,7 @@
   {
     "row": "5",
     "col": "2",
-    "Title": "Director, Collections & Disputes",
+    "Title": "Director, Collections & Disputes (CD)",
     "Key": "Accounts Payable / Accounts Receivable",
 
     "contents": {
@@ -780,7 +788,7 @@
   {
     "row": "5",
     "col": "3",
-    "Title": "Director, Credit",
+    "Title": "Director, Credit (CR)",
     "Key": "Accounts Payable / Accounts Receivable",
 
     "contents": {
@@ -795,7 +803,7 @@
   {
     "row": "5",
     "col": "4",
-    "Title": "Director, Audit Quality & Operations",
+    "Title": "Director, Audit Quality & Operations (QO)",
     "Key": "Corporate Audit",
 
     "contents": {
@@ -810,7 +818,7 @@
   {
     "row": "5",
     "col": "5",
-    "Title": "Director, Commercial Finance",
+    "Title": "Director, Commercial Finance (CO)",
     "Key": "Enterprise Finance",
 
     "contents": {
@@ -825,7 +833,7 @@
   {
     "row": "5",
     "col": "6",
-    "Title": "Director, Corporate Financial Planning & Analysis",
+    "Title": "Director, Corporate Financial Planning & Analysis (CF)",
     "Key": "Enterprise Finance",
 
     "contents": {
@@ -840,7 +848,7 @@
   {
     "row": "5",
     "col": "7",
-    "Title": "Director, Business Financial Planning & Analysis",
+    "Title": "Director, Business Financial Planning & Analysis (BF)",
     "Key": "Enterprise Finance",
 
     "contents": {
@@ -855,7 +863,7 @@
   {
     "row": "5",
     "col": "8",
-    "Title": "Director, Financial Accounting & Controllership",
+    "Title": "Director, Financial Accounting & Controllership (AC)",
     "Key": "Financial Accounting",
 
     "contents": {
@@ -870,7 +878,7 @@
   {
     "row": "5",
     "col": "9",
-    "Title": "Director, Consolidations",
+    "Title": "Director, Consolidations (CN)",
     "Key": "Financial Accounting",
     "contents": {
       "sub_family": "Financial Accounting, Consolidations",
@@ -886,7 +894,7 @@
   {
     "row": "5",
     "col": "10",
-    "Title": "Director, Mergers, Acquisitions, Divestitures & Joint Ventures",
+    "Title": "Director, Mergers, Acquisitions, Divestitures & Joint Ventures (DJ)",
     "Key": "Financial Accounting",
     "contents": {
       "sub_family": "Financial Accounting, MADJV",
@@ -900,7 +908,7 @@
   {
     "row": "5",
     "col": "11",
-    "Title": "Director, Record to Report",
+    "Title": "Director, Record to Report (RR)",
     "Key": "Financial Accounting",
     "contents": {
       "sub_family": "Financial Accounting, Record to Report",
@@ -928,7 +936,7 @@
   {
     "row": "5",
     "col": "13",
-    "Title": "Director, Financial Services Operations",
+    "Title": "Director, Financial Services Operations (FS)",
     "Key": "Financial Accounting",
     "contents": {
       "sub_family": "Financial Accounting, Technical Accounting & Reporting",
@@ -942,7 +950,7 @@
   {
     "row": "5",
     "col": "14",
-    "Title": "Director, Counterparty Risk",
+    "Title": "Director, Counterparty Risk (CT)",
     "Key": "Internal Control",
     "contents": {
       "sub_family": "Internal Controls, Counterparty Risk",
@@ -956,7 +964,7 @@
   {
     "row": "5",
     "col": "15",
-    "Title": "Director, Internal Controls",
+    "Title": "Director, Internal Controls (IC)",
     "Key": "Internal Control",
     "contents": {
       "sub_family": "Internal Controls, Internal Controls",
@@ -970,7 +978,7 @@
   {
     "row": "5",
     "col": "16",
-    "Title": "Director, Cost Accounting",
+    "Title": "Director, Cost Accounting (CA)",
     "Key": "Managerial Accounting",
     "contents": {
       "sub_family": "Managerial Accounting, Cost Accounting",
@@ -984,7 +992,7 @@
   {
     "row": "5",
     "col": "17",
-    "Title": "Director, Managerial Accounting",
+    "Title": "Director, Managerial Accounting (MA)",
     "Key": "Managerial Accounting",
     "contents": {
       "sub_family": "Managerial Accounting, Managerial Accounting",
@@ -1011,7 +1019,7 @@
   },
   { "row": "5",
     "col": "19",
-    "Title": "Director, Tax",
+    "Title": "Director, Tax (TX)",
     "Key": "Tax",
     "contents": {
       "sub_family": "Tax, Tax",
@@ -1025,7 +1033,7 @@
   {
     "row": "5",
     "col": "20",
-    "Title": "Director, Tax Compliance",
+    "Title": "Director, Tax Compliance (TC)",
     "Key": "Tax",
     "contents": {
       "sub_family": "Tax, Tax Compliance",
@@ -1039,7 +1047,7 @@
   },
   { "row": "5",
     "col": "21",
-    "Title": "Director, Tax Process",
+    "Title": "Director, Tax Process (PD)",
     "Key": "Tax",
     "contents": {
       "sub_family": "Tax, Tax Process",
@@ -1053,7 +1061,7 @@
   {
     "row": "5",
     "col": "22",
-    "Title": "Director, Customs Advisory",
+    "Title": "Director, Customs Advisory (CU)",
     "Key": "Trade Compliance",
     "contents": {
       "sub_family": "Trade Compliance, Customs Advisory",
@@ -1067,7 +1075,7 @@
   {
     "row": "5",
     "col": "23",
-    "Title": "Director, Trade Compliance Operations",
+    "Title": "Director, Trade Compliance Operations (OP)",
     "Key": "Trade Compliance",
     "contents": {
       "sub_family": "Trade Compliance, Trade Compliance Operations",
@@ -1081,7 +1089,7 @@
   {
     "row": "5",
     "col": "24",
-    "Title": "Director, Trade Compliance Excellence",
+    "Title": "Director, Trade Compliance Excellence (TE)",
     "Key": "Trade Compliance",
     "contents": {
       "sub_family": "Trade Compliance, Trade Compliance Excellence",
@@ -1095,7 +1103,7 @@
   {
     "row": "5",
     "col": "25",
-    "Title": "Director, Banking Connectivity",
+    "Title": "Director, Banking Connectivity (BC)",
     "Key": "Treasury",
     "contents": {
       "sub_family": "Treasury, Banking Connectivity",
@@ -1109,7 +1117,7 @@
   {
     "row": "5",
     "col": "26",
-    "Title": "Director, Banking Documentation",
+    "Title": "Director, Banking Documentation (BD)",
     "Key": "Treasury",
     "contents": {
       "sub_family": "Treasury, Banking Documentation",
@@ -1123,7 +1131,7 @@
   {
     "row": "5",
     "col": "27",
-    "Title": "Director, Cash Management & Treasury Operations",
+    "Title": "Director, Cash Management & Treasury Operations (TO)",
     "Key": "Treasury",
     "contents": {
       "sub_family": "Treasury, Cash Management & Treasury Operations",
@@ -1137,7 +1145,7 @@
   {
     "row": "5",
     "col": "28",
-    "Title": "Director, Capital Markets & Trading",
+    "Title": "Director, Capital Markets & Trading (TD)",
     "Key": "Treasury",
     "contents": {
       "sub_family": "Treasury, Capital Markets & Trading",
@@ -1151,7 +1159,7 @@
   {
     "row": "5",
     "col": "29",
-    "Title": "Director, Treasury Advisory",
+    "Title": "Director, Treasury Advisory (TY)",
     "Key": "Treasury",
     "contents": {
       "sub_family": "Treasury, Treasury Advisory",
@@ -1165,7 +1173,7 @@
   {
     "row": "5",
     "col": "30",
-    "Title": "Director, Insurance Advisory(IA)",
+    "Title": "Director, Insurance Advisory (IA)",
     "Key": "Treasury",
     "contents": {
       "sub_family": "Insurance, Insurance Advisory",
@@ -1179,32 +1187,72 @@
   {
     "row": "6",
     "col": "1",
-    "Title": "Advisor, Credit",
+    "Title": "Advisor, Credit (CR)",
     "Key": "Accounts Payable / Accounts Receivable"
+    "contents": {
+      "sub_family": "AP / AR, Credit",
+      "band": "Advisor",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Advisor, Credit job performs highly complex assessments and advises business leaders on credit decision to mitigate the organization’s credit risk. As a recognized subject matter authority in credit, this job partners with internal cross functional teams and external credit organizations to meet risk and reward targets and leverage credit as a catalyst for growth. This job influences strategic decisions on credit risk, generates insights on strategic credit initiatives for the organization, and develops new credit processes and policies.",
+      "key_account": "<ul><li><b>Customer Accounts:</b> Reviews and performs highly complex customer credit risk assessments and applies advanced knowledge to lead customer initiatives to mitigate high risk.</li><li><b>Credit Analysis:</b> Leads analysis and interpretation on credit trends, profitability, economics and collections activities to propose recommendations for credit decisions.</li><li><b>Process Modeling:</b> Ensures an optimal credit process approach and delivery model within the organization by collaborating with relevant internal trade and credit partners to design and align critical processes.</li><li><b>Credit Reporting:</b> Establishes processes for the preparation and distribution of detailed credit research and reports to support account decisions, including assessment of credit history and application of credit scoring, customer payment terms and payment terms for new customer and supplier accounts.</li><li><b>Collaboration:</b> Partners with cross-functional teams and external partners to resolve highly complex credit issues and implements solutions that balance problem solving skills and a customer centric approach.</li><li><b>Risk Management:</b> Reviews potential sources of loss and implements mitigation of potential financial consequences to the organization.</li><li><b>Credit Standards:</b> Leads the development and implementation of credit control policies and procedures, ensuring effective and efficient credit operations and processes that are risk aligned and compliant.</li><li><b>Industry Expertise:</b> Applies deep knowledge of industry standards, regulatory changes, and emerging best in class industry standards in credit management, proposing recommendations for process improvements and continuous improvement initiatives.</li><li><b>Credit Portfolio Management:</b> Leads efforts to position the business’ credit portfolio according to market conditions through trade structuring, rating and scoring.</li></ul>",
+      "finance_technical": "<ul><li><b>Makes Decisions with Key Financial Information:</b> Manages, synthesizes, and optimizes key financial information and budgets to effectively inform business decision making and maximize the value of the organization.</li><li><b>Up-to-date Tax & Regulatory Standards:</b> Understands and applies tax-related knowledge about the external business environment and regulatory changes to uphold standards and make informed business decisions and recommendations.</li><li><b>Manages Financial Risk:</b> Identifies, assesses, communicates, educates, and mitigates financial risks and potential consequences to the business; understands and monitors robust control frameworks.</li><li><b>Conducts Complex Financial Analyses:</b> Conducts complex financial analyses (e.g., forecasting, scenario planning, cost/benefit analysis, and modeling), critically interprets models she results, and distills and translates the data points into actionable business insights and decision making.</li><li><b>Manages Allocation of Assets:</b> Manages carefully financial assets, liabilities, and cash flows to ensure liquidity, stability, and efficiency of financial operations for the organization.</li><li><b>Reports Financial Information:</b> Gathers, analyzes, understands, and interprets various types of financial information, both internally and externally, in a way that promotes the financial health and sustainability of the organization.</li></ul>"
+    }
   },
   {
     "row": "6",
     "col": "2",
-    "Title": "Advisor, Corporate Audit",
-    "Key": "Corporate Audit"
+    "Title": "Advisor, Corporate Audit (AU)",
+    "Key": "Corporate Audit",
+    "contents": {
+      "sub_family": "Audit, Corporate Audit",
+      "band": "Advisor",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Advisor, Corporate Audit job develops, plans, and implements internal audit programs for high priority risks aligned with the organization’s strategies, operating objectives and compliance requirements. As a recognized subject matter expert in corporate audits, this job performs and reviews highly complex global audit activities, assesses and communicates risk, guides other members of the team in performing audit procedures, develops and reviews executive level reporting, and advises function and business partners globally.",
+      "key_account": "<ul><li><b>Audits:</b> Develops plans and leads end to end audit processes and procedures across a variety of risk domains within the organization, and drives audit engagement planning and prioritization, including activities, opportunities for maximizing data and analytics.</li><li><b>Risk Mitigation:</b> Guides the identification, assessment, communication and prioritization of relevant risks, applying principles of effective risk management.</li><li><b>Compliance Review:</b> Approves recommendations for improving efficiency and mitigating risks based on review of internal processes.</li><li><b>Investigations:</b> Leads investigations of alleged financial mismanagement, loss of assets or other irregularities, and reviews audit related documentation and reports to support compliance with organization and regulatory standards.</li><li><b>Continuous Improvement:</b> Performs and drives internal audit programs and external benchmarking to prioritize and evaluate audit procedures to be performed and identify areas of opportunity for improvement.</li><li><b>Report Development:</b> Prepares concise and accurate audit reports outlining issues, risks and recommendations, and follows up on audit issues to ensure that actions are implemented and effective.</li><li><b>Consultation:</b> Advises and coaches the audit team on audit procedures, including providing consultation to audit team members on planning and audit execution activities.</li><li><b>Stakeholder Partnerships:</b> Works to enable management and staff to obtain necessary information, supports audit activities and provides advisory services to enable management and staff to obtain necessary information.</li><li><b>Special Projects:</b> Owns and delivers the execution of ad hoc or key strategic project or initiative for corporate audit.</li></ul>",
+      "finance_technical": "<ul><li><b>Makes Decisions with Key Financial Information:</b> Manages, synthesizes, and optimizes key financial information and budgets to effectively inform business decision making and maximize the value of the organization.</li><li><b>Up-to-date Tax & Regulatory Standards:</b> Understands and applies tax-related knowledge about the external business environment and regulatory changes to uphold standards and make informed business decisions and recommendations.</li><li><b>Manages Financial Risk:</b> Identifies, assesses, communicates, educates, and mitigates financial risks and potential consequences to the business; understands and monitors robust control frameworks.</li><li><b>Conducts Complex Financial Analyses:</b> Conducts complex financial analyses (e.g., forecasting, scenario planning, cost/benefit analysis, and modeling), critically interprets models she results, and distills and translates the data points into actionable business insights and decision making.</li><li><b>Manages Allocation of Assets:</b> Manages carefully financial assets, liabilities, and cash flows to ensure liquidity, stability, and efficiency of financial operations for the organization.</li><li><b>Reports Financial Information:</b> Gathers, analyzes, understands, and interprets various types of financial information, both internally and externally, in a way that promotes the financial health and sustainability of the organization.</li></ul>"
+    }
   },
   {
     "row": "6",
     "col": "3",
-    "Title": "Advisor, Audit Risk Advisory",
-    "Key": "Corporate Audit"
+    "Title": "Advisor, Audit Risk Advisory (AR)",
+    "Key": "Corporate Audit",
+    "contents": {
+      "sub_family": "Audit, Audit Risk Advisory",
+      "band": "Advisor",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Advisor, Audit Risk Advisory job leads and drives the organization’s global risk assessments. As a recognized subject matter expert in a relevant domain and risk and controls, this job leads domain risk assessments, focusing on emerging and innovative risks, and prioritizes the organization’s audit activities. This job partners strategically with senior leadership teams across the organization to provide insights and inspire changes in the organization’s risk landscape.",
+      "key_account": "<ul><li><b>Risk Evaluation:</b> Evaluates domains risk that could prevent the organization from achieving strategic objectives, applying advanced knowledge and understanding of the risk landscape to integrate and synthesize seemingly disparate data points and strategies.</li><li><b>Risk Assessment Delivery:</b> Delivers high quality risk assessments and project proposals in alignment with the organization’s defined audit methodologies.</li><li><b>Risk Prioritization:</b> Systematically ranks inherent risks, controls and residual risks to inform and prioritize assurance and risk advisory activities.</li><li><b>Risk Reporting:</b> Communicates risk assessment and assessment conclusions, and facilitates discussions on assessment results with business leadership, acting as a key partner with the objective to enable informed business decisions on risk evaluation and mitigation.</li><li><b>Documentation:</b> Maintains detailed risk assessment documentation including risk ratings, risk summaries and recommendations.</li><li><b>Collaboration:</b> Partners with other risk advisory business and function leaders to maintain knowledge of internal developments within the organization and implements techniques to transform domain risk assessments.</li><li><b>Continuous Improvement:</b> Maintains knowledge of external trends, emerging risks, and innovative risks to inform risk assessments, and identifies and implements techniques to monitor and measure risks using data analytics.</li></ul>",
+      "finance_technical": "<ul><li><b>Makes Decisions with Key Financial Information:</b> Manages, synthesizes, and optimizes key financial information and budgets to effectively inform business decision making and maximize the value of the organization.</li><li><b>Up-to-date Tax & Regulatory Standards:</b> Understands and applies tax-related knowledge about the external business environment and regulatory changes to uphold standards and make informed business decisions and recommendations.</li><li><b>Manages Financial Risk:</b> Identifies, assesses, communicates, educates, and mitigates financial risks and potential consequences to the business; understands and monitors robust control frameworks.</li><li><b>Conducts Complex Financial Analyses:</b> Conducts complex financial analyses (e.g., forecasting, scenario planning, cost/benefit analysis, and modeling), critically interprets models she results, and distills and translates the data points into actionable business insights and decision making.</li><li><b>Manages Allocation of Assets:</b> Manages carefully financial assets, liabilities, and cash flows to ensure liquidity, stability, and efficiency of financial operations for the organization.</li><li><b>Reports Financial Information:</b> Gathers, analyzes, understands, and interprets various types of financial information, both internally and externally, in a way that promotes the financial health and sustainability of the organization.</li></ul>"
+    }
   },
   {
     "row": "6",
     "col": "4",
-    "Title": "Advisor, Audit Quality & Operations",
-    "Key": "Corporate Audit"
+    "Title": "Advisor, Audit Quality & Operations (QO)",
+    "Key": "Corporate Audit",
+    "contents": {
+      "sub_family": "Audit, Audit Quality & Operations",
+      "band": "Advisor",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Advisor, Audit Quality & Operations job leads the implementation and monitoring of audit standards, procedures, and controls to maintain compliance and improve audit effectiveness. As a recognized subject matter expert in risk and controls as well as audit standards, this job handles the prioritization of all audits, develops and implements new standards for audit, leads transformation and continuous improvement initiatives to ensure quality and efficiency, and provides recommendations on operational plans to the function and audit leadership teams.",
+      "key_account": "<ul><li><b>Project Planning:</b> Leads the audit scheduling and prioritization process by identifying and implementing solutions in order to create a more effective and efficient audit pipeline.</li><li><b>Quality Assurance:</b> Leads the ongoing assessment of corporate audit’s capabilities compared to upcoming demand, based upon the approved audit plan and evolving risk landscape.</li><li><b>Continuous Improvement:</b> Develops and implements audit transformation and continuous improvement initiatives using data analytics, research, external benchmarking and key performance indicators.</li><li><b>Audit Pipeline:</b> Leads analysis of inherent risks, coverage measures, functions, enterprises, and geographies to maintain a balanced, cyclical audit pipeline.</li><li><b>Project Initiation and Frameworks:</b> Builds and leads project proposals, statements of work, and recommendations for audit planning priorities for cyclical audits.</li><li><b>Collaboration:</b> Reviews and provides recommendations on operational plans to the function and audit leadership teams.</li></ul>",
+      "finance_technical": "<ul><li><b>Makes Decisions with Key Financial Information:</b> Manages, synthesizes, and optimizes key financial information and budgets to effectively inform business decision making and maximize the value of the organization.</li><li><b>Up-to-date Tax & Regulatory Standards:</b> Understands and applies tax-related knowledge about the external business environment and regulatory changes to uphold standards and make informed business decisions and recommendations.</li><li><b>Manages Financial Risk:</b> Identifies, assesses, communicates, educates, and mitigates financial risks and potential consequences to the business; understands and monitors robust control frameworks.</li><li><b>Conducts Complex Financial Analyses:</b> Conducts complex financial analyses (e.g., forecasting, scenario planning, cost/benefit analysis, and modeling), critically interprets models she results, and distills and translates the data points into actionable business insights and decision making.</li><li><b>Manages Allocation of Assets:</b> Manages carefully financial assets, liabilities, and cash flows to ensure liquidity, stability, and efficiency of financial operations for the organization.</li><li><b>Reports Financial Information:</b> Gathers, analyzes, understands, and interprets various types of financial information, both internally and externally, in a way that promotes the financial health and sustainability of the organization.</li></ul>"
+    }
   },
   {
     "row": "6",
     "col": "5",
     "Title": "Advisor, Commercial Finance",
-    "Key": "Enterprise Finance"
+    "Key": "Enterprise Finance",
+    "contents": {
+      "sub_family": "Enterprise Finance, Commercial Finance",
+      "band": "Advisor",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Advisor, Commercial Finance job partners to develop financial strategy, setting clear, financially focused targets for the organization, and ensures effective deployment of capital. As a recognized subject matter expert in commercial finance and financial planning and analysis, this job is a critical business partner for the group finance director and group leader, providing necessary financial rigor and analysis and ensuring the achievement of financial results and value creation for the organization. This job also leads the development, management and execution of the capital investment portfolio across the assigned business to align program outcomes, objectives and functional goals with the corporate group and functional strategy to deliver business outcomes.",
+      "key_account": "<ul><li><b>Business/Functional Financial Planning:</b> Leads, consolidates and links all financial planning, analysis, and forecasting processes, including scenario modeling and sensitivity analysis to understand drivers for a variety of financial and multi-country business levels or function by applying an understanding of key drivers of value creation and business performance.</li><li><b>Drives Business Performance:</b> Establishes and analyzes performance metrics and business model drivers to define strategy development and value creation, and develops strategy to drive and respond to performance in the business.</li><li><b>Modeling & Analytics:</b> Develops advanced modeling and benchmarking to bring new perspectives to the business, and develops and aligns presentations for communicating insights, including recommendations for new opportunities and solutions to continuously seek win-win solutions.</li><li><b>Forecasting:</b> Develops financial projections and advises financial forecast and model for the business to support new product development projects.</li><li><b>Collaboration:</b> Partners with other business functional stakeholders to influence others and enhance commercial investment performance.</li><li><b>Capital Project Investment Portfolio Management:</b> Leads the development, management and execution of the capital investment portfolio across the assigned business to integrate strategic goals of the business and corporate group, and partners with business leaders to execute corrective actions.</li><li><b>Continuous Improvement:</b> Creates and implements strategies to identify key issues and drive continuous improvement initiatives, including process improvement and nonfinancial impacts, to influence optimization of business performance.</li></ul>",
+      "finance_technical": "<ul><li><b>Makes Decisions with Key Financial Information:</b> Manages, synthesizes, and optimizes key financial information and budgets to effectively inform business decision making and maximize the value of the organization.</li><li><b>Up-to-date Tax & Regulatory Standards:</b> Understands and applies tax-related knowledge about the external business environment and regulatory changes to uphold standards and make informed business decisions and recommendations.</li><li><b>Manages Financial Risk:</b> Identifies, assesses, communicates, educates, and mitigates financial risks and potential consequences to the business; understands and monitors robust control frameworks.</li><li><b>Conducts Complex Financial Analyses:</b> Conducts complex financial analyses (e.g., forecasting, scenario planning, cost/benefit analysis, and modeling), critically interprets models she results, and distills and translates the data points into actionable business insights and decision making.</li><li><b>Manages Allocation of Assets:</b> Manages carefully financial assets, liabilities, and cash flows to ensure liquidity, stability, and efficiency of financial operations for the organization.</li><li><b>Reports Financial Information:</b> Gathers, analyzes, understands, and interprets various types of financial information, both internally and externally, in a way that promotes the financial health and sustainability of the organization.</li></ul>"
+    }
   },
   {
     "row": "6",
