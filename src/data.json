@@ -1188,7 +1188,7 @@
     "row": "6",
     "col": "1",
     "Title": "Advisor, Credit (CR)",
-    "Key": "Accounts Payable / Accounts Receivable"
+    "Key": "Accounts Payable / Accounts Receivable",
     "contents": {
       "sub_family": "AP / AR, Credit",
       "band": "Advisor",
