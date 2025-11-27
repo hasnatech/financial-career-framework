@@ -3165,8 +3165,16 @@
   {
     "row": "12",
     "col": "5",
-    "Title": "Senior Support Staff, Project Accounting",
-    "Key": "Managerial Accounting"
+    "Title": "Senior Support Staff, Project Accounting (PA)",
+    "Key": "Managerial Accounting",
+    "contents": {
+      "sub_family": "Managerial Accounting, Project Accounting",
+      "band": "Senior Support Staff",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Senior Support Staff, Project Accounting job provides assistance and support for the organization’s financial projects to help ensure accurate and efficient execution of all financial activities in projects including project cost analysis, billing, and revenue. This job also performs administrative tasks related to maintaining financial records, processing invoices and payments, reconciling accounts, and ensuring compliance with financial policies and procedures.",
+      "key_account": "✔ Project Budget Development: Facilitates the documentation, communication and coordination between project teams in the development of project budgets, including the assumptions, cost breakdowns, and actual project expenses against the budgeted amounts, providing regular updates to project teams.\n✔ Financial Analysis: Supports the analysis of project financial data by collecting and presenting information to help identify trends, variances, and financial risks.\n✔ Financial Reporting: Assists with preparing accurate and timely financial reports, including project cost estimates, forecasts, and actuals, to support project decision-making.\n✔ Expense Monitoring: Contributes to monitoring project expenses and adherence to approved budgets, identifying any deviations or cost overruns.\n✔ Project Cost Optimization: Supports financial reviews and provides recommendations to optimize project costs, improve profitability, and mitigate financial risks.\n✔ Industry Expertise: Stays abreast of industry regulations and accounting standards, contributing to compliance and continuous improvement.",
+      "finance_technical": "✔ Makes Decisions with Key Financial Information: Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.\n✔ Understands Tax & Regulatory Standards: Builds understanding of external business environment and Cargill’s tax-related strategies.\n✔ Manages Financial Risk: Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.\n✔ Conducts Complex Financial Analyses: Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.\n✔ Manages Allocation of Assets: Gains awareness of the implications of market factors on Cargill’s financial health and strategies.\n✔ Reports Financial Information: Builds awareness of Cargill’s approach to recording and communicating financial information."
+    }
   },
   {
     "row": "12",
