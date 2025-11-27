@@ -2381,7 +2381,7 @@
   {
     "row": "9",
     "col": "11",
-    "Title": "Supervisor I, Cash Management & Treasury Operations",
+    "Title": "Supervisor I, Cash Management & Treasury Operations (TO)",
     "Key": "Treasury",
     "contents": {
       "sub_family": "Treasury, Cash Management & Treasury Operations",
@@ -2395,32 +2395,72 @@
   {
     "row": "10",
     "col": "1",
-    "Title": "Professional, Accounts Payable / Accounts Receivable Process",
-    "Key": "Accounts Payable / Accounts Receivable"
+    "Title": "Professional, Accounts Payable / Accounts Receivable Process (AP)",
+    "Key": "Accounts Payable / Accounts Receivable",
+    "contents": {
+      "sub_family": "AP / AR, AP / AR Process",
+      "band": "Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Professional, Accounts Payable / Accounts Receivable Process job implements the end to end accounts payable or accounts receivable processes to ensure accurate, efficient and compliant billing or invoicing, financial transactions and cash flow management. Under limited supervision, this job maintains financial records, analyzes billing data, generates invoices or verifies and processes invoices. This job works closely with internal and external teams to improve billing or invoicing operations and delivers excellent customer service externally.",
+      "key_account": "<ul><li><b>Invoicing:</b> Implements the end to end invoicing process, including the control of accurate and timely generation or verification of invoices and supporting documentation.</li><li><b>Billing Analysis:</b> Analyzes billing data to identify trends, anomalies and opportunities for process improvements.</li><li><b>Discrepancy Resolution:</b> Investigates and resolves moderately complex billing or invoicing discrepancies by analyzing billing or invoicing data, communicating with internal cross functional teams and external customers or suppliers, and making necessary corrections.</li><li><b>Documentation:</b> Maintains accuracy and completeness of billing or invoicing records by conducting regular audits and reconciliations.</li><li><b>Records Maintenance:</b> Maintains financial records related to accounts payable or accounts receivable processes, ensuring compliance with applicable policies, procedures and regulatory requirements.</li><li><b>Collaboration:</b> Collaborates with cross functional teams to verify billing or invoicing information and ensure timely processing and accurate submission of customer or supplier payments.</li><li><b>Report Generation:</b> Prepares and distributes financial reports related to accounts payable or accounts receivable to support informed decision making on billing or invoicing matters.</li><li><b>Process Improvement:</b> Implements policies and procedures to improve the efficiency and effectiveness of the accounts payable or accounts receivable processes.</li><li><b>Industry Expertise:</b> Stays abreast of industry trends, regulations, regulatory changes and emerging best in class industry standards in accounts payable or accounts receivable processes, proposing necessary updates and improvements.</li></ul>",
+      "finance_technical": "<ul><li><b>Makes Decisions with Key Financial Metrics:</b> Understands key financial information to support the creation of budgets and inform effective business decision-making.</li><li><b>Upholds Tax & Regulatory Standards:</b> Supports Cargill’s tax-related strategies through knowledge of laws, regulations, and practices.</li><li><b>Manages Financial Risk:</b> Supports Cargill’s risk management strategies to inform decision-making, safeguard assets, and prevent errors in support of the business.</li><li><b>Conducts Complex Financial Analysis:</b> Supports Cargill’s use of business insights and effective decision-making through executing and interpreting complex financial analyses.</li><li><b>Manages Allocation of Assets:</b> Supports the management of financial assets, liabilities, and cash flows within Cargill.</li><li><b>Reports Financial Information:</b> Supports the collection and analysis of financial information from internal and external sources for financial reporting.</li></ul>"
+    }
   },
   {
     "row": "10",
     "col": "2",
-    "Title": "Professional, Collections & Disputes",
-    "Key": "Accounts Payable / Accounts Receivable"
+    "Title": "Professional, Collections & Disputes (CD)",
+    "Key": "Accounts Payable / Accounts Receivable",
+    "contents": {
+      "sub_family": "AP / AR, Collections & Disputes",
+      "band": "Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Professional, Collections & Disputes job processes moderately complex accounts receivable transactions and collects on cash due to the organization, supporting the timely and accurate collection of funds while maintaining positive customer relationships. With limited supervision, this job optimizes cash flow and reduces delinquencies by working with internal teams and external customers to resolve issues and collect outstanding payments. This job also provides inputs to identify potential collections risks and handles the accounts receivables ledger.",
+      "key_account": "<ul><li><b>Account Collections:</b> Implements the collections process, including monitoring and following up on overdue accounts, contacting customers for payment, and resolving payment discrepancies.</li><li><b>Customer Analysis:</b> Analyzes customer accounts to identify delinquencies, payment trends and potential credit risks.</li><li><b>Dispute Resolution:</b> Investigates and resolves disputes by analyzing relevant account data and partnering with internal teams.</li><li><b>Payment Negotiation:</b> Negotiates payment plans and settlements with customers, ensuring compliance with organizational policies and standards.</li><li><b>Reporting:</b> Prepares timely and accurate reports on collections, accounts receivable and dispute resolution activities to distribute to cross functional teams.</li><li><b>Relationship Management:</b> Maintains positive working relationships with customers and cross functional teams to enable efficient collaboration.</li><li><b>Continuous Improvement:</b> Identifies opportunities for process improvements and partners to develop innovative solutions to enhance collections and dispute resolution efficiency.</li><li><b>Industry Expertise:</b> Stays updated on industry trends, regulations, and best in class industry standards related to collections and dispute resolution, ensuring compliance and driving innovation.</li></ul>",
+      "finance_technical": "<ul><li><b>Makes Decisions with Key Financial Metrics:</b> Understands key financial information to support the creation of budgets and inform effective business decision-making.</li><li><b>Upholds Tax & Regulatory Standards:</b> Supports Cargill’s tax-related strategies through knowledge of laws, regulations, and practices.</li><li><b>Manages Financial Risk:</b> Supports Cargill’s risk management strategies to inform decision-making, safeguard assets, and prevent errors in support of the business.</li><li><b>Conducts Complex Financial Analysis:</b> Supports Cargill’s use of business insights and effective decision-making through executing and interpreting complex financial analyses.</li><li><b>Manages Allocation of Assets:</b> Supports the management of financial assets, liabilities, and cash flows within Cargill.</li><li><b>Reports Financial Information:</b> Supports the collection and analysis of financial information from internal and external sources for financial reporting.</li></ul>"
+    }
   },
   {
     "row": "10",
     "col": "3",
-    "Title": "Professional, Credit",
-    "Key": "Accounts Payable / Accounts Receivable"
+    "Title": "Professional, Credit (CR)",
+    "Key": "Accounts Payable / Accounts Receivable",
+    "contents": {
+      "sub_family": "AP / AR, Credit",
+      "band": "Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Professional, Credit job performs a range of moderately complex activities to minimize credit risks in support of the organization’s financial stability. Under limited supervision, this job participates in credit reporting, credit research, and account management initiatives in compliance with organizational and regulatory standards. This job also helps develop, recommends, and implements the controls and policies that ensure financially sound credit decisions are made in the organization.",
+      "key_account": "<ul><li><b>Customer Accounts:</b> Handles customer accounts, including tracking account status, following up on overdue accounts, and assessing customer portfolio risk.</li><li><b>Credit Analysis:</b> Synthesizes and interprets findings on credit trends, profitability, economics and collections activities to propose recommendations for credit decisions.</li><li><b>Data Management:</b> Maintains accurate and updated records of credit related information, including customer profiles, credit limits and payment terms, with a focus on accuracy and compliance.</li><li><b>Credit Reporting:</b> Prepares and distributes detailed credit research and reports to support account decision making, including identifying credit history and applying specific knowledge to propose acceptable credit limits and payment terms for new customer and supplier accounts.</li><li><b>Collaboration:</b> Collaborates with peers and teams to resolve moderately complex credit related concerns and problems, demonstrating problem solving skills and a customer centric approach.</li><li><b>Risk Management:</b> Identifies potential sources of risk and prepares estimates of potential financial consequences to inform decision making.</li><li><b>Credit Control Policies:</b> Assists in developing and implements credit control policies and procedures, applying professional knowledge to minimize credit risks and optimize credit operations.</li><li><b>Industry Expertise:</b> Stays abreast of industry trends, regulatory changes, and emerging best in class industry standards in credit management, proactively finding opportunities for continuous improvement in processes, risk mitigation and credit operations.</li></ul>",
+      "finance_technical": "<ul><li><b>Makes Decisions with Key Financial Information:</b> Understands key financial information to support the execution of budgets and informed effective business decisions within scope.</li><li><b>Upholds Tax & Regulatory Standards:</b> Supports Cargill’s tax strategies through knowledge of laws, regulations, and mandates.</li><li><b>Manages Financial Risk:</b> Supports Cargill’s risk management strategies to identify and assess risks, safeguard assets, and prevent errors to support the business.</li><li><b>Conducts Complex Financial Analyses:</b> Supports Cargill’s use of business insights and data for decision-making through executing and interpreting complex financial analyses.</li><li><b>Manages Allocation of Assets:</b> Supports the management of financial assets, liabilities, and cash flows within Cargill.</li><li><b>Reports Financial Information:</b> Supports the collection and analysis of financial information from internal and external sources for financial reporting.</li></ul>"
+    }
   },
   {
     "row": "10",
     "col": "4",
-    "Title": "Professional, Corporate Audit",
-    "Key": "Corporate Audit"
+    "Title": "Professional, Corporate Audit (AU)",
+    "Key": "Corporate Audit",
+    "contents": {
+      "sub_family": "Audit, Corporate Audit",
+      "band": "Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Professional, Corporate Audit job supports the planning and execution of internal audit programs aligned with the organization’s strategies, operational objectives and compliance requirements. Under limited supervision, this job completes moderately complex audit execution activities and procedures, assesses and communicates risk and summarizes findings.",
+      "key_account": "<ul><li><b>Audits:</b> Performs moderately complex audit activities, including completing audit procedures within the various risk domains and performing quality reviews for various parts of the audit life cycle.</li><li><b>Risk Mitigation:</b> Identifies, assesses, and prioritizes relevant risks, applying principles of effective risk management.</li><li><b>Compliance Review:</b> Evaluates the effectiveness of internal processes and provides recommendations for improving efficiency and mitigating risks.</li><li><b>Investigations:</b> Partners to perform investigations of alleged financial mismanagement, loss of assets or other irregularities, and prepares audit related documentation and reports to support compliance with organization and regulatory standards.</li><li><b>Continuous Improvement:</b> Supports corporate audit continuous improvement processes by identifying areas of risk or opportunity based on review of audit life cycle and external research and providing feedback to partners.</li><li><b>Data Review:</b> Monitors and analyzes data quality and accuracy and follows up to ensure timely corrections are made.</li></ul>",
+      "finance_technical": "<ul><li><b>Makes Decisions with Key Financial Information:</b> Understands key financial information to support the creation of budgets and inform effective business decision-making.</li><li><b>Upholds Tax & Regulatory Standards:</b> Supports Cargill’s tax-related strategies through knowledge of laws, regulations, and practices.</li><li><b>Manages Financial Risk:</b> Supports Cargill’s risk management strategies to inform decision-making, safeguard assets, and prevent errors in support of the business.</li><li><b>Conducts Complex Financial Analyses:</b> Supports Cargill’s use of business insights and effective decision-making through executing and interpreting complex financial analyses.</li><li><b>Manages Allocation of Assets:</b> Supports the management of financial assets, liabilities, and cash flows within Cargill.</li><li><b>Reports Financial Information:</b> Supports the collection and analysis of financial information from internal and external sources for financial reporting.</li></ul>"
+    }
   },
   {
     "row": "10",
     "col": "5",
-    "Title": "Professional, Commercial Finance",
-    "Key": "Enterprise Finance"
+    "Title": "Professional, Commercial Finance (CO)",
+    "Key": "Enterprise Finance",
+    "contents": {
+      "sub_family": "Enterprise Finance, Commercial Finance",
+      "band": "Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Professional, Commercial Finance job performs moderately complex financial planning, analysis and forecasting to support the development of business strategy, setting clear, financially focused targets and ensuring effective deployment of capital. As a critical business partner, this job provides necessary financial rigor and moderately complex analytics to monitor the progress and achievement of financial results for value creation for the organization. This job also executes the capital investment portfolio across the assigned business to align program outcomes, objectives and technical goals with the corporate, group, and functional strategy to deliver business outcomes.",
+      "key_account": "<ul><li><b>Business Function Financial Planning:</b> Coordinates and links moderately complex financial planning, analysis and forecasting processes, including customer profitability analysis and enterprise service demand drivers, for a regional or multi-country business or function by applying an understanding of key drivers and results and related sensitivities.</li><li><b>Drives Business Performance:</b> Understands performance metrics and business model drivers to support strategy execution and value creation, utilizing technology to implement the aligned end to end performance management of the business.</li><li><b>Modeling & Analysis:</b> Performs moderately complex modeling and benchmarking to bring new perspectives to business, and develops and delivers presentations to communicate insights, including defending positions on controversial topics, and adapting style to continuously seek win-win solutions.</li><li><b>Forecasting:</b> Develops necessary financial projections and propose financial forecast and model for the business to support new product development and business growth.</li><li><b>Collaboration:</b> Partners to develop necessary financial projections and propose financial forecast and model for the business to support new product development and business growth.</li><li><b>Capital Project Investment Portfolio Management Reporting & Analysis:</b> Monitors and reports on the status of the capital investment portfolio against goals, overall business impact of projects within the portfolio, and recommends changes to plans, and implements the approved corrective actions.</li><li><b>Continuous Improvement:</b> Conducts continuous improvement research to identify key issues and suggest optimization and process changes.</li></ul>",
+      "finance_technical": "<ul><li><b>Makes Decisions with Key Financial Information:</b> Understands key financial information to support the creation of budgets and inform effective business decision-making.</li><li><b>Upholds Tax & Regulatory Standards:</b> Supports Cargill’s tax-related strategies through knowledge of laws, regulations, and practices.</li><li><b>Manages Financial Risk:</b> Supports Cargill’s risk management strategies to inform decision-making, safeguard assets, and prevent errors in support of the business.</li><li><b>Conducts Complex Financial Analyses:</b> Supports Cargill’s use of business insights and effective decision-making through executing and interpreting complex financial analyses.</li><li><b>Manages Allocation of Assets:</b> Supports the management of financial assets, liabilities, and cash flows within Cargill.</li><li><b>Reports Financial Information:</b> Supports the collection and analysis of financial information from internal and external sources for financial reporting.</li></ul>"
+    }
   },
   {
     "row": "10",
