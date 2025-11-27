@@ -2744,38 +2744,86 @@
   {
     "row": "10",
     "col": "26",
-    "Title": "Professional, Banking Documentation",
-    "Key": "Treasury"
+    "Title": "Professional, Banking Documentation (BD)",
+    "Key": "Treasury",
+    "contents": {
+      "sub_family": "Treasury, Banking Documentation",
+      "band": "Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Professional, Banking Documentation job provides treasury documentation activities and continuous improvement initiatives to ensure accurate and compliant records and support the strategy, goals and vision of the global documentation team. Under general supervision, this job drafts and reviews moderately complex treasury documentation, ensuring compliance with relevant regulatory requirements and organizational standards to mitigate emerging risks and impacts while providing guidance and support for different business needs in collaboration with relevant stakeholders.",
+      "key_account": "<ul><li><b>Bank Account Service Support:</b> Partners with internal and external stakeholders to support various defined processes and transactions requiring treasury documentation, such as bank account onboarding and other bank account services.</li><li><b>Documentation Compliance:</b> Reviews moderately complex documentation for assigned transactions to detect risk and mitigate compliance risks and ensure compliance with legal, tax, or organizational standards.</li><li><b>Migration Support:</b> Supports migration activities by providing coaching, training, and advice to stakeholders that need to transfer banking information from one system to another.</li><li><b>Portfolio Terms & Conditions:</b> Assists with global efforts to ensure consistent terms and conditions across the portfolio of financing-related documents, partnering with product teams on the development of terms and risk terms and escalating negotiation roadblocks when necessary.</li><li><b>Regulatory Expertise:</b> Maintains knowledge of the financial regulatory environment to identify changes and recommend remediation activities.</li><li><b>Continuous Improvement:</b> Supports continuous improvement programs for documentation processes and participates in process improvement projects such as system deployments and enhancements.</li><li><b>Standards & Guidance:</b> Establishes standards and guidance for the defined documentation processes, supports implementation and facilitates processes and relationships with banks and internal customers.</li></ul>",
+      "finance_technical": "<ul><li><b>Makes Decisions with Key Financial Information:</b> Understands key financial information to support the creation of budgets and inform effective business decision-making.</li><li><b>Upholds Tax & Regulatory Standards:</b> Supports Cargill’s tax-related strategies through knowledge of laws, regulations, and practices.</li><li><b>Manages Financial Risk:</b> Supports Cargill’s risk management strategies to inform decision-making, safeguard assets, and prevent errors in support of the business.</li><li><b>Conducts Complex Financial Analyses:</b> Supports Cargill’s use of business insights and effective decision-making through executing and interpreting complex financial analyses.</li><li><b>Manages Allocation of Assets:</b> Supports the management of financial assets, liabilities, and cash flows within Cargill.</li><li><b>Reports Financial Information:</b> Supports the collection and analysis of financial information from internal and external sources for financial reporting.</li></ul>"
+    }
   },
   {
     "row": "10",
     "col": "27",
-    "Title": "Professional, Treasury Center of Expertise",
-    "Key": "Treasury"
+    "Title": "Professional, Treasury Center of Expertise (CE)",
+    "Key": "Treasury",
+    "contents": {
+      "sub_family": "Treasury, Treasury Center of Expertise",
+      "band": "Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Professional, Treasury Center of Expertise job executes initiatives that optimize and standardize the global treasury management system to best meet the organization’s treasury data needs. Under general supervision, this job is responsible for supporting end users through the resolution of moderately complex incident tickets in a timely and accurate fashion. This job also collaborates with treasury stakeholders to understand business requirements, which are used to drive system development and updates.",
+      "key_account": "<ul><li><b>End User Support:</b> Reviews, analyzes, and prioritizes moderately complex incident tickets and prioritizes to deliver effective and timely support to global treasury management system users.</li><li><b>Business Requirements:</b> Partners with treasury stakeholders to identify, document, and prioritize business requirements, ensuring alignment to organizational objectives.</li><li><b>Analysis and Solution Design:</b> Analyzes business requirements to determine technical specifications for global treasury management system solutions, such as system configuration, data flow, and user interface requirement.</li><li><b>Change Management:</b> Supports change management initiatives for the implementation of systems that have a considerable impact on treasury work processes.</li><li><b>Vendor Management:</b> Partners closely with development teams and vendors to ensure accurate and timely implementation of treasury data solutions.</li></ul>",
+      "finance_technical": "<ul><li><b>Makes Decisions with Key Financial Information:</b> Understands key financial information to support the creation of budgets and inform effective business decision-making.</li><li><b>Upholds Tax & Regulatory Standards:</b> Supports Cargill’s tax-related strategies through knowledge of laws, regulations, and practices.</li><li><b>Manages Financial Risk:</b> Supports Cargill’s risk management strategies to inform decision-making, safeguard assets, and prevent errors in support of the business.</li><li><b>Conducts Complex Financial Analyses:</b> Supports Cargill’s use of business insights and effective decision-making through executing and interpreting complex financial analyses.</li><li><b>Manages Allocation of Assets:</b> Supports the management of financial assets, liabilities, and cash flows within Cargill.</li><li><b>Reports Financial Information:</b> Supports the collection and analysis of financial information from internal and external sources for financial reporting.</li></ul>"
+    }
   },
   {
     "row": "10",
     "col": "28",
-    "Title": "Professional, Cash Management & Treasury Operations",
-    "Key": "Treasury"
+    "Title": "Professional, Cash Management & Treasury Operations (TO)",
+    "Key": "Treasury",
+    "contents": {
+      "sub_family": "Treasury, Cash Management & Treasury Operations",
+      "band": "Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Professional, Cash Management & Treasury Operations job executes moderately complex processes to maintain an optimal funding position for the organization. Under general supervision, this job works with internal and external partners to ensure funding timeframes and internal control standards are met for all daily cash management activities and financial trade operations.",
+      "key_account": "<ul><li><b>Global Funding Activities:</b> Performs moderately complex activities to ensure global funding needs are met, including trade confirmations, settlements, reconciliations, and collation of regional funding positions.</li><li><b>Issue Resolution:</b> Applies industry knowledge and collaborates with internal stakeholders to resolve funding issues in support of organizational objectives.</li><li><b>Relationship Management:</b> Collaborates with banks, brokers, and other internal and external counterparties to support issue resolution.</li><li><b>Continuous Improvement:</b> Executes initiatives to enhance the treasury’s systems and processes to support organizational objectives and drive continuous improvement, such as implementing new funding and trade structures.</li><li><b>Compliance:</b> Documents and reviews treasury activities to ensure compliance with internal control standards and regulatory requirements.</li></ul>",
+      "finance_technical": "<ul><li><b>Makes Decisions with Key Financial Information:</b> Understands key financial information to support the creation of budgets and inform effective business decision-making.</li><li><b>Upholds Tax & Regulatory Standards:</b> Supports Cargill’s tax-related strategies through knowledge of laws, regulations, and practices.</li><li><b>Manages Financial Risk:</b> Supports Cargill’s risk management strategies to inform decision-making, safeguard assets, and prevent errors in support of the business.</li><li><b>Conducts Complex Financial Analyses:</b> Supports Cargill’s use of business insights and effective decision-making through executing and interpreting complex financial analyses.</li><li><b>Manages Allocation of Assets:</b> Supports the management of financial assets, liabilities, and cash flows within Cargill.</li><li><b>Reports Financial Information:</b> Supports the collection and analysis of financial information from internal and external sources for financial reporting.</li></ul>"
+    }
   },
   {
     "row": "10",
     "col": "29",
-    "Title": "Professional, Capital Markets & Trading",
-    "Key": "Treasury"
+    "Title": "Professional, Capital Markets & Trading (TD)",
+    "Key": "Treasury",
+    "contents": {
+      "sub_family": "Treasury, Capital Markets & Trading",
+      "band": "Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Professional, Capital Markets & Trading job handles the organization’s funding and foreign exchange trading activities for the defined geographic region to ensure that the organization has access to the necessary funds, manage currency risks, optimize costs, and comply with regulatory requirements. Under general supervision, this job assists with managing the risks associated with funding and foreign exchange products using applied financial market knowledge.",
+      "key_account": "<ul><li><b>Transaction Management:</b> Handles the day to day execution of external funding and foreign exchange transactions for the assigned countries.</li><li><b>Funding Flow Analysis:</b> Supports partnerships with internal stakeholders to ensure the optimal mix of funding for a geography between cross border and local funding sources, and manages the interest rate risk and foreign exchange exposure of these short-term funding positions.</li><li><b>Foreign Exchange Trade Execution:</b> Executes moderately complex foreign exchange trades for organization groups while adhering to the counterparty framework and providing general foreign exchange advisory to the groups involved.</li><li><b>Risk Analysis:</b> Analyzes financial markets, evaluates risk unit usage, and registers potential transactions with key stakeholders in support of taking proprietary risk positions.</li><li><b>Market Analysis:</b> Conducts moderately complex market analyses to provide foreign exchange and interest rate advisory to help the organization manage the complexities of currency and interest rate markets and make informed decisions.</li></ul>",
+      "finance_technical": "<ul><li><b>Makes Decisions with Key Financial Information:</b> Understands key financial information to support the creation of budgets and inform effective business decision-making.</li><li><b>Upholds Tax & Regulatory Standards:</b> Supports Cargill’s tax-related strategies through knowledge of laws, regulations, and practices.</li><li><b>Manages Financial Risk:</b> Supports Cargill’s risk management strategies to inform decision-making, safeguard assets, and prevent errors in support of the business.</li><li><b>Conducts Complex Financial Analyses:</b> Supports Cargill’s use of business insights and effective decision-making through executing and interpreting complex financial analyses.</li><li><b>Manages Allocation of Assets:</b> Supports the management of financial assets, liabilities, and cash flows within Cargill.</li><li><b>Reports Financial Information:</b> Supports the collection and analysis of financial information from internal and external sources for financial reporting.</li></ul>"
+    }
   },
   {
     "row": "10",
     "col": "30",
-    "Title": "Professional, Treasury Advisory",
-    "Key": "Treasury"
+    "Title": "Professional, Treasury Advisory (TY)",
+    "Key": "Treasury",
+    "contents": {
+      "sub_family": "Treasury, Treasury Advisory",
+      "band": "Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Professional, Treasury Advisory job provides treasury consulting services for defined organizational divisions to improve the financial well-being of the organization. Under general supervision, this job applies financial knowledge to develop financial and risk management policies and procedures, provide moderately complex advisory services, and contribute to analytical and strategic projects across the organization.",
+      "key_account": "- Financial Modeling: Provides moderately complex financial modeling and advisory services for the defined organizational divisions.\n- Policy Compliance: Participates in the development of financial policies and procedures and provides support to ensure compliance with organizational policies.\n- Advising: Collaborates with businesses during mergers, acquisitions, divestitures, and joint ventures for the defined organizational divisions by applying knowledge in treasury and risk.\n- Risk Reporting: Consolidates information and prepares reports on treasury-related risks for the defined organizational division, including foreign exchange rates and counterparty risks.\n- Banking Relationships: Maintains banking relationships with key partners in the region to improve funding options.",
+      "finance_technical": "- Makes Decisions with Key Financial Information: Understands key financial information to support the creation of budgets and inform effective business decision-making.\n- Upholds Tax & Regulatory Standards: Supports Cargill’s tax-related strategies through knowledge of laws, regulations, and practices.\n- Manages Financial Risk: Supports Cargill’s risk management strategies to inform decision-making, safeguard assets, and prevent errors in support of the business.\n- Conducts Complex Financial Analyses: Supports Cargill’s use of business insights and effective decision-making through executing and interpreting complex financial analyses.\n- Manages Allocation of Assets: Supports the management of financial assets, liabilities, and cash flows within Cargill.\n- Reports Financial Information: Supports the collection and analysis of financial information from internal and external sources for financial reporting."
+    }
   },
   {
     "row": "10",
     "col": "31",
-    "Title": "Professional, Insurance Advisory",
-    "Key": "Insurance"
+    "Title": "Professional, Insurance Advisory (IA)",
+    "Key": "Insurance",
+    "contents": {
+      "sub_family": "Insurance, Insurance Advisory",
+      "band": "Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Professional, Insurance Advisory job contributes to the design and implementation of insurance programs and conducts the analysis of insurance program data to identify trends, assess risk exposures, and make data driven recommendations for program improvements. With limited supervision, this job partners to find opportunities for cost savings, risk mitigation, and improved coverage. This job also maintains accurate documentation and reporting of certain insurance program transactions, ensuring compliance with regulatory requirements and providing valuable insights for decision making.",
+      "key_account": "- Design & Implementation: Supports the design and implementation of insurance programs, collaborating with internal team members and insurance partners to ensure programs align with the company’s risk management objectives and provide adequate coverage.\n- Data Analysis: Supports the review and analysis of data, primarily for programs in the organization’s captive insurance company including property, casualty, marine and employee benefits, to gain insights and make informed decisions regarding risk management, insurance coverage, and program performance.\n- Program Placement: Collaborates with different insurance partners in the placement and administration of certain of moderately complex insurance programs to secure appropriate coverage, negotiate program terms, and handle the programs optimally.\n- Financial Compliance: Partners with internal and external finance and accounting members to ensure insurance programs are accurately reflected in the company’s financial documents.\n- Risk Mitigation: Supports the identification, validation and operational of strategies that mitigate risk, and stays updated on industry trends, emerging risks, and regulatory changes to provide dependable recommendations that ensure program effectiveness and alignment with evolving needs.",
+      "finance_technical": "- Makes Decisions with Key Financial Information: Understands key financial information to support the creation of budgets and inform effective business decision-making.\n- Upholds Tax & Regulatory Standards: Supports Cargill’s tax-related strategies through knowledge of laws, regulations, and practices.\n- Manages Financial Risk: Supports Cargill’s risk management strategies to inform decision-making, safeguard assets, and prevent errors in support of the business.\n- Conducts Complex Financial Analyses: Supports Cargill’s use of business insights and effective decision-making through executing and interpreting complex financial analyses.\n- Manages Allocation of Assets: Supports the management of financial assets, liabilities, and cash flows within Cargill.\n- Reports Financial Information: Supports the collection and analysis of financial information from internal and external sources for financial reporting."
+    }
   },
   {
     "row": "11",
