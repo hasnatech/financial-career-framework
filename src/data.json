@@ -2828,110 +2828,255 @@
   {
     "row": "11",
     "col": "1",
-    "Title": "Associate Professional, Accounts Payable / Accounts Receivable Process",
-    "Key": "Accounts Payable / Accounts Receivable"
+    "Title": "Associate Professional, Accounts Payable / Accounts Receivable Process (AP)",
+    "Key": "Accounts Payable / Accounts Receivable",
+    "contents": {
+      "sub_family": "AP / AR, AP / AR Process",
+      "band": "Associate Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Professional, Accounts Payable / Accounts Receivable Process job supports the end to end accounts payable or accounts receivable processes to ensure accurate, efficient and compliant billing or invoicing, financial transactions and cash flow management. Under close supervision, this job maintains financial records, analyzes billing data, generates invoices or verifies and processes invoices. This job also works closely with internal cross functional teams to improve billing or invoicing operations and delivers excellent customer service externally.",
+      "key_account": "<ul>\n<li><b>Invoicing:</b> Helps implement the end to end invoicing process, including the accurate and timely generation or verification and posting of invoices and supporting documentation.</li>\n<li><b>Billing Analysis:</b> Supports the analysis of billing data to identify trends, anomalies and opportunities for process improvements.</li>\n<li><b>Discrepancy Resolution:</b> Assists with the investigation and resolution of billing or invoicing discrepancies by analyzing billing or invoicing data, communicating with cross functional teams and customers or suppliers, and making necessary corrections.</li>\n<li><b>Audit Support:</b> Maintains accuracy and completeness of billing or invoicing records by helping conduct regular audits.</li>\n<li><b>Records Maintenance:</b> Maintains financial records related to accounts payable or accounts receivable transactions in compliance with applicable policies, procedures and regulatory requirements.</li>\n<li><b>Collaboration:</b> Partners with internal teams to verify billing or invoicing information and ensure timely and accurate processing of customer or supplier payments.</li>\n<li><b>Reporting:</b> Generates and maintains financial reports related to accounts payable or accounts receivable to support informed decision-making in billing or invoicing matters.</li>\n<li><b>Continuous Improvement:</b> Helps implement policies and procedures to improve the efficiency and effectiveness of accounts payable or accounts receivable processes.</li>\n<li><b>Industry Expertise:</b> Stays abreast of industry trends, regulatory changes, and emerging best in class industry standards in accounts payable or accounts receivable processes, providing inputs for necessary updates and improvements.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Builds understanding of external business environments and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "11",
     "col": "2",
-    "Title": "Associate Professional, Collections & Disputes",
-    "Key": "Accounts Payable / Accounts Receivable"
+    "Title": "Associate Professional, Collections & Disputes (CD)",
+    "Key": "Accounts Payable / Accounts Receivable",
+    "contents": {
+      "sub_family": "AP / AR, Collections & Disputes",
+      "band": "Associate Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Professional, Collections & Disputes job assists with processing accounts receivable transactions and collecting on cash due to the organization, supporting the timely and accurate collection of funds while maintaining positive customer relationships. Under close supervision, this job optimizes cash flow and reduces delinquencies by working with internal teams and external customers to resolve issues and collect outstanding payments.",
+      "key_account": "<ul>\n<li><b>Account Collections:</b> Supports the collections process, including monitoring and following up on overdue accounts, contacting customers for payment and resolving payment discrepancies.</li>\n<li><b>Customer Analysis:</b> Assists with the analysis of customer accounts to identify delinquencies, payment trends and potential credit risks.</li>\n<li><b>Dispute Resolution:</b> Investigates and resolves routine disputes by analyzing relevant account data and collaborating with internal teams.</li>\n<li><b>Payment Negotiation:</b> Helps negotiate payment plans and settlements with customers, ensuring compliance with organizational policies and standards.</li>\n<li><b>Reporting:</b> Drafts periodic and accurate reports on collections, accounts receivable and dispute resolution activities to distribute to internal teams.</li>\n<li><b>Relationship Management:</b> Maintains positive working relationships with customers and cross functional teams to support collections and dispute resolution.</li>\n<li><b>Continuous Improvement:</b> Partners to find opportunities for process improvements and contributes to the development of innovative solutions to improve collections and dispute resolution efficiency.</li>\n<li><b>Industry Expertise:</b> Stays updated on industry trends, regulations, and best in class industry standards related to collections and dispute resolution, ensuring compliance and driving innovation.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "11",
     "col": "3",
-    "Title": "Associate Professional, Credit",
-    "Key": "Accounts Payable / Accounts Receivable"
+    "Title": "Associate Professional, Credit (CR)",
+    "Key": "Accounts Payable / Accounts Receivable",
+    "contents": {
+      "sub_family": "AP / AR, Credit",
+      "band": "Associate Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Professional, Credit job performs basic and routine activities to minimize credit risks in support of the organization’s financial stability. Under close supervision, this job supports credit reporting, credit research, and account management initiatives in compliance with organizational and regulatory standards.",
+      "key_account": "<ul>\n<li><b>Customer Accounts:</b> Collects and maintains customer accounts, including tracking account status, following up on overdue accounts, and assessing customer portfolio risk.</li>\n<li><b>Credit Analysis:</b> Researches and presents findings on credit trends, profitability, economics and collections activities to business leaders.</li>\n<li><b>Data Management:</b> Maintains accurate and updated records of credit related information, including customer profiles, credit limits and payment terms.</li>\n<li><b>Credit Reporting:</b> Assists in the preparation and distribution of detailed credit research and reports to support account decision making.</li>\n<li><b>Collaboration:</b> Collaborates with cross functional teams to resolve credit related issues and disputes in a timely and professional manner.</li>\n<li><b>Risk Management:</b> Researches potential sources of loss and helps prepare estimates of potential financial consequences to minimize the company’s credit risk.</li>\n<li><b>Industry Expertise:</b> Stays abreast of industry trends, regulatory changes, and emerging best in class industry standards in credit management, helping find opportunities for continuous improvement in processes, risk mitigation and credit operations.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "11",
     "col": "4",
-    "Title": "Associate Professional, Corporate Audit",
-    "Key": "Corporate Audit"
+    "Title": "Associate Professional, Corporate Audit (AU)",
+    "Key": "Corporate Audit",
+    "contents": {
+      "sub_family": "Audit, Corporate Audit",
+      "band": "Associate Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Professional, Corporate Audit job assists with routine activities in the corporate audit function. Under close supervision, this job assists in updating guidance and methodology materials, performing routine planning, executing, and reporting of internal audit programs aligned with the organization’s strategies, operational objectives and compliance requirements, as well as with other initiatives of the function.",
+      "key_account": "<ul>\n<li><b>Audits:</b> Supports end to end audit processes across a variety of risk domains within the organization.</li>\n<li><b>Risk Mitigation:</b> Assists with the identification, assessment and prioritization of relevant risks, applying principles of effective risk management.</li>\n<li><b>Continuous Improvement:</b> Completes external research to assist with prioritization and evaluation of audit methodologies and procedures.</li>\n<li><b>Data Quality:</b> Analyzes data to ensure quality and accuracy and follows up to ensure timely corrections are made.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "11",
     "col": "5",
-    "Title": "Associate Professional, Business Financial Planning & Analysis",
-    "Key": "Enterprise Finance"
+    "Title": "Associate Professional, Business Financial Planning & Analysis (BF)",
+    "Key": "Enterprise Finance",
+    "contents": {
+      "sub_family": "Enterprise Finance, Business FP&A",
+      "band": "Associate Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Professional, Business FP&A job assists with financial planning and analysis activities that integrate planning, budgeting, forecasting, management reporting and analysis to support the development of business strategy. Under close supervision, this job partners with business to generate insights and contribute to continuous process improvements to support business decision making.",
+      "key_account": "<ul>\n<li><b>Financial Planning, Reporting & Analysis:</b> Assists in providing timely, accurate and consistent financial planning, budgeting, forecasting and management reporting and analysis for the assigned business group or function, translating financial metrics into meaningful insights to help enhance decision making.</li>\n<li><b>Modeling & Analysis:</b> Performs ad hoc analysis and basic modeling including sourcing of data, cost services and associated tools, both financial and nonfinancial, and communication of analysis to support decision making and to identify key performance indicators.</li>\n<li><b>Continuous Process Improvement:</b> Supports the implementation process improvements related to data and technology to support the standardization and simplification of financial planning, budgeting, forecasting and management reporting.</li>\n<li><b>Reporting & Presentations:</b> Assists with routine financial reporting and presentations to enhance the communication of process initiatives and results to business teams and other stakeholders.</li>\n<li><b>Tools, Models, and Reporting:</b> Partners with peers in cross functional financial teams to integrate effective financial planning and reporting to help provide insights and ensure accuracy and transparency.</li>\n<li><b>Integrated Risk Management:</b> Assists with the identification of key financial risks and supports execution of the mitigation of integrated business planning, forecasting and operating review for the business group or function.</li>\n<li><b>Operational Performance Analysis:</b> Monitors operational performance and supports variance analysis and comparison against forecast and budget for a set of given business areas.</li>\n<li><b>Stakeholder Management:</b> Contributes to stakeholder management by supporting commercial conversations, collecting stakeholder inputs and thoughts, and developing quantitative summaries of future estimates to communicate with teams to enhance decision making.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
+
   },
   {
     "row": "11",
     "col": "6",
-    "Title": "Associate Professional, Financial Accounting & Controllership",
-    "Key": "Financial Accounting"
+    "Title": "Associate Professional, Financial Accounting & Controllership (AC)",
+    "Key": "Financial Accounting",
+    "contents": {
+      "sub_family": "Financial Accounting, Financial Accounting & Controllership",
+      "band": "Associate Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Professional, Financial Accounting & Controllership job assists with the establishment and maintenance of accounting policies and fiscal controls to safeguard the organization’s assets. Under close supervision, the job prepares standard financial report, statement and analysis to provide insights for business decision making. The job also contributes to continuous process improvement in management reporting, report standardization and rationalization.",
+      "key_account": "<ul>\n<li><b>Accounting:</b> Maintains accounting and financial records and reports, creates standard accounting report packages, and supports new setup and changes in existing financial applications to ensure accurate and efficient recording.</li>\n<li><b>Accounting Services Support:</b> Performs standard accounting services to ensure accurate and efficient financial record keeping, including applying accounting techniques and practices to classify and record financial reporting, accounting and administrative expenses, verifying the accuracy of detailed business transactions, payment processing, month end general ledger close, balance sheet reconciliations and profit and loss analysis.</li>\n<li><b>Financial Statement & Analysis:</b> Delivers standard financial and management reports to support business decision making.</li>\n<li><b>Internal Controls:</b> Performs internal controls and ensures financial processes are performed in a timely manner, accurately and in compliance with regulatory policies.</li>\n<li><b>Process Improvement:</b> Implements continuous process improvement, including simplifying and optimizing process, improving data integrity and leveraging current technology.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "11",
     "col": "7",
-    "Title": "Associate Professional, Consolidations",
-    "Key": "Financial Accounting"
+    "Title": "Associate Professional, Consolidations (CN)",
+    "Key": "Financial Accounting",
+    "contents": {
+      "sub_family": "Financial Accounting, Consolidations",
+      "band": "Associate Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Professional, Consolidations job helps collect and consolidate financial statements and data from multiple entities into a single entity to provide strategic insights to support decision making processes. Under close supervision, this job prepares and analyzes standard financial statements, disclosures and reports, ensuring accuracy and completeness and compliance with accounting standards, regulatory requirements and internal company policies. This job also assists in implementing controls and assessing risks to support an effective system of internal controls to ensure accurate and timely financial statements.",
+      "key_account": "<ul>\n<li><b>Financial Statement:</b> Consolidates standard financial statements and data from multiple entities into a single entity, including coordinating with multiple stakeholders to gather and analyze financial data, ensuring accuracy, completeness and timeliness.</li>\n<li><b>Policy Compliance & Consistency:</b> Applies knowledge of generally accepted accounting principles to help maintain consistency, comparability and reliability in financial statements.</li>\n<li><b>Control Implementation Effectiveness:</b> Assists in providing accurate information and insights for internal standard financial statements to enable informed decision making.</li>\n<li><b>Analysis:</b> Performs standard analyses on profit and loss and balance sheet, including variance analyses, to support notes and management commentary in the statutory financial statements.</li>\n<li><b>Internal Controls:</b> Assists in the integration of an effective system of internal controls for business or financial statements, including controls deficiencies identification and communication to related parties to help resolve control deficiencies.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "11",
     "col": "8",
-    "Title": "Associate Professional, Record to Report",
-    "Key": "Financial Accounting"
+    "Title": "Associate Professional, Record to Report (RR)",
+    "Key": "Financial Accounting",
+    "contents": {
+      "sub_family": "Financial Accounting, Record to Report",
+      "band": "Associate Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Professional, Record to Report job performs standard record to report activities to collect, process and present accurate financial data for the purposes of providing external information for decision making while ensuring compliance with financial transaction recording standards. Under close supervision, this job collaborates with business units and banks to complete standard operational processes and procedures, compliance and data management for financial products and services and data systems. This job also supports process improvements and audit activities.",
+      "key_account": "<ul>\n<li><b>Record to Report Activities:</b> Performs standard record to report activities, including processing internal and external intercompany transactions, completing monthly and quarterly general ledger close activities, handling fixed asset accounting, balance sheet reconciliations and reporting activities, and month end accounting, cost and profit center allocation, bank accounting and bank reconciliations.</li>\n<li><b>Foreign Risk Management:</b> Assists with foreign exchange risk management for selected units, including calculating and monitoring foreign exchange exposures, communicating information regarding forex risks with key stakeholders, and supporting the establishment of risk management policies and processes to ensure adherence to policies.</li>\n<li><b>Policy Compliance:</b> Maintains the standard operating procedures and processes, and monitors operational compliance with financial transaction recording standards, including business and accounting policies, statutory reporting regulations and tax regulations.</li>\n<li><b>Business Partnership:</b> Maintains relationship with customers, clients and other business partners, including negotiating contracts or customers directly to deliver accurate processes.</li>\n<li><b>Process Improvement:</b> Applies knowledge of operational practices, procedures and internal controls to identify and implement opportunities to drive operational excellence and data integrity to enable analysis and insight.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "11",
     "col": "9",
-    "Title": "Associate Professional, Financial Services Operations",
-    "Key": "Financial Accounting"
+    "Title": "Associate Professional, Financial Services Operations (FS)",
+    "Key": "Financial Accounting",
+    "contents": {
+      "sub_family": "Financial Accounting, Financial Services Operations",
+      "band": "Associate Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Professional, Financial Services Operations job supports the optimization and implementation of standard financial operations and financial services activities while ensuring compliance with all relevant regulations and internal control standards. Under close supervision, this job collaborates with internal and external business partners on day-to-day business operations and drives continuous improvement.",
+      "key_account": "<ul>\n<li><b>Operations & Compliance:</b> Performs routine operational activities including trade matching, reconciliations, position management and life cycle events, ensuring compliance with regulatory requirements and internal control standards.</li>\n<li><b>Customer Support:</b> Supports the communication and liaison with traders, functions, external business partners and other internal and external counterparties to handle operational tasks.</li>\n<li><b>Systems & Processes:</b> Monitors and runs system processes including the end of market and end of day processes for exchanges, report and extract generation, system feeds, reference and static data, error analysis and remediation action.</li>\n<li><b>Data Management:</b> Prepares standard financials, metrics and reports following well defined procedures.</li>\n<li><b>Continuous Improvements:</b> Suggests improvements or new developments to mitigate risks, reduce costs and enhance efficiency.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "11",
     "col": "10",
-    "Title": "Associate Professional, Internal Controls",
-    "Key": "Internal Control"
+    "Title": "Associate Professional, Internal Controls (IC)",
+    "Key": "Internal Control",
+    "contents": {
+      "sub_family": "Internal Controls, Internal Controls",
+      "band": "Associate Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Professional, Internal Controls job assists with implementing, executing and monitoring global policies, processes and tools for internal control over financial reporting risk management to enhance the risk posture of the organization. Under close supervision, this job performs basic and routine risk assessments and control monitoring activities to ensure approval controls are effectively designed and monitored across all integrated applications.",
+      "key_account": "<ul>\n<li><b>Authorization Controls:</b> Executes authorization controls using access control systems to perform segregation of duties risk assessments and provide remediate options, while provisioning access to users in relevant applications.</li>\n<li><b>Control Monitoring:</b> Conducts continuous control monitoring of automated controls across all instances through periodic testing of system configurations for effectiveness.</li>\n<li><b>Mitigation Monitoring:</b> Performs periodic mitigation monitoring, including following up with the users of control-related transactions and validating the activities for appropriateness.</li>\n<li><b>Risk & Control Reporting:</b> Drafts risk and mitigation controls reports, custom transaction code reports and sensitive role reports for SOD assessment and cleanup activities.</li>\n<li><b>Industry Expertise:</b> Maintains basic knowledge of industry trends and regulatory changes to ensure internal control processes remain current and effective.</li>\n<li><b>Collaboration:</b> Collaborates with business partners, functional teams, and third-party service providers to manage and enhance the risk posture of the organization.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "11",
     "col": "11",
-    "Title": "Associate Professional, Managerial Accounting",
-    "Key": "Managerial Accounting"
+    "Title": "Associate Professional, Managerial Accounting (MA)",
+    "Key": "Managerial Accounting",
+    "contents": {
+      "sub_family": "Managerial Accounting, Managerial Accounting",
+      "band": "Associate Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Professional, Managerial Accounting job performs basic and routine managerial accounting activities in support of financial decision-making. Under close supervision, this job assists with preparing financial reports and analyzing financial data. This job also assists with the continuous improvement of management information systems, reporting standards, and business metric development to drive data-informed business decisions.",
+      "key_account": "<ul>\n<li><b>Report Drafting:</b> Assists in the preparation of both financial and nonfinancial reports for internal stakeholders by gathering, organizing, and analyzing financial data.</li>\n<li><b>Business Performance Tracking:</b> Supports the development of reports and dashboards to track business performance against plans, budgets, forecasts and other key performance indicators.</li>\n<li><b>Decision Support:</b> Assists with insights identification based on financial analysis and research to support strategic business decision-making.</li>\n<li><b>Cost Analysis:</b> Reviews and ensures accuracy of cost recording on a daily basis including the chart of accounts and its classification within correct products, segments, and flows.</li>\n<li><b>Continuous Improvement:</b> Supports continuous improvement within the department, challenging the status quo and updating processes to increase effectiveness and efficiency of management information systems and reporting.</li>\n<li><b>Management Reporting:</b> Executes on effective management reporting practices to ensure data integrity and relevancy.</li>\n<li><b>Risk & Control Reporting:</b> Reviews various reports including risk and mitigation controls reports, custom transaction code reports and sensitive role reports for SOD assessment and cleanup activities to identify and address any gaps, vulnerabilities, or inefficiencies in an organization’s control environment.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "11",
     "col": "12",
-    "Title": "Associate Professional, Project Accounting",
-    "Key": "Managerial Accounting"
+    "Title": "Associate Professional, Project Accounting (PA)",
+    "Key": "Managerial Accounting",
+    "contents": {
+      "sub_family": "Managerial Accounting, Project Accounting",
+      "band": "Associate Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Professional, Project Accounting job performs basic and routine financial activities and analysis in support of the organization’s projects. Under close supervision, this job contributes to all financial activities in projects including project cost analysis, billing, and revenue. This job supports collaboration with project teams to ensure adherence to project budgets by supporting the monitoring of project expenses, preparation of financial reports, and resolution of accounting issues.",
+      "key_account": "<ul>\n<li><b>Project Budget Development:</b> Works closely with project teams to understand the scope, objectives, and deliverables of the project and gather relevant information regarding the resources required, timelines, and any specific financial considerations.</li>\n<li><b>Financial Analysis:</b> Drafts analyses of project financial data, including costs, revenues, and expenses, to identify trends, variances, and potential risks.</li>\n<li><b>Financial Reporting:</b> Prepares accurate and timely financial reports, including project cost estimates, forecasts, and actuals, to support project decision-making.</li>\n<li><b>Expense Monitoring:</b> Assists with monitoring project expenses and adherence to approved budgets, identifying and addressing any deviations or cost overruns.</li>\n<li><b>Project Cost Optimization:</b> Conducts basic and routine financial reviews and provides recommendations to optimize project costs, improve profitability and mitigate financial risks.</li>\n<li><b>Industry Expertise:</b> Stays abreast of industry regulations and accounting standards, supporting compliance and continuous improvement.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "11",
     "col": "13",
-    "Title": "Associate Professional, Tax",
-    "Key": "Tax"
+    "Title": "Associate Professional, Tax (TX)",
+    "Key": "Tax",
+    "contents": {
+      "sub_family": "Tax, Tax",
+      "band": "Associate Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Professional, Tax job prepares routine tax forms and basic tax research, analysis, and compliance activities. Under close supervision, this job assists with the development of tax solutions and advice and the resolution of legal disputes and audits.",
+      "key_account": "<ul>\n<li><b>Tax Returns:</b> Prepares assigned, routine tax returns, and assists team with larger, more complex tax returns.</li>\n<li><b>Tax Form Completion:</b> Prepares tax forms and related documents associated with tax compliance, including provisions, computations, estimates, and extensions.</li>\n<li><b>Tax Compliance and Inquiry Responses:</b> Provides support to the organization’s subsidiaries, joint ventures, and tax department personnel by responding to routine tax inquiries and assisting with tax compliance activities.</li>\n<li><b>Tax Compliance Activities:</b> Supports tax compliance projects, assists with inputting data from tax/compliance/tax systems into various compliance-related applications and performs standard tasks related to statutory and/or U.S. GAAP accounting for tax-related items.</li>\n<li><b>Developing Tax Solutions:</b> Assists team members with planning and process improvements, and implementing tax planning ideas, including objectives applicable to corporate and capital structure, M&A/DIV, funding, trading and risk management, trade flow and supply chains, utilizing key tax attributes.</li>\n<li><b>Providing Tax Counsel:</b> Facilitates discrete or specialized tax training sessions for colleagues.</li>\n<li><b>Tax Research and Analysis:</b> Conducts routine tax-related information gathering and analysis for the purpose of completing tax compliance responsibilities.</li>\n<li><b>Conducting Audits and Resolving Legal Disputes:</b> Retrieves information from senior team members to verify in response to routine audits and information requests from external tax authorities, and handles routine correspondence with external revenue bodies and/or inquiries from taxing authorities.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "11",
     "col": "14",
-    "Title": "Associate Professional, Tax Compliance",
-    "Key": "Tax"
+    "Title": "Associate Professional, Tax Compliance (TC)",
+    "Key": "Tax",
+    "contents": {
+      "sub_family": "Tax, Tax Compliance",
+      "band": "Associate Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Professional, Tax Compliance job performs routine income tax compliance and global tax accounting, including financial statement reporting activities. Under close supervision, this job executes basic tax compliance process, assists the implementation of innovative processes, planning initiatives and audits while adhering to legislative and regulatory standards.",
+      "key_account": "<ul>\n<li><b>Tax Filing Compliance:</b> Supports the implementation of timely and accurate fulfillment of routine company’s income tax filing obligations and executes basic tax compliance tasks, tax returns, tax forms and related documents as required.</li>\n<li><b>Financial Statement Reporting:</b> Prepares basic financial statement reporting of tax matters under U.S. GAAP, and performs standard income tax compliance and accounting tasks.</li>\n<li><b>Stakeholder Communication:</b> Partners with key teams to assist with effective communications on routine tax accounting issues.</li>\n<li><b>Cross-Functional Collaboration:</b> Assists collaboration with tax and non-tax teams to support the understanding of the impact of tax accounting on their business objectives.</li>\n<li><b>Strategic Planning & Legislative Partnerships:</b> Implements routine planning initiatives, performs basic analysis and assists other tax teams on legislative and regulatory implementations.</li>\n<li><b>Operational Excellence:</b> Supports the implementation of operational excellence and continuous improvement activities in tax accounting and compliance while assisting with routine audit responses.</li>\n<li><b>Tax Compliance Process Development and Improvement:</b> Assists team members with process development and improvements, projects and basic data requirements for tax, financial, compliance-related systems.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "11",
     "col": "15",
-    "Title": "Associate Professional, Customs Advisory",
-    "Key": "Trade Compliance"
+    "Title": "Associate Professional, Customs Advisory (CU)",
+    "Key": "Trade Compliance",
+    "contents": {
+      "sub_family": "Trade Compliance, Customs Advisory",
+      "band": "Associate Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Professional, Customs Advisory job supports the implementation of customs regulatory and advisory activities in a region. Under direct supervision, this job handles routine customs solutions and processes, while focusing on continuous improvement and adhering to import and export customs regulations, assists legal disputes and audits, and supports routine trade matters. This job applies basic understanding to assist with the development of customs compliance policies and supports customs issues and regulations.",
+      "key_account": "<ul>\n<li><b>Policy and Procedure Development:</b> Supports implementation and maintenance of basic customs solutions, planning, compliance policies, and procedures to adhere to applicable laws and regulations.</li>\n<li><b>Expert Advisory:</b> Uses basic knowledge to assist senior team members and supports ensuring compliance with customs regulations and trade policies to mitigate impacts to the organization, and applies recommendations on local and regional technical and regulatory requirements including classifications, country of origin determinations, and residual product flows.</li>\n<li><b>Customer Strategies:</b> Assists global and regional stakeholders and other business leaders with the implementation and optimization of global customs strategies to ensure requirements are met.</li>\n<li><b>Audits and Investigations:</b> Supports process improvements for the resolution of routine customs-related issues, including customs audits, investigations, and disputes.</li>\n<li><b>Insights and Metrics:</b> Drafts data analysis and customs compliance metrics to provide insights within the organization.</li>\n<li><b>Relationship Management:</b> Assists interactions with legal counsel and customs authorities to provide guidance and advisory service in support of the regulation for adherence to import and export customs regulations.</li>\n<li><b>Compliance Training:</b> Supports basic tasks related to training programs aimed at educating internal stakeholders on customs compliance requirements and best practices.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "11",
     "col": "16",
-    "Title": "Associate Professional, Trade Compliance Operations",
-    "Key": "Trade Compliance"
+    "Title": "Associate Professional, Trade Compliance Operations (OP)",
+    "Key": "Trade Compliance",
+    "contents": {
+      "sub_family": "Trade Compliance, Trade Compliance Operations",
+      "band": "Associate Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Professional, Trade Compliance Operations job supports the execution of routine global trade compliance operations activities and assists trade compliance projects. Under direct supervision, this job performs basic global trade and compliance transactions, ensures compliance, and helps to drive continuous improvement in support of the business strategy and objectives.",
+      "key_account": "<ul>\n<li><b>Operational Execution:</b> Assists with routine global trade and compliance operations activities within a country or region in support of business plans, including supporting execution of global trade and compliance transactions aligned to business strategy and objectives, and validating and coordinating import and export transactional data and document requirements to complete cross-border filings and clearance.</li>\n<li><b>Transaction Auditing:</b> Supports regular audits and assessments of trade transactions as required to ensure compliance with import/export regulations, customs requirements, and trade agreements.</li>\n<li><b>Documentation Review:</b> Supports analysis and helps ensure trade documents, including invoices, preferential trade documentation, shipping documents, export licenses, and other cross-border documents are accurate, complete, and in compliance with legal and fiscal requirements, and maintains records according to guidelines.</li>\n<li><b>Relationship Management:</b> Interacts with internal and external stakeholders and partners to assist the implementation of cross-border trade solutions.</li>\n<li><b>Metrics Analysis:</b> Collaborates with the analysis of key performance indicators and performs basic analysis for compliance operations in the designated location to support process effectiveness.</li>\n<li><b>Continuous Improvement:</b> Assists with the execution of internal global trade and compliance projects as needed to support operational process or policy improvements.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "11",
     "col": "17",
-    "Title": "Associate Professional, Trade Compliance Excellence",
-    "Key": "Trade Compliance"
+    "Title": "Associate Professional, Trade Compliance Excellence (TE)",
+    "Key": "Trade Compliance",
+    "contents": {
+      "sub_family": "Trade Compliance, Trade Compliance Excellence",
+      "band": "Associate Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Professional, Trade Compliance Excellence job supports the execution of strategic routine plans related to ongoing optimization and improvements in trade compliance. Under direct supervision, this job performs continuous improvement for trade compliance processes while also assisting high-quality advisory services internally. This job supports basic activities for the implementation of strategic trade compliance solutions and sensitized data strategies for the benefit of the business’ global trade operations.",
+      "key_account": "<ul>\n<li><b>Solution Development:</b> Performs basic technical international compliance planning solutions to assemble customs benefits and support risk mitigation, applying knowledge of compliance and industry best practices to support cross border solutions that benefit the organization.</li>\n<li><b>Process Improvement:</b> Assists with investigation and assessment of trade compliance operations, agreement opportunities, and gaps in procedure to support implementation of new trade compliance processes and best practices to comply with laws and regulations administered by government agencies.</li>\n<li><b>Compliance Operations & Sensitized Data Strategy:</b> Implements routine regional trade compliance operations, sensitized data management systems, and processes, harmonizing to a scalable framework of standards to secure and facilitate global trade.</li>\n<li><b>Compliance Training:</b> Supports basic tasks related to training programs aimed at educating internal stakeholders on compliance requirements and best practices.</li>\n<li><b>Relationship Management:</b> Assists interactions with appropriate government agencies and internal stakeholders to deliver compliant processes in support of effective business operations.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "11",
     "col": "18",
-    "Title": "Associate Professional, Cash Management & Treasury Operations",
-    "Key": "Treasury"
+    "Title": "Associate Professional, Cash Management & Treasury Operations (TO)",
+    "Key": "Treasury",
+    "contents": {
+      "sub_family": "Treasury, Cash Management & Treasury Operations",
+      "band": "Associate Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Professional, Cash Management & Treasury Operations job executes basic and routine processes to maintain an optimal funding position for the organization. Under close supervision, this job works with other team members to ensure funding time frames are met, transactions are settled, and internal controls are adhered to.",
+      "key_account": "<ul>\n<li><b>Global Funding Activities:</b> Performs basic and routine activities to ensure global funding needs are met, including trade confirmations, settlements, reconciliations, and calibration of regional funding positions.</li>\n<li><b>Issue Resolution:</b> Applies industry knowledge and supports internal stakeholders to resolve funding issues in support of organizational activities.</li>\n<li><b>Relationship Management:</b> Supports collaboration with banks, brokers, and other internal and external counterparties to support issue resolution.</li>\n<li><b>Continuous Improvement:</b> Assists with initiatives to enhance the treasury’s continuous improvement, such as implementing new funding and trade structures.</li>\n<li><b>Compliance:</b> Documents treasury activities to ensure compliance with internal control standards and regulatory requirements.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "11",
