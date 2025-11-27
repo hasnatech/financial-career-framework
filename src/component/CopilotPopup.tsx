@@ -211,7 +211,7 @@ Encourage your team to use Copilot to prepare:
             individualized development plan, consider using Copilot. Here's a
             prompt you can copy and paste to start this journey:
           </div>
-          <div className="grid grid-cols-2 w-full max-w-full h-full max-h-full gap-x-5 p-5 pt-0 pb-2">
+          <div className= "grid grid-cols-2 w-full max-w-full h-full max-h-full gap-x-5 p-5 pt-0 pb-2">
             <div className="flex flex-col items-start gap-y-4">
               <h2 className="self-start text-lg font-bold">
                 Enter Details of the role{" "}
@@ -251,7 +251,7 @@ Encourage your team to use Copilot to prepare:
               </div>
 
               {generatedPrompt && (
-                <div className="space-y-4 p-0 pb-0 h-full max-h-full flex flex-col mb-16">
+                <div className="space-y-4 p-0 pb-0 h-full max-h-full flex flex-col border-4 ">
                   <div className="flex gap-4   ">
                     <div
                       className={`${bgColor} border rounded px-3 py-2 min-w-[120px]`}
@@ -259,7 +259,7 @@ Encourage your team to use Copilot to prepare:
                       <h3 className="font-bold text-lg mb-2 whitespace-nowrap">
                         Sub Family
                       </h3>
-                      <p className="text-sm text-black/90">
+                      <p className=" text-black/90">
                         {currentPromptDetails.sub_family || "Not available"}
                       </p>
                     </div>
@@ -270,7 +270,7 @@ Encourage your team to use Copilot to prepare:
                       <h3 className="font-bold text-lg mb-2 whitespace-nowrap">
                         Band
                       </h3>
-                      <p className="text-sm text-black/90">
+                      <p className=" text-black/90">
                         {currentPromptDetails.band || "Not available"}
                       </p>
                     </div>
@@ -281,7 +281,7 @@ Encourage your team to use Copilot to prepare:
                       <h3 className="font-bold text-lg mb-2 ">
                         Contributor Type
                       </h3>
-                      <p className="text-sm text-black/90">
+                      <p className=" text-black/90">
                         {currentPromptDetails.contributor_type ||
                           "Not available"}
                       </p>
@@ -291,13 +291,13 @@ Encourage your team to use Copilot to prepare:
                       className={`${bgColor} border rounded px-3 py-2 max-h-[150px] overflow-hidden  hover:overflow-auto  `}
                     >
                       <h3 className="font-bold text-lg mb-2">Job Purpose</h3>
-                      <p className="text-sm text-black/90 ">
+                      <p className=" text-black/90 ">
                         {`${currentPromptDetails.purpose}` || "Not available"}
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex gap-4 flex-1 ">
+                  <div className="flex gap-4 h-full">
                     <div
                       className={`flex-1 ${bgColor} border rounded px-3 py-2 max-h-96 overflow-hidden  hover:overflow-auto `}
                     >
@@ -305,7 +305,7 @@ Encourage your team to use Copilot to prepare:
                         Key Accountabilities
                       </h3>
                       <p
-                        className="text-sm text-black/90 text-ellipsis h-full"
+                        className=" text-black/90 text-ellipsis h-full"
                         dangerouslySetInnerHTML={
                           currentPromptDetails.key_account
                             ? {
@@ -322,7 +322,7 @@ Encourage your team to use Copilot to prepare:
                         Finance Technical Competencies
                       </h3>
                       <p
-                        className="text-sm text-black/90"
+                        className=" text-black/90"
                         dangerouslySetInnerHTML={
                           currentPromptDetails.finance_technical
                             ? {

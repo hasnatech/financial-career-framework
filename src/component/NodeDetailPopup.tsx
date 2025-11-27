@@ -1,4 +1,4 @@
-import { LucideArrowLeft, LucideArrowRight, X } from "lucide-react";
+import { LucideArrowLeft, LucideArrowRight, X, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
 import { getBandBackgroundColor } from "./Constant";
 import SearchBar from "./SearchBar";
@@ -105,7 +105,7 @@ export function NodeDetailPopup({
     return (
       <div className="fixed inset-0 bg-black  bg-opacity-70 backdrop-blur-md flex items-center justify-center z-50 p-5">
         <div
-          className={`${bgColor} relative bg-white rounded-lg  border w-full m-6 max-h-full overflow-y-auto p-0 z-50`}
+          className={`${bgColor} relative h-full w-full flex flex-col bg-white rounded-lg border w-full m-6 max-h-full overflow-y-auto p-0 z-50`}
         >
           <div
             className={`${bgColor} sticky top-0 rounded-t-lg p-2 pl-5  flex justify-between items-center pb-3 mb-2`}
@@ -141,7 +141,7 @@ export function NodeDetailPopup({
               </button>
             </div>
           </div>
-          <div className="space-y-2 p-0 pb-0 h-full   ">
+          <div className="space-y-2 p-0 flex flex-col max-h-full h-full">
             <div className="flex gap-2 px-2">
               <div
                 className={`${bgColor} border rounded px-3 py-2 min-w-[180px]`}
@@ -184,55 +184,60 @@ export function NodeDetailPopup({
               </div>
             </div>
 
-            <div className="flex gap-2 px-2">
-              <div className={`flex-1 ${bgColor} border rounded px-3 py-2`}>
-                <h3 className="font-bold text-lg mb-2">Key Accountabilities</h3>
-                <p
-                  className="text-sm text-black/90"
-                  dangerouslySetInnerHTML={
-                    currentNodeData.key_account
-                      ? { __html: currentNodeData.key_account }
-                      : { __html: "Not available" }
-                  }
-                ></p>
-              </div>
-              <div className={`flex-1 ${bgColor} border rounded px-3 py-2`}>
-                <h3 className="font-bold text-lg mb-2">
-                  Finance Technical Competencies
-                </h3>
-                <p
-                  className="text-sm text-black/90"
-                  dangerouslySetInnerHTML={
-                    currentNodeData.finance_technical
-                      ? { __html: currentNodeData.finance_technical }
-                      : { __html: "Not available" }
-                  }
-                ></p>
-              </div>
+            
+
+            <div className="flex gap-2 px-2 h-full max-h-full">
+            <div className={`flex-1 ${bgColor} border rounded px-3 py-2 `}>
+            <h3 className="font-bold text-lg mb-2">Key Accountabilities</h3>
+            <p
+            className="text-sm text-black/90"
+            dangerouslySetInnerHTML={
+            currentNodeData.key_account
+            ? { __html: currentNodeData.key_account }
+            : { __html: "Not available" }
+            }
+            ></p>
             </div>
-          </div>
-          <div className=" flex justify-end gap-x-4 p-2 bg-white sticky bottom-0 right-0 bg-slate-200">
+            <div className={`flex-1 ${bgColor} border rounded px-3 py-2 `}>
+            <h3 className="font-bold text-lg mb-2">
+            Finance Technical Competencies
+            </h3>
+            <p
+            className="text-sm text-black/90"
+            dangerouslySetInnerHTML={
+            currentNodeData.finance_technical
+            ? { __html: currentNodeData.finance_technical }
+            : { __html: "Not available" }
+            }
+            ></p>
+            </div>
+            </div>
+            <div className="sticky bottom-0 flex justify-end gap-x-4 p-2 bg-white bg-slate-200">
             <Button
-              className=""
-              disabled={currentNodeIndex === 0}
-              onClick={() => {
-                handleSlide(true, false);
-              }}
+            className=""
+            disabled={currentNodeIndex === 0}
+            onClick={() => {
+            handleSlide(true, false);
+            }}
             >
-              <LucideArrowLeft className="h-4 stroke-white group-disabled:stroke-white/30"></LucideArrowLeft>{" "}
-              Previous
+            <LucideArrowLeft className="h-4 stroke-white group-disabled:stroke-white/30"></LucideArrowLeft>{" "}
+            Previous
             </Button>
             <Button
-              className=""
-              disabled={currentNodeIndex === nodes.length - 1}
-              onClick={() => {
-                handleSlide(false, true);
-              }}
+            className=""
+            disabled={currentNodeIndex === nodes.length - 1}
+            onClick={() => {
+            handleSlide(false, true);
+            }}
             >
-              Next{" "}
-              <LucideArrowRight className="h-4 stroke-white "></LucideArrowRight>
+            Next{" "}
+            <LucideArrowRight className="h-4 stroke-white "></LucideArrowRight>
             </Button>
+            </div>
+            
+            
           </div>
+          
         </div>
         {shouldOpenTimelinePopup && (
           <div className="fixed z-50 flex items-center justify-center top-0 bottom-0 left-0 right-0 bg-black/50">
@@ -245,25 +250,27 @@ export function NodeDetailPopup({
               >
                 <X className="w-4 h-4" />
               </button>
-              <div className="flex flex-col gap-y-3 p-3 pb-5 pt-0">
-                <label className="font-bold text-lg " htmlFor="">
-                  Enter Timeline
+              <div className="flex flex-col gap-y-3 p-3 pb-5 pt-0 w-80">
+                <label className="font-bold text-lg" htmlFor="">
+                  Enter Timeline (in months)
                 </label>
-                <input
+                <input type="number"
                   value={timeline}
                   onChange={(event) => {
                     setTimeline(event.target.value);
                   }}
                   className="border w-full p-3 py-2 pl-3 rounded-md outline-none text-sm"
-                  type="text"
-                  placeholder="12 Months"
+                 
+                  placeholder="number of months"
                 />
                 <button
                   onClick={() => {
                     handleCopilotPopup();
                   }}
-                  className="px-4 py-2 text-sm font-medium self-center rounded-full bg-primary text-primary-foreground mt-1 w-fit border-none outline-none hover:opacity-50 duration-500"
+                  className="px-4 flex gap-x-2 items-center py-2 text-sm font-medium self-center rounded-md bg-primary text-primary-foreground mt-1 w-fit border-none outline-none hover:opacity-50 duration-500"
                 >
+                
+                  <img className="w-4 h-4" src="images/icons/copilot-icon-white.png" /> 
                   Generate Prompt
                 </button>
               </div>

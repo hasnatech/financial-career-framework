@@ -267,8 +267,8 @@ export default function Option2() {
         </div>
 
         {pathWay.length > 0 && (
-          <div className="flex flex-col w-fit flex-1">
-            <div className="w-80  flex flex-col  rounded space-y-3 overflow-y-auto h-[92.5vh]">
+          <div className="flex flex-col h-screen w-fit ">
+            <div className="w-80 flex flex-col rounded space-y-3 overflow-y-auto h-[92.5vh]">
               <div className="bg-primary sticky top-0 z-50 text-white p-3 rounded-t flex justify-between  items-center">
                 <h2 className="text-xl font-bold">My Pathway</h2>
               </div>
@@ -305,7 +305,7 @@ export default function Option2() {
                 </div>
               )}
             </div>
-            <div className="flex w-full gap-4 p-5 pl-2">
+            <div className="flex w-full gap-4 px-5 py-2  pl-2 items-center">
               <Button
                 onClick={() => {
                   setIsPrintInitiated(true);
@@ -355,6 +355,6 @@ export default function Option2() {
           ref={printRef}
         ></PathwayPrintDocument>
       )}
-    </MainLayout>
+     </MainLayout>
   );
 }
