@@ -251,7 +251,7 @@ Encourage your team to use Copilot to prepare:
               </div>
 
               {generatedPrompt && (
-                <div className="space-y-4 p-0 pb-0 h-full max-h-full flex flex-col border-4 ">
+                <div className="space-y-4 p-0 pb-0 h-full max-h-full flex flex-col ">
                   <div className="flex gap-4   ">
                     <div
                       className={`${bgColor} border rounded px-3 py-2 min-w-[120px]`}
