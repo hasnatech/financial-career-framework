@@ -3221,56 +3221,140 @@
   {
     "row": "13",
     "col": "1",
-    "Title": "Support Staff, Accounts Payable / Accounts Receivable Process",
-    "Key": "Accounts Payable / Accounts Receivable"
+    "Title": "Support Staff, Accounts Payable / Accounts Receivable Process (AP)",
+    "Key": "Accounts Payable / Accounts Receivable",
+    "contents": {
+      "sub_family": "AP / AR, AP / AR Process",
+      "band": "Support Staff",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Support Staff, Accounts Payable / Accounts Receivable Process job performs routine administrative tasks in support of the organization’s accounts payable or accounts receivable processes to enable accurate financial transactions, efficient cash flow management and compliance. Working under general supervision for routine administrative tasks, this job helps maintain financial records, resolve billing discrepancies, generate invoices, or verify and process invoices. This job also works closely with internal cross functional teams to facilitate billing or invoicing operations and delivers excellent customer service externally.",
+      "key_account": "<ul>\n<li><b>Invoicing:</b> Assists in the preparation, generation or processing of invoices, ensuring accuracy and adherence to billing policies and procedures.</li>\n<li><b>Customer Service:</b> Responds to routine customer or supplier inquiries regarding billing or invoicing, providing timely and accurate information and addressing any concerns or disputes.</li>\n<li><b>Balance Reconciliation:</b> Helps process and reconcile accounts receivable balances using established administrative procedures, maintaining accuracy and investigating discrepancies.</li>\n<li><b>Documentation Support:</b> Assists with the maintenance of billing or invoicing records and documentation, assuring proper filing and organization for easy retrieval and audit purposes.</li>\n<li><b>Records Maintenance:</b> Assists with maintaining financial records related to accounts payable or accounts receivable processes in line with applicable policies, procedures and regulatory requirements.</li>\n<li><b>Collaboration:</b> Collaborates with cross functional teams to timely and accurate process customer or supplier payments.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Understands Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "13",
     "col": "2",
-    "Title": "Support Staff, Collections and Disputes",
-    "Key": "Accounts Payable / Accounts Receivable"
+    "Title": "Support Staff, Collections and Disputes (CD)",
+    "Key": "Accounts Payable / Accounts Receivable",
+    "contents": {
+      "sub_family": "AP / AR, Collections & Disputes",
+      "band": "Support Staff",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Support Staff, Collections & Disputes job performs routine clerical and administrative activities related to collections and accounts receivable processes, supporting the timely and accurate collection of funds while maintaining positive customer relationships. Working under general supervision for routine administrative tasks, this job helps collect receivables to maintain working capital levels and ensures invoices are paid according to the set terms. This job also helps maintain the receivables ledger for the designated business units.",
+      "key_account": "<ul>\n<li><b>Account Collections:</b> Supports the collection of receivables to ensure accounts remain in good standing.</li>\n<li><b>Data Entry:</b> Assists with entering records of collections activities, payment arrangements and dispute outcomes to support account status monitoring.</li>\n<li><b>Dispute Resolution:</b> Assists with gathering relevant data and collaborating with internal teams in support of investigation and disputes resolution.</li>\n<li><b>Documentation:</b> Documents routine customer interactions, maintaining accurate records and compliance with organizational policies and standards.</li>\n<li><b>Reporting:</b> Processes standard reports, including accounts receivable aging and dispute reports, and distributes them to internal cross functional teams.</li>\n<li><b>Meeting Administration:</b> Helps coordinate meetings with professional teams and take notes to support the communication and escalation of account issues.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Understands Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "13",
     "col": "3",
-    "Title": "Support Staff, Credit",
-    "Key": "Accounts Payable / Accounts Receivable"
+    "Title": "Support Staff, Credit (CR)",
+    "Key": "Accounts Payable / Accounts Receivable",
+    "contents": {
+      "sub_family": "AP / AR, Credit",
+      "band": "Support Staff",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Support Staff, Credit job performs clerical and routine tasks related to credit in support of the organization’s financial stability. Working under general supervision for routine tasks, this job uses email, indirect logging systems and telephone communication to cover various payment support functions. This job helps ensure credit compliance by carrying out payment control policies and payment processing.",
+      "key_account": "<ul>\n<li><b>Customer Accounts:</b> Monitors and maintains customer accounts, including tracking account status and reporting on outstanding balances.</li>\n<li><b>Transaction Documentation:</b> Maintains organized and updated documentation for credit transactions to help the organization settle all credit transactions.</li>\n<li><b>Data Management:</b> Verifies and updates master data changes, such as customer information and credit limits, to maintain accurate records.</li>\n<li><b>Credit Reporting:</b> Assists in the preparation of credit research and reports to support financial analysis and decision making.</li>\n<li><b>Collaboration:</b> Cooperates with internal cross functional teams to gather required information in support of credit decision making.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Understands Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "13",
     "col": "4",
-    "Title": "Support Staff, Financial Accounting Record to Report",
-    "Key": "Financial Accounting"
+    "Title": "Support Staff, Financial Accounting Record to Report (RR)",
+    "Key": "Financial Accounting",
+    "contents": {
+      "sub_family": "Financial Accounting, Record to Report",
+      "band": "Support Staff",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Support Staff, Record to Report job performs general routine clerical and administrative tasks to support record to report activities, collecting, processing and presenting accurate financial data for the purposes of providing external information for decision making while ensuring compliance with financial transaction recording standards. Working under general supervision for routine tasks, this job performs a variety of activities in compliance with standard accounting procedures including data entry, filing, organizing financial documents, preparing financial reports and assisting with audits.",
+      "key_account": "<ul>\n<li><b>Data Entry:</b> Enters data or uses technology tools to upload data into a computer system using defined computer programs to accurately and efficiently record financial transactions.</li>\n<li><b>Record Accuracy Verification:</b> Verifies the accuracy of invoices and other accounting documents or records, including detailed financial transactions.</li>\n<li><b>Record Management:</b> Implements record information management policies and best practices to ensure compliance with financial reporting requirements, enhance audit readiness and maintain data integrity.</li>\n<li><b>Data & Report Compilation:</b> Compiles data and helps prepare a variety of financial reports to provide accurate and reliable financial information to support decision making, financial analysis, and compliance with regulatory requirements.</li>\n<li><b>Process Improvement:</b> Contributes to process improvement projects to improve effectiveness of record to report services and internal controls.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Understands Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
-  { "row": "13", "col": "5", "Title": "Support Staff, Tax", "Key": "Tax" },
+  { "row": "13",
+    "col": "5",
+    "Title": "Support Staff, Tax (TX)",
+    "Key": "Tax" ,
+    "contents": {
+      "sub_family": "Tax, Tax",
+      "band": "Support Staff",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Support Staff, Tax job performs routine administrative tasks in support of tax and compliance activities. Working under general supervision for routine administrative tasks, this job helps assist the development of tax solutions and advice and the resolution of legal disputes and audits.",
+      "key_account": "<ul>\n<li><b>Tax Returns:</b> Assists in the preparation of assigned tax returns, ensuring accuracy and daily basis support.</li>\n<li><b>Tax Form Completion:</b> Supports the preparation of routine tax forms and related documents associated with tax compliance, including provisions, computations, estimates, and extensions of low complexity as required.</li>\n<li><b>Tax Compliance and Inquiry Responses:</b> Assists the organization’s subsidiaries, joint ventures, and tax department personnel by supporting responses of the assigned tax inquiries and tax compliance activities.</li>\n<li><b>Tax Compliance Activities:</b> Collaborates with tax compliance projects, enters data into various compliance-related applications and performs assigned tasks related to statutory and accounting for tax-related items, including data quality checks.</li>\n<li><b>Documentation Support:</b> Verify the accuracy of the assigned invoices, accounting documents, records, detailed financial business transactions and compiles tax data and various related reports.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Understands Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
+    },
   {
     "row": "13",
     "col": "6",
-    "Title": "Support Staff, Tax Compliance",
-    "Key": "Tax"
+    "Title": "Support Staff, Tax Compliance (TC)",
+    "Key": "Tax",
+    "contents": {
+      "sub_family": "Tax, Tax Compliance",
+      "band": "Support Staff",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Support Staff, Tax Compliance job performs routine administrative tasks in support of income tax compliance and global tax accounting, including financial statement reporting activities. Working under general supervision for routine administrative tasks, this job helps assist with the execution of tax compliance process, planning initiatives and audits while adhering to legislative and regulatory standards.",
+      "key_account": "<ul>\n<li><b>Tax Filing Compliance:</b> Assists the implementation of timely and accurate fulfillment of routine company’s income tax filing obligations and the execution of low complexity tax compliance tasks, tax returns, tax forms and related documents as required.</li>\n<li><b>Financial Statement Reporting:</b> Supports the preparation of basic financial statement reporting of tax matters under U.S. GAAP, including standard income tax compliance and accounting tasks.</li>\n<li><b>Planning and Legislative Partnership:</b> Assists with required planning initiatives and supports other tax teams on legislative and regulatory tasks.</li>\n<li><b>Operational Excellence:</b> Assists the implementation of operational excellence and continuous improvement activities in tax accounting and compliance while supporting routine audit tasks.</li>\n<li><b>Tax Compliance Activities:</b> Collaborates with tax compliance projects, enters data into various compliance-related systems and performs assigned tasks related to tax accounting and financial statement reporting activities.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Understands Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    } 
   },
   {
     "row": "14",
     "col": "1",
-    "Title": "Associate Support Staff, Accounts Payable / Accounts Receivable Process",
-    "Key": "Accounts Payable / Accounts Receivable"
+    "Title": "Associate Support Staff, Accounts Payable / Accounts Receivable Process (AP)",
+    "Key": "Accounts Payable / Accounts Receivable",
+    "contents": {
+      "sub_family": "AP / AR, AP / AR Process",
+      "band": "Associate Support Staff",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Support Staff, Accounts Payable / Accounts Receivable Process job assists with standard administrative tasks in support of the organization’s accounts payable or accounts receivable processes to enable accurate financial transactions, efficient cash flow management and compliance. Under close supervision for standard administrative tasks, this job helps maintain financial records, resolve billing discrepancies, generate invoices, or verify and process invoices. This job also assists in facilitating billing or invoicing operations and delivering excellent customer service.",
+      "key_account": "<ul>\n<li><b>Invoicing:</b> Assists in the preparation, generation or processing of invoices, ensuring accuracy and adherence to billing policies and procedures.</li>\n<li><b>Customer Service:</b> Responds to customer or supplier standard inquiries regarding billing or invoicing, providing timely and accurate information and addressing any concerns or disputes.</li>\n<li><b>Balance Reconciliation:</b> Helps process and reconcile accounts receivable balances using established standard administrative procedures, maintaining accuracy and investigating discrepancies.</li>\n<li><b>Documentation:</b> Helps maintain billing or invoicing records and documentation in line with standard filing procedures to support easy retrieval and audit purposes.</li>\n<li><b>Records Maintenance:</b> Assists with maintaining financial records related to accounts payable or accounts receivable processes in line with applicable policies, procedures and regulatory requirements.</li>\n<li><b>Collaboration:</b> Collaborates with cross functional teams to help timely and accurately process customer or supplier payments.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Understands Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "14",
     "col": "2",
-    "Title": "Associate Support Staff, Credit",
-    "Key": "Accounts Payable / Accounts Receivable"
+    "Title": "Associate Support Staff, Credit (CR)",
+    "Key": "Accounts Payable / Accounts Receivable",
+    "contents": {
+      "sub_family": "AP / AR, Credit",
+      "band": "Associate Support Staff",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Support Staff, Credit job assists with clerical and routine tasks related to credit in support of the organization’s financial stability. Working under close supervision for routine tasks, this job uses email, incident logging systems and telephone communications to support various payment support functions. This job implements standard payment control policies and payment processing.",
+      "key_account": "<ul>\n<li><b>Customer Accounts:</b> Assists with monitoring and maintaining customer accounts, including tracking account status and reporting on outstanding balances.</li>\n<li><b>Transaction Documentation:</b> Maintains organized and updated documentation for credit transactions in accordance with the established standard credit transaction procedures.</li>\n<li><b>Data Management:</b> Helps verify and update master data changes, such as customer information and credit limits, to maintain accurate records.</li>\n<li><b>Credit Reporting:</b> Assists in the preparation of standard credit research and reports to support financial analysis and decision making.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Understands Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "14",
     "col": "3",
-    "Title": "Associate Support Staff, Record to Report",
-    "Key": "Financial Accounting"
+    "Title": "Associate Support Staff, Record to Report (RR)",
+    "Key": "Financial Accounting",
+    "contents": {
+      "sub_family": "Financial Accounting, Record to Report",
+      "band": "Associate Support Staff",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Support Staff, Record to Report job performs basic clerical and administrative tasks to support record to report activities, collecting, processing and presenting accurate financial data for the purposes of providing external information for decision making while ensuring compliance with financial transaction recording standards. Under direct supervision, this job performs a variety of basic routine activities in compliance with standard accounting procedures including data entry, filing, organizing financial documents, supporting financial reports and assisting with audits.",
+      "key_account": "<ul>\n<li><b>Data Entry:</b> Enters data or uses technology tools to upload data into a computer system using defined computer programs to accurately and efficiently record financial transactions.</li>\n<li><b>Record Accuracy Verification:</b> Assists in verifying the accuracy of invoices and other accounting documents or records, including detailed financial transactions.</li>\n<li><b>Record Management:</b> Learns to implement record information management policies and best practices to support compliance with financial reporting requirements, enhance audit readiness and maintain data integrity.</li>\n<li><b>Data & Report Compilation:</b> Assists in compiling data and preparing a variety of financial reports to provide accurate and reliable financial information to support decision making, financial analysis, and compliance with regulatory requirements.</li>\n<li><b>Process Improvement:</b> Contributes to process improvement projects to improve effectiveness of record to report services and internal controls.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Understands Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   },
   {
     "row": "14",
     "col": "4",
-    "Title": "Associate Support Staff, Tax Compliance",
-    "Key": "Tax"
+    "Title": "Associate Support Staff, Tax Compliance (TC)",
+    "Key": "Tax",
+    "contents": {
+      "sub_family": "Tax, Tax Compliance",
+      "band": "Associate Support Staff",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Associate Support Staff, Tax Compliance job assists with standard administrative tasks in support of income tax compliance and global tax accounting, including financial statement reporting. Working under close supervision for standard administrative tasks, this job helps assist with the execution of tax compliance process, planning initiatives and audits while adhering to legislative and regulatory standards.",
+      "key_account": "<ul>\n<li><b>Tax Filing Compliance:</b> Assists the implementation of timely and accurate fulfillment of standard company’s income tax filing obligations and the execution of low complexity tax compliance tasks, tax returns, tax forms and related documents as required.</li>\n<li><b>Financial Statement Reporting:</b> Supports the preparation of standard financial statement reporting of tax matters under U.S. GAAP including standard income tax compliance and accounting tasks.</li>\n<li><b>Planning and Legislative Partnership:</b> Helps with required planning initiatives and assists other tax teams on legislative and regulatory tasks assigned.</li>\n<li><b>Operational Excellence:</b> Helps implement standard operational excellence and continuous improvement activities in tax accounting and compliance while supporting standard audit tasks.</li>\n<li><b>Tax Compliance Activities:</b> Collaborates with standard tax compliance projects, enters data into various compliance-related systems and executes assigned tasks related to tax accounting and financial statement reporting activities.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Builds foundational understanding of Cargill’s use of key financial information in budgeting and decision-making.</li>\n<li><b>Understands Tax & Regulatory Standards:</b> Builds understanding of external business environment and Cargill’s tax-related strategies.</li>\n<li><b>Manages Financial Risk:</b> Builds awareness of Cargill’s exposure to risk and relevant mitigation strategies.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Builds knowledge of Cargill’s use of complex financial modeling to drive decision-making.</li>\n<li><b>Manages Allocation of Assets:</b> Gains awareness of the implications of market factors on Cargill’s financial health and strategies.</li>\n<li><b>Reports Financial Information:</b> Builds awareness of Cargill’s approach to recording and communicating financial information.</li>\n</ul>"
+    }
   }
 ]
