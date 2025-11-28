@@ -297,7 +297,7 @@ Encourage your team to use Copilot to prepare:
                     </div>
                   </div>
 
-                  <div className="flex gap-4 h-full">
+                  <div className="flex gap-4 h-full max-h-[17.4rem] max-xl:max-h-[10rem]">
                     <div
                       className={`flex-1 ${bgColor} border rounded px-3 py-2 max-h-96 overflow-hidden  hover:overflow-auto `}
                     >
@@ -316,7 +316,7 @@ Encourage your team to use Copilot to prepare:
                       ></p>
                     </div>
                     <div
-                      className={`flex-1 ${bgColor} border rounded px-3 max-h-96 overflow-hidden  hover:overflow-auto pb-10 `}
+                      className={`flex-1 ${bgColor} border rounded px-3 py-2  max-h-96 overflow-hidden  hover:overflow-auto pb-10 `}
                     >
                       <h3 className="font-bold text-lg mb-2">
                         Finance Technical Competencies
@@ -368,7 +368,7 @@ Encourage your team to use Copilot to prepare:
                     {/* --- NEW TABS ---- */}
 
                     <div
-                      className="relative rounded-b-[1.313rem] max-h-[52vh] overflow-hidden hover:overflow-auto 
+                      className="relative rounded-b-[1.313rem] max-h-[54vh] max-xl:max-h-[50vh] overflow-hidden hover:overflow-auto 
                    bg-white h-full mb-5 overflow-auto flex gap-y-2  w-full hide-scrollbar"
                     >
                       <div>
