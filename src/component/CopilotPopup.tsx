@@ -251,7 +251,7 @@ Encourage your team to use Copilot to prepare:
               </div>
 
               {generatedPrompt && (
-                <div className="space-y-4 p-0 pb-0 h-full max-h-full flex flex-col ">
+                <div className="space-y-4 p-0 pb-40 min-h-full max-h-full flex flex-col ">
                   <div className="flex gap-4   ">
                     <div
                       className={`${bgColor} border rounded px-3 py-2 min-w-[120px]`}
@@ -259,7 +259,7 @@ Encourage your team to use Copilot to prepare:
                       <h3 className="font-bold text-lg mb-2 whitespace-nowrap">
                         Sub Family
                       </h3>
-                      <p className=" text-black/90">
+                      <p className=" text-black/90 text-sm">
                         {currentPromptDetails.sub_family || "Not available"}
                       </p>
                     </div>
@@ -270,7 +270,7 @@ Encourage your team to use Copilot to prepare:
                       <h3 className="font-bold text-lg mb-2 whitespace-nowrap">
                         Band
                       </h3>
-                      <p className=" text-black/90">
+                      <p className=" text-black/90 text-sm">
                         {currentPromptDetails.band || "Not available"}
                       </p>
                     </div>
@@ -281,7 +281,7 @@ Encourage your team to use Copilot to prepare:
                       <h3 className="font-bold text-lg mb-2 ">
                         Contributor Type
                       </h3>
-                      <p className=" text-black/90">
+                      <p className=" text-black/90 text-sm">
                         {currentPromptDetails.contributor_type ||
                           "Not available"}
                       </p>
@@ -291,7 +291,7 @@ Encourage your team to use Copilot to prepare:
                       className={`${bgColor} border rounded px-3 py-2 max-h-[150px] overflow-hidden  hover:overflow-auto  `}
                     >
                       <h3 className="font-bold text-lg mb-2">Job Purpose</h3>
-                      <p className=" text-black/90 ">
+                      <p className=" text-black/90 text-sm ">
                         {`${currentPromptDetails.purpose}` || "Not available"}
                       </p>
                     </div>
@@ -305,7 +305,7 @@ Encourage your team to use Copilot to prepare:
                         Key Accountabilities
                       </h3>
                       <p
-                        className=" text-black/90 text-ellipsis h-full"
+                        className=" text-black/90 text-ellipsis h-full text-sm"
                         dangerouslySetInnerHTML={
                           currentPromptDetails.key_account
                             ? {
@@ -316,13 +316,13 @@ Encourage your team to use Copilot to prepare:
                       ></p>
                     </div>
                     <div
-                      className={`flex-1 ${bgColor} border rounded px-3 py-2 max-h-96 overflow-hidden  hover:overflow-auto `}
+                      className={`flex-1 ${bgColor} border rounded px-3 max-h-96 overflow-hidden  hover:overflow-auto pb-10 `}
                     >
                       <h3 className="font-bold text-lg mb-2">
                         Finance Technical Competencies
                       </h3>
                       <p
-                        className=" text-black/90"
+                        className=" text-black/90 text-sm"
                         dangerouslySetInnerHTML={
                           currentPromptDetails.finance_technical
                             ? {
@@ -372,7 +372,7 @@ Encourage your team to use Copilot to prepare:
                    bg-white h-full mb-5  overflow-auto flex    gap-y-2  w-full hide-scrollbar"
                     >
                       <div>
-                        <pre className="whitespace-pre-wrap p-5 ">
+                        <pre className="whitespace-pre-wrap p-5 text-sm ">
                           {generatedPrompt}
                         </pre>
                       </div>

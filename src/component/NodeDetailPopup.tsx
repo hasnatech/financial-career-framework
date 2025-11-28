@@ -105,7 +105,7 @@ export function NodeDetailPopup({
     return (
       <div className="fixed inset-0 bg-black  bg-opacity-70 backdrop-blur-md flex items-center justify-center z-50 p-5">
         <div
-          className={`${bgColor} relative h-full w-full flex flex-col bg-white rounded-lg border w-full m-6 max-h-full overflow-y-auto p-0 z-50`}
+          className={`${bgColor} relative h-full flex flex-col overflow-auto bg-white rounded-lg border w-full max-h-full m-6 p-0 z-50`}
         >
           <div
             className={`${bgColor} sticky top-0 rounded-t-lg p-2 pl-5  flex justify-between items-center pb-3 mb-2`}
@@ -149,7 +149,7 @@ export function NodeDetailPopup({
                 <h3 className="font-bold text-lg mb-2 whitespace-nowrap">
                   Sub Family
                 </h3>
-                <p className="text-sm text-black/90">
+                <p className=" text-black/90 ">
                   {currentNodeData.sub_family || "Not available"}
                 </p>
               </div>
@@ -160,7 +160,7 @@ export function NodeDetailPopup({
                 <h3 className="font-bold text-lg mb-2 whitespace-nowrap">
                   Band
                 </h3>
-                <p className="text-sm text-black/90">
+                <p className="text-black/90">
                   {currentNodeData.band || "Not available"}
                 </p>
               </div>
@@ -171,14 +171,14 @@ export function NodeDetailPopup({
                 <h3 className="font-bold text-lg mb-2 whitespace-nowrap">
                   Contributor Type
                 </h3>
-                <p className="text-sm text-black/90">
+                <p className="text-black/90">
                   {currentNodeData.contributor_type || "Not available"}
                 </p>
               </div>
 
               <div className={`${bgColor} border rounded px-3 py-2`}>
                 <h3 className="font-bold text-lg mb-2">Job Purpose</h3>
-                <p className="text-sm text-black/90">
+                <p className=" text-black/90">
                   {currentNodeData.purpose || "Not available"}
                 </p>
               </div>
@@ -186,11 +186,11 @@ export function NodeDetailPopup({
 
             
 
-            <div className="flex gap-2 px-2 h-full max-h-full">
-            <div className={`flex-1 ${bgColor} border rounded px-3 py-2 `}>
+            <div className="container-2 flex gap-2 px-2  flex-1">
+            <div className={`key-account flex-1 ${bgColor} border rounded px-3 py-2 `}>
             <h3 className="font-bold text-lg mb-2">Key Accountabilities</h3>
             <p
-            className="text-sm text-black/90"
+            className="text-black/90"
             dangerouslySetInnerHTML={
             currentNodeData.key_account
             ? { __html: currentNodeData.key_account }
@@ -198,12 +198,12 @@ export function NodeDetailPopup({
             }
             ></p>
             </div>
-            <div className={`flex-1 ${bgColor} border rounded px-3 py-2 `}>
+            <div className={`finance-technical flex-1 ${bgColor} border rounded px-3 py-2 `}>
             <h3 className="font-bold text-lg mb-2">
             Finance Technical Competencies
             </h3>
             <p
-            className="text-sm text-black/90"
+            className="text-black/90"
             dangerouslySetInnerHTML={
             currentNodeData.finance_technical
             ? { __html: currentNodeData.finance_technical }
@@ -267,7 +267,7 @@ export function NodeDetailPopup({
                   onClick={() => {
                     handleCopilotPopup();
                   }}
-                  className="px-4 flex gap-x-2 items-center py-2 text-sm font-medium self-center rounded-md bg-primary text-primary-foreground mt-1 w-fit border-none outline-none hover:opacity-50 duration-500"
+                  className="px-4 py-2 flex gap-x-2 items-center  text-sm font-medium self-center rounded-md bg-primary text-primary-foreground mt-1 w-fit border-none outline-none hover:opacity-50 duration-500"
                 >
                 
                   <img className="w-4 h-4" src="images/icons/copilot-icon-white.png" /> 
