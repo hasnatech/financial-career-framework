@@ -251,7 +251,7 @@ Encourage your team to use Copilot to prepare:
               </div>
 
               {generatedPrompt && (
-                <div className="space-y-4 p-0 pb-40 min-h-full max-h-full flex flex-col ">
+                <div className="space-y-4 p-0 grid grid-rows-2 ">
                   <div className="flex gap-4   ">
                     <div
                       className={`${bgColor} border rounded px-3 py-2 min-w-[120px]`}
@@ -288,7 +288,7 @@ Encourage your team to use Copilot to prepare:
                     </div>
 
                     <div
-                      className={`${bgColor} border rounded px-3 py-2 max-h-[150px] overflow-hidden  hover:overflow-auto  `}
+                      className={`${bgColor} border rounded px-3 py-2 overflow-hidden  hover:overflow-auto  `}
                     >
                       <h3 className="font-bold text-lg mb-2">Job Purpose</h3>
                       <p className=" text-black/90 text-sm ">
