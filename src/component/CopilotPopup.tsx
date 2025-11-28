@@ -338,9 +338,9 @@ Encourage your team to use Copilot to prepare:
             </div>
 
             {generatedPrompt ? (
-              <div className="min-w-0 child-2 space-y-5">
+              <div className=" flex flex-col space-y-5">
                 <h3 className="font-bold text-lg">Copilot Prompt</h3>
-                <div>
+                <div className="flex flex-col">
                   <div className="flex gap-3">
                     <button
                       className={`px-4 py-2 rounded-t-md  ${
@@ -364,12 +364,12 @@ Encourage your team to use Copilot to prepare:
                       Manager
                     </button>
                   </div>
-                  <div className="  p-[3px] rounded-b-3xl bg-gradient-to-r from-[#03441f] to-[#BDE588]">
+                  <div className="p-[3px] flex rounded-b-3xl bg-gradient-to-r  from-[#03441f] to-[#BDE588]">
                     {/* --- NEW TABS ---- */}
 
                     <div
-                      className="relative rounded-b-[1.313rem] max-h-[62vh] overflow-hidden hover:overflow-auto 
-                   bg-white h-full mb-5  overflow-auto flex    gap-y-2  w-full hide-scrollbar"
+                      className="relative rounded-b-[1.313rem] max-h-[52vh] overflow-hidden hover:overflow-auto 
+                   bg-white h-full mb-5 overflow-auto flex gap-y-2  w-full hide-scrollbar"
                     >
                       <div>
                         <pre className="whitespace-pre-wrap p-5 text-sm ">
@@ -397,7 +397,7 @@ Encourage your team to use Copilot to prepare:
                     </div>
                   </div>
                 </div>
-                <div className="flex gap-3 justify-between">
+                <div className="flex gap-3 justify-between ">
                   <p>
                     Click on the{" "}
                     <a
