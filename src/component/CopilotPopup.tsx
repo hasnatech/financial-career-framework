@@ -211,8 +211,8 @@ Encourage your team to use Copilot to prepare:
             individualized development plan, consider using Copilot. Here's a
             prompt you can copy and paste to start this journey:
           </div>
-          <div className= "main-container grid grid-cols-2 gap-x-5 w-full max-w-full h-full max-h-full p-5 pt-0 pb-2">
-            <div className="child-1 min-w-0 flex flex-col items-start gap-y-4">
+          <div className="grid grid-cols-2 max-xl:flex w-full max-w-full h-full max-h-full gap-x-5 p-5 pt-0 pb-2">
+            <div className="max-xl:flex-1 flex flex-col items-start gap-y-4">
               <h2 className="self-start text-lg font-bold">
                 Enter Details of the role{" "}
               </h2>
@@ -251,37 +251,37 @@ Encourage your team to use Copilot to prepare:
               </div>
 
               {generatedPrompt && (
-                <div className="space-y-4 p-0 flex flex-col">
-                  <div className="grid grid-cols-4 max-xl:grid-cols-2 gap-4  max-w-full">
+                <div className="space-y-4 p-0 pb-0 h-full max-h-full flex flex-col mb-16">
+                  <div className="flex gap-4   ">
                     <div
-                      className={`${bgColor} border rounded px-3 py-2  max-h-[150px]`}
+                      className={`${bgColor} border rounded px-3 py-2 min-w-[120px]`}
                     >
                       <h3 className="font-bold text-lg mb-2 whitespace-nowrap">
                         Sub Family
                       </h3>
-                      <p className=" text-black/90 text-sm">
+                      <p className=" text-black/90">
                         {currentPromptDetails.sub_family || "Not available"}
                       </p>
                     </div>
 
                     <div
-                      className={`${bgColor} border rounded px-3 py-2 max-h-[150px]  `}
+                      className={`${bgColor} border rounded px-3 py-2 min-w-[120px] `}
                     >
                       <h3 className="font-bold text-lg mb-2 whitespace-nowrap">
                         Band
                       </h3>
-                      <p className=" text-black/90 text-sm">
+                      <p className=" text-black/90">
                         {currentPromptDetails.band || "Not available"}
                       </p>
                     </div>
 
                     <div
-                      className={`${bgColor} border rounded px-3 py-2 max-h-[150px] `}
+                      className={`${bgColor} border rounded px-3 py-2 min-w-[120px]`}
                     >
                       <h3 className="font-bold text-lg mb-2 ">
                         Contributor Type
                       </h3>
-                      <p className=" text-black/90 text-sm">
+                      <p className=" text-black/90">
                         {currentPromptDetails.contributor_type ||
                           "Not available"}
                       </p>
@@ -291,13 +291,13 @@ Encourage your team to use Copilot to prepare:
                       className={`${bgColor} border rounded px-3 py-2 max-h-[150px] overflow-hidden  hover:overflow-auto  `}
                     >
                       <h3 className="font-bold text-lg mb-2">Job Purpose</h3>
-                      <p className=" text-black/90 text-sm ">
+                      <p className=" text-black/90 ">
                         {`${currentPromptDetails.purpose}` || "Not available"}
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex gap-4 h-full max-h-[17.4rem] max-xl:max-h-[10rem]">
+                  <div className="flex gap-4 flex-1 ">
                     <div
                       className={`flex-1 ${bgColor} border rounded px-3 py-2 max-h-96 overflow-hidden  hover:overflow-auto `}
                     >
@@ -305,7 +305,7 @@ Encourage your team to use Copilot to prepare:
                         Key Accountabilities
                       </h3>
                       <p
-                        className=" text-black/90 text-ellipsis h-full text-sm"
+                        className=" text-black/90 text-ellipsis h-full"
                         dangerouslySetInnerHTML={
                           currentPromptDetails.key_account
                             ? {
@@ -316,13 +316,13 @@ Encourage your team to use Copilot to prepare:
                       ></p>
                     </div>
                     <div
-                      className={`flex-1 ${bgColor} border rounded px-3 py-2  max-h-96 overflow-hidden  hover:overflow-auto pb-10 `}
+                      className={`flex-1 ${bgColor} border rounded px-3 py-2 max-h-96 overflow-hidden  hover:overflow-auto `}
                     >
                       <h3 className="font-bold text-lg mb-2">
                         Finance Technical Competencies
                       </h3>
                       <p
-                        className=" text-black/90 text-sm"
+                        className=" text-black/90"
                         dangerouslySetInnerHTML={
                           currentPromptDetails.finance_technical
                             ? {
@@ -338,9 +338,9 @@ Encourage your team to use Copilot to prepare:
             </div>
 
             {generatedPrompt ? (
-              <div className=" flex flex-col space-y-5">
+              <div className="max-xl:flex-1 space-y-5">
                 <h3 className="font-bold text-lg">Copilot Prompt</h3>
-                <div className="flex flex-col">
+                <div>
                   <div className="flex gap-3">
                     <button
                       className={`px-4 py-2 rounded-t-md  ${
@@ -349,7 +349,7 @@ Encourage your team to use Copilot to prepare:
                           : "bg-slate-200"
                       }`}
                       onClick={() => setActiveTab("employee")}
-                    >           
+                    >
                       Employee
                     </button>
 
@@ -364,15 +364,15 @@ Encourage your team to use Copilot to prepare:
                       Manager
                     </button>
                   </div>
-                  <div className="p-[3px] flex rounded-b-3xl bg-gradient-to-r  from-[#03441f] to-[#BDE588]">
+                  <div className="  p-[3px] rounded-b-3xl bg-gradient-to-r from-[#03441f] to-[#BDE588]">
                     {/* --- NEW TABS ---- */}
 
                     <div
-                      className="relative rounded-b-[1.313rem] max-h-[54vh] max-xl:max-h-[50vh] overflow-hidden hover:overflow-auto 
-                   bg-white h-full mb-5 overflow-auto flex gap-y-2  w-full hide-scrollbar"
+                      className="relative rounded-b-[1.313rem] lg:max-h-[50vh] xl:max-h-[58vh] overflow-hidden hover:overflow-auto 
+                   bg-white h-full mb-5  overflow-auto flex    gap-y-2  w-full hide-scrollbar"
                     >
                       <div>
-                        <pre className="whitespace-pre-wrap p-5 text-sm ">
+                        <pre className="whitespace-pre-wrap p-5 ">
                           {generatedPrompt}
                         </pre>
                       </div>
@@ -389,7 +389,7 @@ Encourage your team to use Copilot to prepare:
                               Prompt Copied...
                             </p>
                             <p className="opacity-90 mt-2">
-                              Your pr ompt copied to clipboard...
+                              Your prompt copied to clipboard...
                             </p>
                           </div>
                         </div>
@@ -397,7 +397,7 @@ Encourage your team to use Copilot to prepare:
                     </div>
                   </div>
                 </div>
-                <div className="flex gap-3 justify-between ">
+                <div className="flex gap-3 justify-between items-center">
                   <p>
                     Click on the{" "}
                     <a
@@ -444,7 +444,7 @@ Encourage your team to use Copilot to prepare:
                 </div>
               </div>
             ) : (
-              <div className="min-w- p-[3px] rounded-3xl bg-gradient-to-r from-[#03441f] to-[#BDE588]">
+              <div className="max-xl:flex-1 p-[3px] rounded-3xl bg-gradient-to-r from-[#03441f] to-[#BDE588]">
                 <div className="bg-white rounded-[1.313rem] h-full w-full flex flex-col  gap-y-3 items-center justify-center justify-items-center">
                   <img src="images/icons/icons8-microsoft-copilot-50 (2).png"></img>
                   <p className="text-slate-400">
@@ -461,3 +461,4 @@ Encourage your team to use Copilot to prepare:
 };
 
 export default CopilotPopup;
+
