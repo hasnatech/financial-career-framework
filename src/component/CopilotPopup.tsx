@@ -297,7 +297,7 @@ Encourage your team to use Copilot to prepare:
                     </div>
                   </div>
 
-                  <div className="flex gap-4 flex-1 ">
+                  <div className="flex gap-4  xl:max-h-[42.3vh] lg:max-h-[34.6vh]">
                     <div
                       className={`flex-1 ${bgColor} border rounded px-3 py-2 max-h-96 overflow-hidden  hover:overflow-auto `}
                     >
