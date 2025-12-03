@@ -1,8 +1,4 @@
-import {
-  Eraser,
-  MoveUp,
-  Printer
-} from "lucide-react";
+import { ChevronDown, ChevronUp, Eraser, MoveUp, Printer } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useReactToPrint } from "react-to-print";
 import "./App.css";
@@ -22,6 +18,8 @@ const nodeTypes = {
 };
 
 export default function Option2() {
+  const [isPathwayOpen, setIsPathwayOpen] = useState(true);
+
   const [nodes, setNodes] = useState<any[]>([]);
   // const [isTransposed, setIsTransposed] = useState(false);
   const [selectedNodeForPopup, setSelectedNodeForPopup] = useState<any | null>(
@@ -49,11 +47,9 @@ export default function Option2() {
     documentTitle: "\u00A0",
 
     onBeforePrint: () => {
-      
       return Promise.resolve();
     },
     onAfterPrint: () => {
-      
       return Promise.resolve();
     },
   });
@@ -171,20 +167,28 @@ export default function Option2() {
   };
 
   useEffect(() => {
-    if(selectedNodeForPopup == null) {
-      setSearchValue('');
+    if (selectedNodeForPopup == null) {
+      setSearchValue("");
     }
   }, [selectedNodeForPopup]);
 
   return (
     <MainLayout searchValue={searchValue} setSearchValue={setSearchValue}>
       <div className="flex gap-2">
+          {isLegendOpen && (
         <div className="w-72 border rounded">
           <div className="bg-primary text-white p-3 rounded-t flex justify-between items-center">
             <h2 className="text-xl font-bold">Legends</h2>
+             <button
+                  onClick={() => setIsLegendOpen(!isLegendOpen)}
+                  className="hover:bg-primary-dark p-1 rounded"
+                  aria-label="Toggle My Pathway"
+                >
+                    <ChevronDown className="w-5 h-5" />
+                </button>
           </div>
-          {isLegendOpen && (
-            <div className="p-2 space-y-3 relative h-full">
+        
+            <div className="p-2 space-y-3 relative h-[90vh] overflow-y">
               <Legend
                 selectedBands={selectedBands}
                 onBandClick={handleBandClick}
@@ -200,8 +204,9 @@ export default function Option2() {
                 </Button>
               )}
             </div>
-          )}
+          
         </div>
+        )}
 
         <div
           className={`relative flex flex-col w-full min-h-screen items-center gap-y-10 ${
@@ -236,33 +241,81 @@ export default function Option2() {
           <div className="bg-white rounded-lg flex-1 border relative w-full">
             <CareerRoadmap nodes={nodes} nodeTypes={nodeTypes} fitView />
 
-            <button
-              onClick={() => {
-                setShouldCopilotPopupOpen(true);
-              }}
-              className={`group absolute bottom-5
-         right-5 flex items-center gap-2 z-50`}
-            >
-              {/* Bubble Text */}
-              <span className="opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 duration-300 bg-slate-50 text-primary text-sm font-medium px-3 py-1.5 rounded-full shadow-lg">
-                Copilot Corner
-              </span>
-
-              {/* Icon Button */}
-              <div className="h-12 w-12 p-2 rounded-full flex items-center justify-center hover:opacity-80 duration-300 shadow-md border bg-white">
-                <img  src="images/icons/icons8-microsoft-copilot-48.png" />
+            <div className={`absolute w-full flex items-center justify-between gap-3 bottom-5 right-5 px-3 pl-10`}>
+              
+              {!isLegendOpen ? (
+              <div className="bg-primary text-white pl-5 pr-3 py-2 rounded flex gap-3 justify-between  items-center">
+                <h2 className="text-md">Legends</h2>
+                <button
+                  onClick={() => setIsLegendOpen(!isLegendOpen)}
+                  className="hover:bg-primary-dark p-1 rounded"
+                  aria-label="Toggle Legends"
+                >
+                    <ChevronUp className="w-5 h-5" />
+                </button>
               </div>
-            </button>
+              ):(
+                <div></div>
+              )}
+              <div>
+              <div className="flex items-center justify-end gap-3">
+              <button
+                onClick={() => {
+                  setShouldCopilotPopupOpen(true);
+                }}
+                className="group relative 
+         right-5 flex items-center gap-2 z-50"
+              >
+                {/* Bubble Text */}
+                <span className="opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 duration-300 bg-slate-50 text-primary text-sm font-medium px-3 py-1.5 rounded-full shadow-lg">
+                  Copilot Corner
+                </span>
+
+                {/* Icon Button */}
+                <div className="h-12 w-12 p-2 rounded-full flex items-center justify-center hover:opacity-80 duration-300 shadow-md border bg-white">
+                  <img src="images/icons/icons8-microsoft-copilot-48.png" />
+                </div>
+              </button>
+
+                {!isPathwayOpen && (
+              <div className="bg-primary text-white pl-5 pr-3 py-2 rounded flex gap-3 justify-between  items-center">
+                <h2 className="text-md">My Pathway</h2>
+                <button
+                  onClick={() => setIsPathwayOpen(!isPathwayOpen)}
+                  className="hover:bg-primary-dark p-1 rounded"
+                  aria-label="Toggle My Pathway"
+                >
+                    <ChevronUp className="w-5 h-5" />
+                </button>
+              </div>
+              )}
+              </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        {pathWay.length > 0 && (
-          <div className="flex flex-col h-screen w-fit ">
-            <div className="w-80 flex flex-col rounded space-y-3 overflow-y-auto h-[92.5vh]">
+        {pathWay.length > 0  && isPathwayOpen && (
+          <div
+            className={`flex flex-col h-screen w-fit ${
+              isPathwayOpen ? "" : " fixed right-0 z-20"
+            }`}
+          >
+            <div
+              className={`w-80 flex flex-col rounded space-y-3 overflow-y-auto 
+              ${isPathwayOpen ? "h-[92.5vh]" : "h-[100px] "}`}
+            >
               <div className="bg-primary sticky top-0 z-50 text-white p-3 rounded-t flex justify-between  items-center">
                 <h2 className="text-xl font-bold">My Pathway</h2>
+                <button
+                  onClick={() => setIsPathwayOpen(!isPathwayOpen)}
+                  className="hover:bg-primary-dark p-1 rounded"
+                  aria-label="Toggle My Pathway"
+                >
+                    <ChevronDown className="w-5 h-5" />
+                </button>
               </div>
-              {pathWay.length > 0 && (
+              {isPathwayOpen && pathWay.length > 0 && (
                 <div className="flex flex-col-reverse justify-end items-center gap-3 p-3 h-full  ">
                   {pathWay.map((node: any, index: number) => (
                     <div className="w-full" key={index}>
@@ -345,6 +398,6 @@ export default function Option2() {
           ref={printRef}
         ></PathwayPrintDocument>
       )}
-     </MainLayout>
+    </MainLayout>
   );
 }

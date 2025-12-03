@@ -18,7 +18,7 @@ export function Legend({ selectedBands, onBandClick, onClear }: LegendProps) {
 
   return (
     <div className="flex flex-col gap-y-4 ">
-      <div className="flex flex-col flex-wrap gap-x-4 gap-y-4 ">
+      <div className="flex flex-col gap-x-4 gap-y-4 overflow-auto max-h-[8  2vh]">
         {legendData.map(({ band }) => {
           const isSelected = selectedBands.includes(band);
           const hasSelection = selectedBands.length > 0;
