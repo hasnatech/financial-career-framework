@@ -1,30 +1,21 @@
 import {
   Eraser,
-  LucideAArrowDown,
-  LucideArrowDown,
-  LucideArrowUp,
-  LucideEllipsis,
-  LucideRemoveFormatting,
-  LucideSearch,
-  LucideTrash,
   MoveUp,
-  Printer,
+  Printer
 } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useReactToPrint } from "react-to-print";
 import "./App.css";
 import { CareerRoadmap } from "./component/CareerRoadmap";
+import CopilotPopup from "./component/CopilotPopup";
 import { HexaNode } from "./component/HexaNode";
 import { Legend } from "./component/Legend";
 import { NodeDetailPopup } from "./component/NodeDetailPopup";
+import PathwayPrintDocument from "./component/PathwayPrintDocument";
+import SearchBar from "./component/SearchBar";
+import { Button } from "./components/ui/button";
 import data from "./data.json";
 import MainLayout from "./Layout/MainLayout";
-import { Button } from "./components/ui/button";
-import SearchBar from "./component/SearchBar";
-import CopilotPopup from "./component/CopilotPopup";
-import { useReactToPrint } from "react-to-print";
-import PathwayPrintDocument from "./component/PathwayPrintDocument";
-import Translatex from "./components/Translate";
-import Translate from "./components/Translate";
 
 const nodeTypes = {
   textUpdater: HexaNode,
@@ -32,7 +23,7 @@ const nodeTypes = {
 
 export default function Option2() {
   const [nodes, setNodes] = useState<any[]>([]);
-  const [isTransposed, setIsTransposed] = useState(false);
+  // const [isTransposed, setIsTransposed] = useState(false);
   const [selectedNodeForPopup, setSelectedNodeForPopup] = useState<any | null>(
     null
   );
@@ -44,9 +35,9 @@ export default function Option2() {
 
   const [selectedBands, setSelectedBands] = useState<string[]>([]);
   const [isLegendOpen, setIsLegendOpen] = useState(true);
-  const [showPathway, setShowPathway] = useState(true);
+  // const [showPathway, setShowPathway] = useState(true);
   const [pathWay, setPathWay] = useState<any[]>([]);
-  const [shouldOptionsOpen, setShouldOptionsOpen] = useState<string>("");
+  // const [shouldOptionsOpen, setShouldOptionsOpen] = useState<string>("");
   const [searchValue, setSearchValue] = useState<string>("");
   const [shouldCopilotPopupOpen, setShouldCopilotPopupOpen] =
     useState<boolean>(false);
@@ -58,11 +49,11 @@ export default function Option2() {
     documentTitle: "\u00A0",
 
     onBeforePrint: () => {
-      console.log("Before Print");
+      
       return Promise.resolve();
     },
     onAfterPrint: () => {
-      console.log("After Print");
+      
       return Promise.resolve();
     },
   });
@@ -183,11 +174,7 @@ export default function Option2() {
     if(selectedNodeForPopup == null) {
       setSearchValue('');
     }
-    console.log(
-      "The selected node for popup is changed to : ",
-      selectedNodeForPopup
-    );
-  });
+  }, [selectedNodeForPopup]);
 
   return (
     <MainLayout searchValue={searchValue} setSearchValue={setSearchValue}>
@@ -239,6 +226,9 @@ export default function Option2() {
                 onSearchChange={(value) => setSearchValue(value)}
                 data={nodes}
                 setSelectedNodeForPopup={setSelectedNodeForPopup}
+                isCopilotPopupOpen={shouldCopilotPopupOpen}
+                currentPromptDetails={copilotPromptDetails}
+                setCurrentPromptDetails={setCopilotPromptDetails}
               />
             </div>
           </nav>

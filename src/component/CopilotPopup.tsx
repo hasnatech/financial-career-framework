@@ -93,8 +93,7 @@ const CopilotPopup: React.FC<Props> = ({
 
     if (activeTab === "manager") {
       console.log("activeTab", currentPromptDetails);
-      const managerPromptInstruction =
-        `${currentPromptDetails.label} Conversation Guide for Finance Managers
+      const managerPromptInstruction = `${currentPromptDetails.label} Conversation Guide for Finance Managers
 🎯 Purpose
 •	Encourage reflection and career ownership
 •	Understand each team member’s aspirations
@@ -127,8 +126,22 @@ Encourage your team to use Copilot to prepare:
       setGeneratedPrompt(`${managerPromptInstruction}`);
       return;
     } else {
-      const prompt = `${promptHeader}\n\nPurpose:\n${purpose}\n\nKey Accountabilities:\n${keyAccount}\n\nFinance Technical Competencies:\n${financeTechnical}\n\n${promptInstruction}`;
-      console.log("activeTab", activeTab);
+      // const prompt = `${promptHeader}\n\nPurpose:\n${purpose}\n\nKey Accountabilities:\n${keyAccount}\n\nFinance Technical Competencies:\n${financeTechnical}\n\n${promptInstruction}`;
+
+      const prompt = [
+        clean(promptHeader),
+        "",
+        "Purpose:",
+        clean(purpose),
+        "",
+        "Key Accountabilities:",
+        clean(keyAccount),
+        "",
+        "Finance Technical Competencies:",
+        clean(financeTechnical),
+        "",
+        clean(promptInstruction),
+      ].join("\n");
       setGeneratedPrompt(prompt);
     }
 
@@ -156,6 +169,10 @@ Encourage your team to use Copilot to prepare:
       </div>
     );
   };
+
+  function clean(text: string) {
+    return (text || "").replace(/<[^>]*>/g, "");
+  }
 
   const handlePlainTextRetrieval = (htmlString: string) => {
     if (!htmlString) {
@@ -461,4 +478,3 @@ Encourage your team to use Copilot to prepare:
 };
 
 export default CopilotPopup;
-

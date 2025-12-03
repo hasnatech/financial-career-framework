@@ -4,22 +4,21 @@ import {
   LucideArrowUp,
   LucideTrash
 } from "lucide-react";
-import { useEffect, useState } from "react";
 import { bandClass } from "./Constant";
 
 export function HexaNode(props: any) {
-  const zoom = props.zoom || 1;
-  const [zoomLevel, setZoomLevel] = useState("small");
-  const [shouldOptionsOpen, setShouldOptionsOpen] = useState<string>("");
+  // const zoom = props.zoom || 1;
+  // const [zoomLevel, setZoomLevel] = useState("small");
+  // const [shouldOptionsOpen, setShouldOptionsOpen] = useState<string>("");
 
-  useEffect(() => {
-    // console.log(zoom);
-    if (zoom < 1.5) {
-      setZoomLevel("small");
-    } else {
-      setZoomLevel("large");
-    }
-  }, [zoom]);
+  // useEffect(() => {
+  //   // console.log(zoom);
+  //   if (zoom < 1.5) {
+  //     setZoomLevel("small");
+  //   } else {
+  //     setZoomLevel("large");
+  //   }
+  // }, [zoom]);
 
   const getImage = (band: string) => {
     const fileName = `${band

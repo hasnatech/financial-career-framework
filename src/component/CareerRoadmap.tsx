@@ -1,15 +1,15 @@
-import { Fullscreen, Minus, Plus } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { TextUpdaterNode } from './TextUpdaterNode';
-import SearchBar from './SearchBar';
+import { Fullscreen, Minus, Plus } from "lucide-react";
+import { useEffect, useState } from "react";
+import { TextUpdaterNode } from "./TextUpdaterNode";
+import SearchBar from "./SearchBar";
 
 const Background = ({ color, gap }: { color: string; gap: number }) => {
   const backgroundStyle = {
-    position: 'absolute',
+    position: "absolute",
     top: 0,
     left: 0,
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
     backgroundImage: `radial-gradient(${color} 1px, transparent 0)`,
     backgroundSize: `${gap}px ${gap}px`,
   };
@@ -18,31 +18,44 @@ const Background = ({ color, gap }: { color: string; gap: number }) => {
 
 const Controls = ({ onZoomIn, onZoomOut, onFitView }: any) => {
   return (
-    <div style={{ position: 'absolute', top: 10, right: 10, display: 'flex', flexDirection: 'column' }}
-    className='space-y-1 z-20'
+    <div
+      style={{
+        position: "absolute",
+        top: 10,
+        right: 10,
+        display: "flex",
+        flexDirection: "column",
+      }}
+      className="space-y-1 z-20"
     >
-      <button className='p-2 cursor bg-white rounded shadow' onClick={onZoomIn}>
-        <Plus className="w-4 h-4 stroke-slate-700" /> 
+      <button className="p-2 cursor bg-white rounded shadow" onClick={onZoomIn}>
+        <Plus className="w-4 h-4 stroke-slate-700" />
       </button>
-      <button className='p-2 cursor bg-white rounded shadow' onClick={onZoomOut}>
+      <button
+        className="p-2 cursor bg-white rounded shadow"
+        onClick={onZoomOut}
+      >
         <Minus className="w-4 h-4 stroke-slate-700" />
       </button>
-      <button className='p-2 cursor bg-white rounded shadow' onClick={onFitView}>
+      <button
+        className="p-2 cursor bg-white rounded shadow"
+        onClick={onFitView}
+      >
         <Fullscreen className="w-4 h-4 stroke-slate-700" />
       </button>
     </div>
   );
 };
 
-export const CareerRoadmap = ({ nodes, nodeTypes, 
-  onNodesChange, onEdgesChange, onConnect, fitView, nodesDraggable, nodesConnectable }) => {
+export const CareerRoadmap = ({ nodes, nodeTypes, fitView }) => {
   const [transform, setTransform] = useState({ x: 0, y: 0, k: 1 });
 
   const handleWheel = (event) => {
     const { deltaY, clientX, clientY } = event;
     const zoomFactor = 0.95;
     // const zoomFactor = 1.95;
-    const newK = deltaY < 0 ? transform.k / zoomFactor : transform.k * zoomFactor;
+    const newK =
+      deltaY < 0 ? transform.k / zoomFactor : transform.k * zoomFactor;
 
     const mouseX = clientX - transform.x;
     const mouseY = clientY - transform.y;
@@ -64,12 +77,12 @@ export const CareerRoadmap = ({ nodes, nodeTypes,
     };
 
     const handleMouseUp = () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
     };
 
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseup', handleMouseUp);
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
   };
 
   const handleZoomIn = () => {
@@ -85,8 +98,11 @@ export const CareerRoadmap = ({ nodes, nodeTypes,
   const handleFitView = () => {
     if (nodes.length === 0) return;
 
-    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
-    nodes.forEach(node => {
+    let minX = Infinity,
+      minY = Infinity,
+      maxX = -Infinity,
+      maxY = -Infinity;
+    nodes.forEach((node) => {
       minX = Math.min(minX, node.position.x);
       minY = Math.min(minY, node.position.y);
       maxX = Math.max(maxX, node.position.x + (node.width || 220));
@@ -95,15 +111,15 @@ export const CareerRoadmap = ({ nodes, nodeTypes,
 
     const boundsWidth = maxX - minX;
     const boundsHeight = maxY - minY;
-    const container = document.querySelector('.career-roadmap-container');
+    const container = document.querySelector(".career-roadmap-container");
     const { width, height } = container.getBoundingClientRect();
 
     const kx = width / boundsWidth;
     const ky = height / boundsHeight;
     const newK = Math.min(kx, ky) * 0.9;
 
-    const newX = (width - (boundsWidth * newK)) / 2 - minX * newK;
-    const newY = (height - (boundsHeight * newK)) / 2 - minY * newK;
+    const newX = (width - boundsWidth * newK) / 2 - minX * newK;
+    const newY = (height - boundsHeight * newK) / 2 - minY * newK;
 
     setTransform({ x: newX, y: newY, k: newK });
   };
@@ -117,31 +133,44 @@ export const CareerRoadmap = ({ nodes, nodeTypes,
   return (
     <div
       className="career-roadmap-container"
-      style={{ width: '100%', height: '100%', overflow: 'hidden', position: 'relative' }}
+      style={{
+        width: "100%",
+        height: "100%",
+        overflow: "hidden",
+        position: "relative",
+      }}
       onWheel={handleWheel}
       onMouseDown={handleMouseDown}
     >
-      
       <Background color="#e6e5e5ff" gap={16} />
-      <div style={{ transform: `translate(${transform.x}px, ${transform.y}px) scale(${transform.k})`, transformOrigin: '0 0' }}>
-        {nodes.map(node => {
+      <div
+        style={{
+          transform: `translate(${transform.x}px, ${transform.y}px) scale(${transform.k})`,
+          transformOrigin: "0 0",
+        }}
+      >
+        {nodes.map((node) => {
           const NodeComponent = nodeTypes[node.type] || TextUpdaterNode;
           return (
             <div
-              key={node.id} 
+              key={node.id}
               style={{
-                position: 'absolute',
+                position: "absolute",
                 left: node.position.x,
                 top: node.position.y,
                 ...node.style,
               }}
             >
-              <NodeComponent {...node} zoom={transform.k}/>
+              <NodeComponent {...node} zoom={transform.k} />
             </div>
           );
         })}
       </div>
-      <Controls onZoomIn={handleZoomIn} onZoomOut={handleZoomOut} onFitView={handleFitView} />
+      <Controls
+        onZoomIn={handleZoomIn}
+        onZoomOut={handleZoomOut}
+        onFitView={handleFitView}
+      />
     </div>
   );
 };

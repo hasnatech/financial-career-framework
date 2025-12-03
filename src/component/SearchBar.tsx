@@ -24,9 +24,9 @@ type SearchBarProps = {
 };
 
 const SearchBar = ({  
-  isNodeDetailPopupOpen,
+  
   isCopilotPopupOpen,
-  onClose,
+  
   data = [],
   onSearchChange,
   setSelectedNodeForPopup,
