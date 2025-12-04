@@ -12,6 +12,7 @@ import SearchBar from "./component/SearchBar";
 import { Button } from "./components/ui/button";
 import data from "./data.json";
 import MainLayout from "./Layout/MainLayout";
+import OnboardingPopup from "./component/OnBoardingPopup";
 
 const nodeTypes = {
   textUpdater: HexaNode,
@@ -40,6 +41,7 @@ export default function Option2() {
   const [shouldCopilotPopupOpen, setShouldCopilotPopupOpen] =
     useState<boolean>(false);
   const [isPrintInitiated, setIsPrintInitiated] = useState<boolean>(false);
+  const [shouldShowOnboardingPopup,setShouldShowOnboardingPopup]=useState<boolean>(true);
   const printRef = useRef<HTMLDivElement>(null);
 
   const handlePrint = useReactToPrint({
@@ -235,6 +237,9 @@ export default function Option2() {
                 currentPromptDetails={copilotPromptDetails}
                 setCurrentPromptDetails={setCopilotPromptDetails}
               />
+              <button onClick={()=>{
+                setShouldShowOnboardingPopup(true)
+              }} className="self-center text-wrap text-xs bg-white shadow-sm rounded-lg hidden">Demo</button>
             </div>
           </nav>
 
@@ -398,6 +403,12 @@ export default function Option2() {
           ref={printRef}
         ></PathwayPrintDocument>
       )}
+
+      {shouldShowOnboardingPopup &&
+      <OnboardingPopup setShouldShowOnboardingPopup={setShouldShowOnboardingPopup}></OnboardingPopup>
+      }
+
+     
     </MainLayout>
   );
 }

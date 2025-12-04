@@ -21,7 +21,7 @@ interface PromptDetails {
 interface Props {
   data: any;
   promptDetails?: PromptDetails;
-  setShouldCopilotPopupOpen?: (open: boolean) => void;
+  setShouldCopilotPopupOpen?: (value: boolean) => void;
   setSelectedNodeForCopilotPopup?: (value: any) => void;
   setCopilotPromptDetails: (value: PromptDetails | null) => void;
 }
