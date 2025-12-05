@@ -1,7 +1,6 @@
-import { Fullscreen, Minus, Plus } from "lucide-react";
+import { Fullscreen, Info, InfoIcon, Minus, Plus } from "lucide-react";
 import { useEffect, useState } from "react";
 import { TextUpdaterNode } from "./TextUpdaterNode";
-import SearchBar from "./SearchBar";
 
 const Background = ({ color, gap }: { color: string; gap: number }) => {
   const backgroundStyle = {
@@ -16,7 +15,7 @@ const Background = ({ color, gap }: { color: string; gap: number }) => {
   return <div style={backgroundStyle} />;
 };
 
-const Controls = ({ onZoomIn, onZoomOut, onFitView }: any) => {
+const Controls = ({ onZoomIn, onZoomOut, onFitView, onBoard }: any) => {
   return (
     <div
       style={{
@@ -43,11 +42,17 @@ const Controls = ({ onZoomIn, onZoomOut, onFitView }: any) => {
       >
         <Fullscreen className="w-4 h-4 stroke-slate-700" />
       </button>
+      <button
+        className="p-2 cursor bg-white rounded shadow"
+        onClick={onBoard}
+      >
+        <InfoIcon className="w-4 h-4 stroke-slate-700" />
+      </button>
     </div>
   );
 };
 
-export const CareerRoadmap = ({ nodes, nodeTypes, fitView }) => {
+export const CareerRoadmap = ({ nodes, nodeTypes, fitView, onHandleOnboard }) => {
   const [transform, setTransform] = useState({ x: 0, y: 0, k: 1 });
 
   const handleWheel = (event) => {
@@ -124,6 +129,10 @@ export const CareerRoadmap = ({ nodes, nodeTypes, fitView }) => {
     setTransform({ x: newX, y: newY, k: newK });
   };
 
+  const handleOnboard = () => {
+      onHandleOnboard(true);
+  }
+
   useEffect(() => {
     if (fitView && nodes.length > 0) {
       handleFitView();
@@ -170,6 +179,7 @@ export const CareerRoadmap = ({ nodes, nodeTypes, fitView }) => {
         onZoomIn={handleZoomIn}
         onZoomOut={handleZoomOut}
         onFitView={handleFitView}
+        onBoard={handleOnboard}
       />
     </div>
   );

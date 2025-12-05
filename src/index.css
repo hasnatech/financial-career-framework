@@ -3,19 +3,16 @@
 @tailwind utilities;
 
 @keyframes fadeIn {
-  from{
+  from {
     opacity: 0;
   }
-  to{
+  to {
     opacity: 1;
   }
 }
 
-
-
 @layer base {
   :root {
-    
     --background: #000;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
@@ -43,7 +40,6 @@
     --chart-5: 27 87% 67%;
     --soft-green: 91 65% 75%;
     --radius: 0.5rem;
-
   }
   .dark {
     --background: 222.2 84% 4.9%;
@@ -69,7 +65,7 @@
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%
+    --chart-5: 340 75% 55%;
   }
 }
 
@@ -79,10 +75,10 @@
 .react-flow__node {
   transition: transform 0.5s ease-in-out;
 }
-body{
+body {
   overflow: hidden;
 }
-.hide-scrollbar::-webkit-scrollbar{ 
+.hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
 /* Hides the Google Translate top bar */
@@ -92,7 +88,7 @@ body {
 }
 .goog-te-gadget-icon,
 .skiptranslate iframe {
-    display: none !important;
+  display: none !important;
 }
 /* Hide Google Translate Hover Popup */
 #goog-gt-tt {
@@ -122,22 +118,22 @@ body {
   position: static !important;
 }
 
-.goog-te-combo{
+.goog-te-combo {
   padding: 0.75rem 0.5rem !important;
   border-radius: 0.5rem !important;
   font-size: 14px !important;
-  border:solid 1px rgb(229, 231, 235);
+  border: solid 1px rgb(229, 231, 235);
   background-color: white !important;
   cursor: pointer;
   outline: none;
-  margin:0;
-   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  margin: 0;
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
 }
 .goog-te-gadget .goog-te-combo {
-    margin: 0 0;
+  margin: 0 0;
 }
-.fade-in{
+.fade-in {
   animation: fadeIn 0.5s;
 }
 
@@ -217,14 +213,20 @@ ol {
   }
 }
 
+.prompt_window {
+  height: calc(100vh - 460px);
+  @media screen and (max-height: 700px) {
+    height: calc(100vh - 460px);
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
+.job-desc1 {
+  height: 20vh;
+  
+}
+.job-desc2 {
+  height: 60vh;
+   @media screen and (max-height: 700px) {
+    height: 40vh;
+   }
+}

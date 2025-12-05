@@ -206,11 +206,19 @@ Encourage your team to use Copilot to prepare:
   return (
     <>
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-5">
-        <div className="relative bg-slate-50 h-full w-full flex flex-col items-start gap-y-3 rounded-lg overflow-clip  ">
+        {/* Limit overall modal height to viewport minus outer padding (p-5 -> 20px top + 20px bottom = 40px) */}
+        <div className="relative bg-slate-50 max-h-[calc(100vh-40px)] w-full flex flex-col items-start gap-y-3 rounded-lg overflow-hidden">
           <div className="flex w-full border-2 bg-white  items-center justify-between sticky top-0 pt-3 p-3 pl-4">
             <div className="flex gap-3 items-center">
               <img src="images/icons/icons8-microsoft-copilot-48.png" />
-              <h1 className="text-black font-bold text-xl">Copilot Corner</h1>
+              <div>
+                <h1 className="text-black font-bold text-xl">Copilot Corner</h1>
+                <p>
+                  To go deeper with the Finance Career Framework and build a
+                  more individualized development plan, consider using Copilot.
+                  Here's a prompt you can copy and paste to start this journey:
+                </p>
+              </div>
             </div>
             <button
               onClick={() => {
@@ -223,250 +231,250 @@ Encourage your team to use Copilot to prepare:
               <LucideX className="w-6 h-6"></LucideX>
             </button>
           </div>
-          <div className="px-5">
-            To go deeper with the Finance Career Framework and build a more
-            individualized development plan, consider using Copilot. Here's a
-            prompt you can copy and paste to start this journey:
-          </div>
-          <div className="grid grid-cols-2 max-xl:flex w-full max-w-full h-full max-h-full gap-x-5 p-5 pt-0 pb-2">
-            <div className="max-xl:flex-1 flex flex-col items-start gap-y-4">
-              <h2 className="self-start text-lg font-bold">
-                Enter Details of the role{" "}
-              </h2>
-              <div className="flex gap-3 items-center text-sm w-full ">
-                <div className="w-full flex-1 flex flex-col items-start gap-y-2 ">
-                  <label className="font-medium" htmlFor="">
-                    Search for the Role
-                  </label>
-                  <SearchBar
-                    isCopilotPopupOpen={true}
-                    data={data}
-                    className={"w-full"}
-                    currentPromptDetails={currentPromptDetails}
-                    setCurrentPromptDetails={setCurrentPromptDetails}
-                    onSearchChange={() => {}}
-                  ></SearchBar>
-                </div>
+          {/* allow this flex child to shrink/scroll inside the max-h parent */}
+          <div className="overflow-auto w-full flex-1 flex flex-col min-h-0">
+            <div className="w-full flex-1 min-h-0">
+              <div className="flex w-full max-w-full gap-x-5 p-5 pt-0 pb-2 min-h-0 flex-1 items-stretch h-full">
+                <div className="flex-1 flex flex-col items-start gap-y-4 min-h-0">
+                  <h2 className="self-start text-lg font-bold">
+                    Enter Details of the role
+                  </h2>
 
-                <div className="flex flex-col items-start gap-y-2">
-                  <label className="font-medium" htmlFor="">
-                    Timeline (in months)
-                  </label>
-                  <input
-                    onChange={(event) => {
-                      setCurrentPromptDetails({
-                        ...currentPromptDetails,
-                        timeline: event.target.value,
-                      });
-                    }}
-                    value={currentPromptDetails.timeline ?? ""}
-                    type="number"
-                    className="border w-full p-3 py-2 pl-3 rounded-md outline-none"
-                    placeholder="number of months"
-                  />
-                </div>
-              </div>
-
-              {generatedPrompt && (
-                <div className="space-y-4 p-0 pb-0 h-full max-h-full flex flex-col mb-16">
-                  <div className="flex gap-4   ">
-                    <div
-                      className={`${bgColor} border rounded px-3 py-2 min-w-[120px]`}
-                    >
-                      <h3 className="font-bold text-lg mb-2 whitespace-nowrap">
-                        Sub Family
-                      </h3>
-                      <p className=" text-black/90">
-                        {currentPromptDetails.sub_family || "Not available"}
-                      </p>
+                  <div className="flex gap-3 items-center text-sm w-full ">
+                    <div className="w-full flex-1 flex flex-col items-start gap-y-2 ">
+                      <label className="font-medium" htmlFor="">
+                        Search for the Role
+                      </label>
+                      <SearchBar
+                        isCopilotPopupOpen={true}
+                        data={data}
+                        className={"w-full"}
+                        currentPromptDetails={currentPromptDetails}
+                        setCurrentPromptDetails={setCurrentPromptDetails}
+                        onSearchChange={() => {}}
+                      ></SearchBar>
                     </div>
 
-                    <div
-                      className={`${bgColor} border rounded px-3 py-2 min-w-[120px] `}
-                    >
-                      <h3 className="font-bold text-lg mb-2 whitespace-nowrap">
-                        Band
-                      </h3>
-                      <p className=" text-black/90">
-                        {currentPromptDetails.band || "Not available"}
-                      </p>
-                    </div>
-
-                    <div
-                      className={`${bgColor} border rounded px-3 py-2 min-w-[120px]`}
-                    >
-                      <h3 className="font-bold text-lg mb-2 ">
-                        Contributor Type
-                      </h3>
-                      <p className=" text-black/90">
-                        {currentPromptDetails.contributor_type ||
-                          "Not available"}
-                      </p>
-                    </div>
-
-                    <div
-                      className={`${bgColor} border rounded px-3 py-2 max-h-[150px] overflow-hidden  hover:overflow-auto  `}
-                    >
-                      <h3 className="font-bold text-lg mb-2">Job Purpose</h3>
-                      <p className=" text-black/90 ">
-                        {`${currentPromptDetails.purpose}` || "Not available"}
-                      </p>
+                    <div className="flex flex-col items-start gap-y-2">
+                      <label className="font-medium" htmlFor="">
+                        Timeline (in months)
+                      </label>
+                      <input
+                        onChange={(event) => {
+                          setCurrentPromptDetails({
+                            ...currentPromptDetails,
+                            timeline: event.target.value,
+                          });
+                        }}
+                        value={currentPromptDetails.timeline ?? ""}
+                        type="number"
+                        className="border w-full p-3 py-2 pl-3 rounded-md outline-none"
+                        placeholder="number of months"
+                      />
                     </div>
                   </div>
 
-                  <div className="container-1 flex gap-4 xl:max-h-[21.8rem] lg:max-h-[16.6rem]">
-                    <div
-                      className={`flex-1 ${bgColor} border rounded px-3 py-2 max-h-96 overflow-hidden  hover:overflow-auto `}
-                    >
-                      <h3 className="font-bold text-lg mb-2">
-                        Key Accountabilities
-                      </h3>
-                      <p
-                        className=" text-black/90 text-ellipsis h-full"
-                        dangerouslySetInnerHTML={
-                          currentPromptDetails.key_account
-                            ? {
-                                __html: currentPromptDetails.key_account,
-                              }
-                            : { __html: "Not available" }
-                        }
-                      ></p>
-                    </div>
-                    <div
-                      className={`flex-1 ${bgColor} border rounded px-3 py-2 max-h-96 overflow-hidden  hover:overflow-auto `}
-                    >
-                      <h3 className="font-bold text-lg mb-2">
-                        Finance Technical Competencies
-                      </h3>
-                      <p
-                        className=" text-black/90"
-                        dangerouslySetInnerHTML={
-                          currentPromptDetails.finance_technical
-                            ? {
-                                __html: currentPromptDetails.finance_technical,
-                              }
-                            : { __html: "Not available" }
-                        }
-                      ></p>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
+                  {generatedPrompt && (
+                    <div className="flex-1 space-y-5 flex flex-col min-h-0">
+                      <h3 className="font-bold text-lg">Copilot Prompt</h3>
+                      <div className="">
+                        <div className="flex gap-3">
+                          <button
+                            className={`px-4 py-2 rounded-t-md  ${
+                              activeTab === "employee"
+                                ? "bg-gradient-to-t from-[#03441f] to-[#00843D] text-white"
+                                : "bg-slate-200"
+                            }`}
+                            onClick={() => setActiveTab("employee")}
+                          >
+                            Employee
+                          </button>
 
-            {generatedPrompt ? (
-              <div className="max-xl:flex-1 space-y-5">
-                <h3 className="font-bold text-lg">Copilot Prompt</h3>
-                <div>
-                  <div className="flex gap-3">
-                    <button
-                      className={`px-4 py-2 rounded-t-md  ${
-                        activeTab === "employee"
-                          ? "bg-gradient-to-t from-[#03441f] to-[#00843D] text-white"
-                          : "bg-slate-200"
-                      }`}
-                      onClick={() => setActiveTab("employee")}
-                    >
-                      Employee
-                    </button>
+                          <button
+                            className={`px-4 py-2 rounded-t-md ${
+                              activeTab === "manager"
+                                ? "bg-gradient-to-r from-[#03441f] to-[#00843D] text-white"
+                                : "bg-slate-200"
+                            }`}
+                            onClick={() => setActiveTab("manager")}
+                          >
+                            Manager
+                          </button>
+                        </div>
+                        <div className="p-[3px] rounded-b-3xl bg-gradient-to-r from-[#03441f] to-[#BDE588]">
+                          {/* --- NEW TABS ---- */}
 
-                    <button
-                      className={`px-4 py-2 rounded-t-md ${
-                        activeTab === "manager"
-                          ? "bg-gradient-to-r from-[#03441f] to-[#00843D] text-white"
-                          : "bg-slate-200"
-                      }`}
-                      onClick={() => setActiveTab("manager")}
-                    >
-                      Manager
-                    </button>
-                  </div>
-                  <div className="  p-[3px] rounded-b-3xl bg-gradient-to-r from-[#03441f] to-[#BDE588]">
-                    {/* --- NEW TABS ---- */}
+                          <div className="prompt_window relative rounded-b-[1.313rem] bg-white mb-5 flex-1 overflow-auto w-full hide-scrollbar min-h-0">
+                            <pre className="whitespace-pre-wrap p-5 min-h-0">
+                              {generatedPrompt}
+                            </pre>
 
-                    <div
-                      className="relative rounded-b-[1.313rem] lg:max-h-[50vh] xl:max-h-[58vh] overflow-hidden hover:overflow-auto 
-                   bg-white h-full mb-5  overflow-auto flex    gap-y-2  w-full hide-scrollbar"
-                    >
-                      <div>
-                        <pre className="whitespace-pre-wrap p-5 ">
-                          {generatedPrompt}
-                        </pre>
-                      </div>
-
-                      {isPromptCopied && (
-                        <div
-                          className={`absolute inset-0 bg-green-700/40 backdrop-blur-sm z-50 flex items-center justify-center
+                            {isPromptCopied && (
+                              <div
+                                className={`absolute inset-0 bg-green-700/40 backdrop-blur-sm z-50 flex items-center justify-center
         rounded-b-[1.313rem]
         transition-opacity duration-700
         ${visible ? "opacity-100" : "opacity-0"}`}
-                        >
-                          <div className="flex flex-col rounded-lg border-primary h-full w-full items-center justify-center ">
-                            <p className="font-bold text-center  text-3xl rounded-xl">
-                              Prompt Copied...
-                            </p>
-                            <p className="opacity-90 mt-2">
-                              Your prompt copied to clipboard...
-                            </p>
+                              >
+                                <div className="flex flex-col rounded-lg border-primary h-full w-full items-center justify-center ">
+                                  <p className="font-bold text-center  text-3xl rounded-xl">
+                                    Prompt Copied...
+                                  </p>
+                                  <p className="opacity-90 mt-2">
+                                    Your prompt copied to clipboard...
+                                  </p>
+                                </div>
+                              </div>
+                            )}
                           </div>
                         </div>
-                      )}
+                      </div>
+                      <div className="flex  gap-3 justify-between items-center">
+                        <p>
+                          Click on the <a
+                            className="underline text-blue-800"
+                            href="https://m365.cloud.microsoft/chat/?titleId=T_24e7e2dc-dc16-b3b7-de2a-51b9d3b65192&source=embedded-builder"
+                            target="_blank"
+                          >
+                            Finance Career Coach Agent
+                          </a>  and paste the prompt.
+                        </p>
+
+                        <Button
+                          onClick={() => {
+                            handleCopy();
+                          }}
+                          className=""
+                        >
+                          <AnimatePresence mode="wait" initial={false}>
+                            {isPromptCopied ? (
+                              <motion.div
+                                key="check"
+                                initial={{ opacity: 0, scale: 0.5 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.5 }}
+                                transition={{ duration: 0.2 }}
+                              >
+                                <Check className="w-4 h-4 stroke-green-500" />
+                              </motion.div>
+                            ) : (
+                              <motion.div
+                                key="copy"
+                                initial={{ opacity: 0, scale: 0.5 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.5 }}
+                                transition={{ duration: 0.2 }}
+                              >
+                                <Copy className="w-4 h-4 stroke-slate-200" />
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                          {isPromptCopied ? "Copied" : "Copy"}
+                        </Button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {generatedPrompt && (
+                  <div className="flex flex-col text-sm w-[50%] space-y-4 p-0 pb-0 min-h-0 h-full">
+                    <div className="flex gap-4 job-desc1">
+                      <div
+                        className={`${bgColor} border rounded px-3 py-2 min-w-[120px]`}
+                      >
+                        <h3 className="font-bold text-md xl:text-lg mb-2 whitespace-nowrap">
+                          Sub Family
+                        </h3>
+                        <p className=" text-black/90">
+                          {currentPromptDetails.sub_family || "Not available"}
+                        </p>
+                      </div>
+
+                      <div
+                        className={`${bgColor} border rounded px-3 py-2 min-w-[120px] `}
+                      >
+                        <h3 className="font-bold xl:text-lg mb-2 whitespace-nowrap">
+                          Band
+                        </h3>
+                        <p className=" text-black/90">
+                          {currentPromptDetails.band || "Not available"}
+                        </p>
+                      </div>
+
+                      <div
+                        className={`${bgColor} border rounded px-3 py-2 min-w-[120px]`}
+                      >
+                        <h3 className="font-bold xl:text-lg mb-2 ">
+                          Contributor Type
+                        </h3>
+                        <p className=" text-black/90">
+                          {currentPromptDetails.contributor_type ||
+                            "Not available"}
+                        </p>
+                      </div>
+
+                      <div
+                        className={`${bgColor} md:col-span-3  border rounded px-3 py-2  
+                          overflow-hidden  hover:overflow-auto  `}
+                      >
+                        <h3 className="font-bold xl:text-lg mb-2">
+                          Job Purpose
+                        </h3>
+                        <p className=" text-black/90 ">
+                          {`${currentPromptDetails.purpose}` || "Not available"}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="container-1 flex  gap-4 job-desc2 overflow-auto">
+                      <div
+                        className={`flex-1 ${bgColor} border rounded px-3 py-2 overflow-auto min-h-0`}
+                      >
+                        <h3 className="font-bold xl:text-lg mb-2">
+                          Key Accountabilities
+                        </h3>
+                        <p
+                          className=" text-black/90 text-ellipsis h-full"
+                          dangerouslySetInnerHTML={
+                            currentPromptDetails.key_account
+                              ? {
+                                  __html: currentPromptDetails.key_account,
+                                }
+                              : { __html: "Not available" }
+                          }
+                        ></p>
+                      </div>
+                      <div
+                        className={`flex-1 ${bgColor} border rounded px-3 py-2 overflow-auto min-h-0`}
+                      >
+                        <h3 className="font-bold xl:text-lg mb-2">
+                          Finance Technical Competencies
+                        </h3>
+                        <p
+                          className=" text-black/90"
+                          dangerouslySetInnerHTML={
+                            currentPromptDetails.finance_technical
+                              ? {
+                                  __html:
+                                    currentPromptDetails.finance_technical,
+                                }
+                              : { __html: "Not available" }
+                          }
+                        ></p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="flex gap-3 justify-between items-center">
-                  <p>
-                    Click on the{" "}
-                    <a
-                      className="underline text-blue-800"
-                      href="https://m365.cloud.microsoft/chat/?titleId=T_24e7e2dc-dc16-b3b7-de2a-51b9d3b65192&source=embedded-builder"
-                      target="_blank"
-                    >
-                      Finance Career Coach Agent{" "}
-                    </a>{" "}
-                    and paste the prompt.
-                  </p>
-
-                  <Button
-                    onClick={() => {
-                      handleCopy();
-                    }}
-                    className=""
-                  >
-                    <AnimatePresence mode="wait" initial={false}>
-                      {isPromptCopied ? (
-                        <motion.div
-                          key="check"
-                          initial={{ opacity: 0, scale: 0.5 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          exit={{ opacity: 0, scale: 0.5 }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          <Check className="w-4 h-4 stroke-green-500" />
-                        </motion.div>
-                      ) : (
-                        <motion.div
-                          key="copy"
-                          initial={{ opacity: 0, scale: 0.5 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          exit={{ opacity: 0, scale: 0.5 }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          <Copy className="w-4 h-4 stroke-slate-200" />
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                    {isPromptCopied ? "Copied" : "Copy"}
-                  </Button>
-                </div>
+                )}
               </div>
-            ) : (
-              <div className="max-xl:flex-1 p-[3px] rounded-3xl bg-gradient-to-r from-[#03441f] to-[#BDE588]">
-                <div className="bg-white rounded-[1.313rem] h-full w-full flex flex-col  gap-y-3 items-center justify-center justify-items-center">
-                  <img src="images/icons/icons8-microsoft-copilot-50 (2).png"></img>
-                  <p className="text-slate-400">
-                    Enter Details and Generate a Prompt
-                  </p>
+            </div>
+            {!generatedPrompt && (
+              <div className="flex-1 w-full p-3 min-h-0">
+                <div className="p-[3px] rounded-3xl bg-gradient-to-r from-[#03441f] to-[#BDE588]">
+                  <div className="bg-white rounded-[1.313rem] w-full flex flex-col gap-y-3 items-center justify-center">
+                    <img src="images/icons/icons8-microsoft-copilot-50 (2).png"></img>
+                    <p className="text-slate-400">
+                      Enter Details and Generate a Prompt
+                    </p>
+                  </div>
                 </div>
               </div>
             )}
