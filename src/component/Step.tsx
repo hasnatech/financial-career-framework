@@ -28,7 +28,7 @@ const Step: React.FC<Props> = ({
         <div className="relative flex flex-col items-center">
           <span className="shadow-sm h-fit ">
             {/* <LucideUser className="stroke-slate-600"></LucideUser> */}
-            <div className="rounded-full px-3 py-1 bg-primary text-white">
+            <div className="rounded-full px-3 py-1 bg-white text-primary">
                 {stepDetails.stepNumber}
             </div>
           </span>
@@ -40,7 +40,7 @@ const Step: React.FC<Props> = ({
         </div>
         <div className="flex flex-col">
           <p className="font-bold">{stepDetails.stepTitle}</p>
-          <p className="text-sm text-gray-800 ">{stepDetails.stepDescription}</p>
+          <p className="text-sm text-white/70">{stepDetails.stepDescription}</p>
         </div>
       </div>
     </div>

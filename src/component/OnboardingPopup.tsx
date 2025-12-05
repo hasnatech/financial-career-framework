@@ -11,7 +11,7 @@ const OnboardingPopup: React.FC<Props> = ({ setShouldShowOnboardingPopup }) => {
   const [currentStep, setCurrentStep] = useState<number>(1);
 
   return (
-    <div className="fixed inset-0 backdrop-blur-lg  bg-black bg-opacity-50 flex flex-col items-center justify-center z-50 p-4">
+    <div className="fixed inset-0 backdrop-blur-lg  bg-black bg-opacity-50 flex flex-col items-center justify-center z-50 ">
       <div className="relative bg-white max-w-[98%] max-h-full flex gap-y-2 rounded-lg overflow-clip p-1">
         {/* <button
           onClick={() => {
@@ -21,8 +21,8 @@ const OnboardingPopup: React.FC<Props> = ({ setShouldShowOnboardingPopup }) => {
         >
           <LucideX className="w-4 h-4 text-red-800 group-hover:text-white"></LucideX>
         </button> */}
-        <div className="flex flex-col relative gap-y-4 bg-slate-100 h-full p-4 rounded-lg">
-          <h1 className="font-bold text-2xl text-primary mb-4">Cargil Career Framework</h1>
+        <div className="flex flex-col relative gap-y-4 bg-primary text-white h-full p-4 rounded-lg">
+          <h1 className="font-bold text-2xl  mb-4">Cargil Career Framework</h1>
           {onboardingSteps.map((stepDetails: OnboardingStep) => {
             return (
               <Step
@@ -48,7 +48,7 @@ const OnboardingPopup: React.FC<Props> = ({ setShouldShowOnboardingPopup }) => {
                     setCurrentStep((prev) => prev + 1);
                   }
                 }}
-                className="absolute bottom-3 right-4 bg-primary rounded-lg  px-4 py-1 text-white hover:opacity-75 duration-500"
+                className="absolute bottom-3 right-4 bg-white  rounded-lg  px-4 py-1 text-primary hover:opacity-75 duration-500"
               >
                 {currentStep === 4 ? "Finish" : "Next"}
               </button>
@@ -63,11 +63,11 @@ const OnboardingPopup: React.FC<Props> = ({ setShouldShowOnboardingPopup }) => {
             ></video> */}
             <img 
               className="max-h-[24rem] max-w-full rounded-lg object-contain border border-gray-300 rounded bg-gray-100"
-              src={`/images/onboarding_step_${currentStep}.png`}
+              src={`images/onboarding_step_${currentStep}.png`}
             ></img>
             <div className="flex flex-col items-center gap-y-4">
               <div className="flex flex-col items-center gap-y-2">
-                <p className="text-xl font-bold">
+                <p className="text-xl font-bold text-primary">
                   {onboardingSteps[currentStep - 1].stepTitle}
                 </p>
                 <p>{onboardingSteps[currentStep - 1].stepDescription}</p>
@@ -81,7 +81,7 @@ const OnboardingPopup: React.FC<Props> = ({ setShouldShowOnboardingPopup }) => {
                 setCurrentStep(1);
               }}
               className={`h-[5px] w-16 rounded-full ${
-                currentStep === 1 ? "bg-green-700" : "bg-slate-300"
+                currentStep === 1 ? "bg-primary" : "bg-slate-300"
               }`}
             ></button>
             <button
@@ -89,7 +89,7 @@ const OnboardingPopup: React.FC<Props> = ({ setShouldShowOnboardingPopup }) => {
                 setCurrentStep(2);
               }}
               className={`h-[5px] w-16 rounded-full ${
-                currentStep === 2 ? "bg-green-700" : "bg-slate-300"
+                currentStep === 2 ? "bg-primary" : "bg-slate-300"
               }`}
             ></button>
             <button
@@ -97,7 +97,7 @@ const OnboardingPopup: React.FC<Props> = ({ setShouldShowOnboardingPopup }) => {
                 setCurrentStep(3);
               }}
               className={`h-[5px] w-16 rounded-full ${
-                currentStep === 3 ? "bg-green-700" : "bg-slate-300"
+                currentStep === 3 ? "bg-primary" : "bg-slate-300"
               }`}
             ></button>
             <button
@@ -105,7 +105,7 @@ const OnboardingPopup: React.FC<Props> = ({ setShouldShowOnboardingPopup }) => {
                 setCurrentStep(4);
               }}
               className={`h-[5px] w-16 rounded-full ${
-                currentStep === 4 ? "bg-green-700" : "bg-slate-300"
+                currentStep === 4 ? "bg-primary" : "bg-slate-300"
               }`}
             ></button>
           </div>
