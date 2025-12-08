@@ -42,17 +42,20 @@ const Controls = ({ onZoomIn, onZoomOut, onFitView, onBoard }: any) => {
       >
         <Fullscreen className="w-4 h-4 stroke-slate-700" />
       </button>
-      <button
-        className="p-2 cursor bg-white rounded shadow"
-        onClick={onBoard}
-      >
+      <button className="p-2 cursor bg-white rounded shadow" onClick={onBoard}>
         <InfoIcon className="w-4 h-4 stroke-slate-700" />
       </button>
     </div>
   );
 };
 
-export const CareerRoadmap = ({ nodes, nodeTypes, fitView, onHandleOnboard }) => {
+export const CareerRoadmap = ({
+  nodes,
+  nodeTypes,
+  fitView,
+  onHandleOnboard,
+  pathway,
+}) => {
   const [transform, setTransform] = useState({ x: 0, y: 0, k: 1 });
 
   const handleWheel = (event) => {
@@ -130,8 +133,8 @@ export const CareerRoadmap = ({ nodes, nodeTypes, fitView, onHandleOnboard }) =>
   };
 
   const handleOnboard = () => {
-      onHandleOnboard(true);
-  }
+    onHandleOnboard(true);
+  };
 
   useEffect(() => {
     if (fitView && nodes.length > 0) {
@@ -160,6 +163,20 @@ export const CareerRoadmap = ({ nodes, nodeTypes, fitView, onHandleOnboard }) =>
       >
         {nodes.map((node) => {
           const NodeComponent = nodeTypes[node.type] || TextUpdaterNode;
+
+          // determine if this node is present in the pathway array
+          const inPathway =
+            Array.isArray(pathway) &&
+            pathway.some((p) => {
+              if (!p) return false;
+              if (typeof p === "object") return p.id === node.id;
+              return p === node.id;
+            });
+
+          // const selectedBorder = inPathway
+          //   ? { border: "3px solid #0ea5a4", boxSizing: "border-box" }
+          //   : {};
+
           return (
             <div
               key={node.id}
@@ -170,7 +187,12 @@ export const CareerRoadmap = ({ nodes, nodeTypes, fitView, onHandleOnboard }) =>
                 ...node.style,
               }}
             >
-              <NodeComponent {...node} zoom={transform.k} />
+              <NodeComponent
+                className={inPathway ? "hexagon-highlight" : ""}
+                {...node}
+                zoom={transform.k}
+                selected = {inPathway}
+              />
             </div>
           );
         })}

@@ -1,6 +1,7 @@
 import { LucideUser } from "lucide-react";
 import React from "react";
 import type { OnboardingStep } from "../onboardingStepsDetails";
+import { div } from "framer-motion/client";
 
 interface Props {
   stepDetails: OnboardingStep;
@@ -14,36 +15,37 @@ const Step: React.FC<Props> = ({
   setCurrentStep,
 }) => {
   return (
-    <div
-      onClick={() => {
-        setCurrentStep(stepDetails.stepNumber);
-      }}
-      className={`${
-        currentStep != stepDetails.stepNumber
-          ? "opacity-50 cursor-pointer hover:opacity-40 duration-500"
-          : ""
-      } `}
-    >
-      <div className="flex gap-x-4 mb-10">
-        <div className="relative flex flex-col items-center">
-          <span className="shadow-sm h-fit ">
-            {/* <LucideUser className="stroke-slate-600"></LucideUser> */}
-            <div className="rounded-full px-3 py-1 bg-white text-primary">
-                {stepDetails.stepNumber}
-            </div>
-          </span>
-          <span
-            className={`w-px h-16 absolute -bottom-14 bg-slate-400 ${
-              stepDetails.stepNumber === 4 ? "hidden" : ""
-            }`}
-          ></span>
-        </div>
-        <div className="flex flex-col">
-          <p className="font-bold">{stepDetails.stepTitle}</p>
-          <p className="text-sm text-white/70">{stepDetails.stepDescription}</p>
+    
+      <div
+        onClick={() => {
+          setCurrentStep(stepDetails.stepNumber);
+        }}
+        className={`flex-1 ${
+          currentStep != stepDetails.stepNumber
+            ? "opacity-50 cursor-pointer hover:opacity-40 duration-500"
+            : ""
+        } `}
+      >
+        <div className="flex gap-x-4 h-full">
+          <div className="relative flex flex-col items-center">
+            <span className="z-10 rounded-full px-3 py-1 bg-white text-primary">
+              {stepDetails.stepNumber}
+            </span>
+
+            {/* vertical line */}
+            {stepDetails.stepNumber !== 4 && (
+              <span className="absolute top-0 bottom-0 w-px bg-slate-400" />
+            )}
+          </div>
+          <div className="flex flex-col">
+            <p className="font-bold">{stepDetails.stepTitle}</p>
+            <p className="text-sm text-white/70 mb-5">
+              {stepDetails.stepDescription}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 

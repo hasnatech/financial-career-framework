@@ -35,15 +35,16 @@ export default function Option2() {
   const [selectedBands, setSelectedBands] = useState<string[]>([]);
   const [isLegendOpen, setIsLegendOpen] = useState(true);
   // const [showPathway, setShowPathway] = useState(true);
-  const [pathWay, setPathWay] = useState<any[]>([]);
+  const [pathWay, setPathWay] = useState<any[]>( 
+    JSON.parse( localStorage.getItem('pathWay')   || '[]'));
   // const [shouldOptionsOpen, setShouldOptionsOpen] = useState<string>("");
   const [searchValue, setSearchValue] = useState<string>("");
   const [isPrintInitiated, setIsPrintInitiated] = useState<boolean>(false);
-  const [shouldCopilotPopupOpen, setShouldCopilotPopupOpen] = useState<boolean>(false);
-    
+  const [shouldCopilotPopupOpen, setShouldCopilotPopupOpen] =
+    useState<boolean>(false);
+
   const [shouldShowOnboardingPopup, setShouldShowOnboardingPopup] =
-    useState<boolean>(localStorage.getItem("onBoardingPopup") === "true"
-  );
+    useState<boolean>(localStorage.getItem("onBoardingPopup") === "true");
 
   useEffect(() => {
     localStorage.setItem(
@@ -52,6 +53,11 @@ export default function Option2() {
     );
     console.log(shouldShowOnboardingPopup);
   }, [shouldShowOnboardingPopup]);
+
+  useEffect(() => {
+    localStorage.setItem("pathWay", JSON.stringify(pathWay));
+    console.log(pathWay);
+  }, [pathWay]);
 
   const printRef = useRef<HTMLDivElement>(null);
 
@@ -263,6 +269,7 @@ export default function Option2() {
               nodes={nodes}
               nodeTypes={nodeTypes}
               fitView
+              pathway={pathWay}
               onHandleOnboard={setShouldShowOnboardingPopup}
             />
 

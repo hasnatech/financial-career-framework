@@ -1,4 +1,7 @@
 import {
+  Check,
+  Heart,
+  HeartIcon,
   Info,
   LucideArrowDown,
   LucideArrowUp,
@@ -7,6 +10,7 @@ import {
 import { bandClass } from "./Constant";
 
 export function HexaNode(props: any) {
+  
   // const zoom = props.zoom || 1;
   // const [zoomLevel, setZoomLevel] = useState("small");
   // const [shouldOptionsOpen, setShouldOptionsOpen] = useState<string>("");
@@ -32,11 +36,20 @@ export function HexaNode(props: any) {
     <div
       title={props.data.label}
       className={`group relative w-full flex gap-x-4 items-center justify-center transition-opacity
+        ${props.className} 
          ${
            props.pathWay ? "" : "hover:scale-[200%]"
          } hover:z-40 transition-transform duration-300
         ${bandClass(props)} `}
     >
+
+      {props.selected && (
+        <div className="absolute bg-blue-200 text-white rounded-full p-1 z-10 top-0 left-0">
+          {/* <HeartIcon className="h-3 w-3" /> */}
+          <img src="images/heart-fill.svg" alt="" className="h-4 w-4" />
+        </div>
+      )}
+
       {props.pathWay && (
         <div className="opacity-0 group-hover:opacity-100 flex absolute top-0 right-0 justify-around w-fit gap-x-1 items-center p-2 border border-slate-400 rounded-sm">
           {props.index != props.pathWay.length - 1 && (

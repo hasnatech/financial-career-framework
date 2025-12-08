@@ -12,7 +12,7 @@ const OnboardingPopup: React.FC<Props> = ({ setShouldShowOnboardingPopup }) => {
 
   return (
     <div className="fixed inset-0 backdrop-blur-lg  bg-black bg-opacity-50 flex flex-col items-center justify-center z-50 ">
-      <div className="relative bg-white max-w-[98%] max-h-full flex gap-y-2 rounded-lg overflow-clip p-1">
+      <div className="relative bg-white w-[98%] max-w-[1240px] max-h-full flex gap-y-2 rounded-lg overflow-clip p-1">
         {/* <button
           onClick={() => {
             setShouldShowOnboardingPopup(false);
@@ -21,8 +21,9 @@ const OnboardingPopup: React.FC<Props> = ({ setShouldShowOnboardingPopup }) => {
         >
           <LucideX className="w-4 h-4 text-red-800 group-hover:text-white"></LucideX>
         </button> */}
-        <div className="flex flex-col relative gap-y-4 bg-primary text-white h-full p-4 rounded-lg">
+        <div className="flex flex-col flex-1 relative gap-y-4 bg-primary text-white h-full p-4 rounded-lg">
           <h1 className="font-bold text-2xl  mb-4">Cargil Career Framework</h1>
+          <div className="flex flex-col flex-1 mb-6">
           {onboardingSteps.map((stepDetails: OnboardingStep) => {
             return (
               <Step
@@ -32,6 +33,7 @@ const OnboardingPopup: React.FC<Props> = ({ setShouldShowOnboardingPopup }) => {
               ></Step>
             );
           })}
+          </div>
           <button
             onClick={() => {
               setShouldShowOnboardingPopup(false);
@@ -62,7 +64,7 @@ const OnboardingPopup: React.FC<Props> = ({ setShouldShowOnboardingPopup }) => {
               src={`/images/step${currentStep}.mp4`}
             ></video> */}
             <img 
-              className="max-h-[24rem] max-w-full rounded-lg object-contain border border-gray-300 rounded bg-gray-100"
+              className="max-h-[20rem] max-w-full rounded-lg object-contain border border-gray-300 rounded bg-gray-100"
               src={`images/onboarding_step_${currentStep}.png`}
             ></img>
             <div className="flex flex-col items-center gap-y-4">
@@ -70,7 +72,7 @@ const OnboardingPopup: React.FC<Props> = ({ setShouldShowOnboardingPopup }) => {
                 <p className="text-xl font-bold text-primary">
                   {onboardingSteps[currentStep - 1].stepTitle}
                 </p>
-                <p>{onboardingSteps[currentStep - 1].stepDescription}</p>
+                <p className="min-h-20 text-center">{onboardingSteps[currentStep - 1].stepDescription}</p>
               </div>
               
             </div>

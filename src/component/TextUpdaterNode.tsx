@@ -2,6 +2,7 @@ import { Info } from "lucide-react";
 import { bandClass } from "./Constant";
 
 export function TextUpdaterNode(props: any) {
+
   return (
     <div
       className={`group relative bg-white shadow rounded-lg w-[200px] h-[100px] transition-opacity
