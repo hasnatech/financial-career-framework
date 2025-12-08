@@ -38,11 +38,21 @@ export default function Option2() {
   const [pathWay, setPathWay] = useState<any[]>([]);
   // const [shouldOptionsOpen, setShouldOptionsOpen] = useState<string>("");
   const [searchValue, setSearchValue] = useState<string>("");
-  const [shouldCopilotPopupOpen, setShouldCopilotPopupOpen] =
-    useState<boolean>(false);
   const [isPrintInitiated, setIsPrintInitiated] = useState<boolean>(false);
+  const [shouldCopilotPopupOpen, setShouldCopilotPopupOpen] = useState<boolean>(false);
+    
   const [shouldShowOnboardingPopup, setShouldShowOnboardingPopup] =
-    useState<boolean>(true);
+    useState<boolean>(localStorage.getItem("onBoardingPopup") === "true"
+  );
+
+  useEffect(() => {
+    localStorage.setItem(
+      "onBoardingPopup",
+      shouldShowOnboardingPopup.toString()
+    );
+    console.log(shouldShowOnboardingPopup);
+  }, [shouldShowOnboardingPopup]);
+
   const printRef = useRef<HTMLDivElement>(null);
 
   const handlePrint = useReactToPrint({
@@ -249,9 +259,12 @@ export default function Option2() {
           </nav>
 
           <div className="bg-white rounded-lg flex-1 border relative w-full">
-            <CareerRoadmap nodes={nodes} nodeTypes={nodeTypes} fitView onHandleOnboard={
-              setShouldShowOnboardingPopup
-            } />
+            <CareerRoadmap
+              nodes={nodes}
+              nodeTypes={nodeTypes}
+              fitView
+              onHandleOnboard={setShouldShowOnboardingPopup}
+            />
 
             <div
               className={`absolute w-full flex items-center justify-between gap-3 bottom-5 right-5 px-3 pl-10`}

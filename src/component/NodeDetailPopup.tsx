@@ -1,8 +1,8 @@
-import { LucideArrowLeft, LucideArrowRight, X, Zap } from "lucide-react";
+import { LucideArrowLeft, LucideArrowRight, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Button } from "../components/ui/button";
 import { getBandBackgroundColor } from "./Constant";
 import SearchBar from "./SearchBar";
-import { Button } from "../components/ui/button";
 
 interface NodeData {
   label?: string;
