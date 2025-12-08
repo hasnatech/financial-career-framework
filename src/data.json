@@ -2202,13 +2202,29 @@
     "row": "8",
     "col": "30",
     "Title": "Senior Professional, Capital Markets & Trading (TD)",
-    "Key": "Treasury"
+    "Key": "Treasury",
+    "contents": {
+      "sub_family": "Treasury, Capital Markets & Trading",
+      "band": "Senior Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Senior Professional, Capital Markets & Trading job handles the organization’s funding and foreign exchange trading activities for the defined geographic region to ensure that the organization has access to the necessary funds, manage currency risks, optimize costs, and comply with regulatory requirements. With limited supervision, this job manages the risks associated with funding and foreign exchange products by applying knowledge of international and local market conventions as well as regulatory constraints.",
+      "key_account": "<ul>\n<li><b>Transaction Management:</b> Executes external funding and foreign exchange transactions for the assigned countries, and participates in determining the strategy for external funding and foreign exchange transactions.</li>\n<li><b>Funding Flow Analysis:</b> Partners with internal stakeholders to ensure the optimal mix of funding per geography between cross border and local funding sources, and manages the interest rate risk and foreign exchange exposure of these short-term funding positions.</li>\n<li><b>Foreign Exchange Trade Execution:</b> Executes complex foreign exchange trades for organizational groups while adhering to the counterparty framework and providing greater foreign exchange coverage for the group involved.</li>\n<li><b>Risk Analysis:</b> Determines the proprietary risk positions for the defined market by analyzing financial markets, evaluating risk unit usage, and registering potential transactions with key stakeholders.</li>\n<li><b>Market Analysis:</b> Conducts complex market analyses to provide foreign exchange or interest rate advisory to help the organization navigate the complexities of currency and interest rate markets and make informed decisions.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Understands key financial information to support the creation of budgets and inform effective business decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Supports Cargill’s tax-related strategies through knowledge of laws, regulations, and practices.</li>\n<li><b>Manages Financial Risk:</b> Supports Cargill’s risk management strategies to inform decision-making, safeguard assets, and prevent errors in support of the business.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Supports Cargill’s use of business insights and effective decision-making through executing and interpreting complex financial analyses.</li>\n<li><b>Manages Allocation of Assets:</b> Supports the management of financial assets, liabilities, and cash flows within Cargill.</li>\n<li><b>Reports Financial Information:</b> Supports the collection and analysis of financial information from internal and external sources for financial reporting.</li>\n</ul>"
+    }  
   },
   {
     "row": "8",
     "col": "31",
     "Title": "Senior Professional, Treasury Advisory (TY)",
-    "Key": "Treasury"
+    "Key": "Treasury",
+    "contents": {
+      "sub_family": "Treasury, Treasury Advisory",
+      "band": "Senior Professional",
+      "contributor_type": "Individual Contributor",
+      "purpose": "The Senior Professional, Treasury Advisory job develops treasury consulting services for defined organizational divisions to improve the financial well-being of the organization. With limited supervision, this job applies financial knowledge to develop financial and risk management policies and procedures, provide complex advisory services, perform financial modeling and forecasting, and contribute to analytical and strategic projects across the organization.",
+      "key_account": "<ul>\n<li><b>Financial Modeling:</b> Performs and designs complex financial modeling and provides advisory services for the defined organizational divisions.</li>\n<li><b>Policy Compliance:</b> Develops financial policies and procedures and provides advisory services to ensure compliance with organizational policies.</li>\n<li><b>Advising:</b> Advises businesses on financial markets, funding, foreign exchange and methods for mitigating financial risks, in addition to advising businesses during mergers, acquisitions, divestitures, and joint ventures for the defined organizational divisions by applying knowledge in treasury and risk.</li>\n<li><b>Risk Reporting:</b> Oversees the preparation of reports on treasury-related risks for the defined organizational divisions and educates businesses on ways to mitigate financial risks.</li>\n<li><b>Banking Relationships:</b> Fosters new banking relationships and maintains relationships with key partners in the region to improve funding options.</li>\n</ul>",
+      "finance_technical": "<ul>\n<li><b>Makes Decisions with Key Financial Information:</b> Understands key financial information to support the creation of budgets and inform effective business decision-making.</li>\n<li><b>Upholds Tax & Regulatory Standards:</b> Supports Cargill’s tax-related strategies through knowledge of laws, regulations, and practices.</li>\n<li><b>Manages Financial Risk:</b> Supports Cargill’s risk management strategies to inform decision-making, safeguard assets, and prevent errors in support of the business.</li>\n<li><b>Conducts Complex Financial Analyses:</b> Supports Cargill’s use of business insights and effective decision-making through executing and interpreting complex financial analyses.</li>\n<li><b>Manages Allocation of Assets:</b> Supports the management of financial assets, liabilities, and cash flows within Cargill.</li>\n<li><b>Reports Financial Information:</b> Supports the collection and analysis of financial information from internal and external sources for financial reporting.</li>\n</ul>"
+    }
   },
   {
     "row": "8",
