@@ -44,9 +44,9 @@ export function HexaNode(props: any) {
     >
 
       {props.selected && (
-        <div className="absolute bg-blue-200 text-white rounded-full p-1 z-10 top-0 left-0">
+        <div className="absolute rounded-full z-10 top-0 left-0">
           {/* <HeartIcon className="h-3 w-3" /> */}
-          <img src="images/heart-fill.svg" alt="" className="h-4 w-4" />
+          <img src="images/heart.png" alt="" className="h-6 w-6 rounded-full" />
         </div>
       )}
 

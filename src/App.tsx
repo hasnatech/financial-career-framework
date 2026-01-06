@@ -35,8 +35,9 @@ export default function Option2() {
   const [selectedBands, setSelectedBands] = useState<string[]>([]);
   const [isLegendOpen, setIsLegendOpen] = useState(true);
   // const [showPathway, setShowPathway] = useState(true);
-  const [pathWay, setPathWay] = useState<any[]>( 
-    JSON.parse( localStorage.getItem('pathWay')   || '[]'));
+  const [pathWay, setPathWay] = useState<any[]>(
+    JSON.parse(localStorage.getItem("pathWay") || "[]")
+  );
   // const [shouldOptionsOpen, setShouldOptionsOpen] = useState<string>("");
   const [searchValue, setSearchValue] = useState<string>("");
   const [isPrintInitiated, setIsPrintInitiated] = useState<boolean>(false);
@@ -45,6 +46,20 @@ export default function Option2() {
 
   const [shouldShowOnboardingPopup, setShouldShowOnboardingPopup] =
     useState<boolean>(localStorage.getItem("onBoardingPopup") === "true");
+
+  useEffect(() => {
+    const handleWheel = (e: any) => {
+      if (e.ctrlKey) {
+        e.preventDefault();
+      }
+    };
+
+    window.addEventListener("wheel", handleWheel, { passive: false });
+
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
 
   useEffect(() => {
     localStorage.setItem(

@@ -9,11 +9,11 @@ import Option2 from "./pages/Option2.tsx";
 import ErrorPage from "./pages/ErrorPage.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const basename =
-  import.meta.env.MODE === "production"
-    ? "/financial-career-framework"
-    : "/";
-
+// const basename =
+//   import.meta.env.MODE === "production"
+//     ? "/financial-career-framework"
+//     : "/";
+const basename = "/";
 const router = createBrowserRouter(
   [
     { path: "/", element: <App />, errorElement: <ErrorPage /> },
