@@ -1173,10 +1173,10 @@
     "row": "5",
     "col": "30",
     "Title": "Director, Insurance Advisory (IA)",
-    "Key": "Treasury",
+    "Key": "Insurance",
     "contents": {
       "sub_family": "Insurance, Insurance Advisory",
-      "band": "Manager II",
+      "band": "Manager I",
       "contributor_type": "Manager",
       "purpose": "The Manager II, Insurance Advisory job owns the execution of functional strategy and provides key input and operational direction on global hazard risk & insurance strategy and program structure to enable the organization to proactively handle and mitigate the optimal impacts of global hazards. This job leads all aspects of insurance activities for assigned regions, leading, advising, and making decisions on the most complex insurance matters, including insurance risk management, strategy development, insurance program management and administration, multi-jurisdiction compliance, contract and service negotiation, and considering mergers and acquisitions transactions. This job also directs and guides the governance and operations of the organization’s captive insurance company.",
       "key_account": "<ul><li><b>Risk Management Strategy:</b> Owns the design and implementation of the global hazard risk management program strategy as it relates to the organization’s insurance programs and benefits, to respond to global hazards in a manner that aligns with the risk appetite, compliance, and operational requirements.</li><li><b>Risk Management:</b> Leads analyzing and evaluating potential loss areas and resolving appropriate type and level of protection for the organization, including negotiating insurance coverage and selecting tools as needed.</li><li><b>Vendor Relationship Management:</b> Forges positive relationships with insurers, brokers, underwriters and related service providers and coordinates the related services that meet the organization’s performance to ensure access to the most suitable insurance coverage and related services at the most favorable terms and conditions.</li><li><b>Continuous Improvement:</b> Nurtures strategies and continuous improvement initiatives with a focus on systems and operational improvements for insurance governance and compliance across the regions while considering the specific regulatory and market conditions of each region.</li><li><b>Understanding Standardization:</b> Establishes, implements and monitors underwriting policies and procedures to minimize risk exposure while maintaining compliance with the captive towards fulfillment of the organization’s risk retention and mitigation goals.</li><li><b>Insurance Strategy:</b> Leads the global insurance strategy, due diligence and implementation guidelines to ensure that the organization’s insurance programs are compliant and up-to-date and guide effective risk financing from an insurance program at a global scale.</li><li><b>Mergers & Acquisitions:</b> Oversees activities and guides insurance due diligence and implementation for large or complex programs, counseling business divisions on insurance requirements and risk financing that the organization must consider for mergers, acquisitions and other related transactions.</li><li><b>Operational Governance:</b> Owns and oversees governance of the organization’s captive insurance company’s financials, risk position, operations and compliance standards.</li><li><b>Team Management:</b> Manages team members to achieve the organization’s goals, by ensuring productivity, communicating performance expectations, creating goal alignment, giving and seeking feedback, providing coaching, sharing best practices and holding people accountable, supporting employee development, recognizing achievement and lessons learned, and developing enabling conditions for talent to thrive in an inclusive team culture.</li></ul>",
@@ -1523,7 +1523,7 @@
     "row": "6",
     "col": "25",
     "Title": "Advisor, Insurance Claims (IL)",
-    "Key": "Insurance",
+    "Key": "Insurance", 
     "contents": {
       "sub_family": "Insurance, Insurance Advisory ",
       "band": "Advisor",
@@ -2250,7 +2250,7 @@
   {
     "row": "8",
     "col": "33",
-    "Title": "Advisor, Insurance Claims (IL)",
+    "Title": "Senior Professional, Insurance Claims (IL)",
     "Key": "Insurance",
     "contents": {
       "sub_family": "Insurance, Insurance Claims",
