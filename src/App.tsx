@@ -167,9 +167,9 @@ export default function Option2() {
         style: {
           opacity:
             (selectedBands.length === 0 && searchValue.length === 0) ||
-            selectedBands.includes(data[i].Key) ||
-            (searchValue.length > 0 &&
-              data[i].Title.toLowerCase().includes(searchValue.toLowerCase()))
+              selectedBands.includes(data[i].Key) ||
+              (searchValue.length > 0 &&
+                data[i].Title.toLowerCase().includes(searchValue.toLowerCase()))
               ? 1
               : 0.3,
         },
@@ -242,14 +242,13 @@ export default function Option2() {
         )}
 
         <div
-          className={`relative flex flex-col w-full min-h-screen items-center gap-y-10 ${
-            pathWay.length === 0 ? "pr-2" : ""
-          }`}
+          className={`relative flex flex-col w-full min-h-screen items-center gap-y-10 ${pathWay.length === 0 ? "pr-2" : ""
+            }`}
         >
           <nav className="flex w-full justify-between items-center absolute top-3 left-5 z-10">
             <p>
               <a href="/" className="font-bold text-4xl text-primary">
-                Career Framework
+                Finance Career Framework 2.0
               </a>
             </p>
 
@@ -257,7 +256,7 @@ export default function Option2() {
               <div id="google_translate_element"></div>
               <SearchBar
                 className={""}
-                onClose={() => {}}
+                onClose={() => { }}
                 searchValue={searchValue}
                 setSearchValue={setSearchValue}
                 isNodeDetailPopupOpen={false}
@@ -345,9 +344,8 @@ export default function Option2() {
 
         {pathWay.length > 0 && isPathwayOpen && (
           <div
-            className={`flex flex-col h-screen w-fit ${
-              isPathwayOpen ? "" : " fixed right-0 z-20"
-            }`}
+            className={`flex flex-col h-screen w-fit ${isPathwayOpen ? "" : " fixed right-0 z-20"
+              }`}
           >
             <div
               className={`w-80 flex flex-col rounded space-y-3 overflow-y-auto 
@@ -377,7 +375,7 @@ export default function Option2() {
                         style={{
                           opacity:
                             selectedBands.length === 0 ||
-                            selectedBands.includes(node.band)
+                              selectedBands.includes(node.band)
                               ? 1
                               : 0.3,
                         }}
